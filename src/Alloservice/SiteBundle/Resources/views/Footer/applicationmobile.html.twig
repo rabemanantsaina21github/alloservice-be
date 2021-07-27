@@ -1,0 +1,150 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} L'application mobile {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="bg-cover bg-mobile-app">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+        <div class="index-public-hero">
+            <div class="container" style="padding-top: 80px;padding-bottom: 80px;">
+                <h1 class="hero-title" style="text-align:left">L'application Alloservice</h1>
+                <h2 class="hero-subtitle" style="text-align:left">Votre allié de tous les jours pour gagner du temps</h2>
+                <div class="mt-4">
+                    <a href="" target="_blank"><img alt="Apple badge" height="50px" src="{{ asset('images/apple-badge-8dfe72dd6da09f6e42137bc7eeae9bba69540e28fc792aaf96266dc0aed36e0f.png') }}"></a>
+                    <span class="pl-2">
+                        <a href="" target="_blank"><img alt="Google play badge" height="50px" src="{{ asset('images/google-play-badge-82bfd7160c955c71bca4cddf01f9deb0c00b2d1319.png') }}"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-200"></div>
+    <div class="container">
+        <ul class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb-item active">L'application Alloservice</li>
+        </ul>
+    </div>
+</div>
+<div class="bg-white pt-1">
+    <div class="container">
+        <div class="row mt-4 mb-5">
+            <div class="col-md-9 order-md-2">
+                <h3 class="h2">Organiser son quotidien n'a jamais été aussi facile</h3>
+                <h4 class="text-muted">Une nouvelle expérience pour trouver les bons jobeurs près de chez soi</h4>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <i class="fa fa-edit fa-4x text-primary mb-3"></i>
+                        <h5>Décrire son besoin</h5>
+                        <p class="font-size-3">Réservez en 5min vos prestataires pour tous vos besoins depuis votre téléphone. En quelques clics, décrivez votre demande de service et postez votre annonce rapidement</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-users fa-4x text-primary mb-3"></i>
+                        <h5>Trouver le bon jobeur</h5>
+                        <p class="font-size-3">Recevez en temps réel par notification les offres des jobeurs vérifiés et évalués. Choisissez votre jobeur en quelques clics depuis votre téléphone</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-money-bill-alt fa-4x text-primary mb-3"></i>
+                        <h5>Payer moins cher en un clic</h5>
+                        <p class="font-size-3">Payez à petit prix et rapidement tous les services du quotidien avec notre solution de paiement en 1 clic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 order-md-1">
+                <img width="100%" src="{{ asset('images/screen1-561bc18a817d51d0d51c0a316fb86e3cef3d15e0fbe2841ded00423f923d9770.jpg') }}" alt="Screen1"></div>
+        </div>
+        <div class="row mt-4 mb-4">
+            <div class="col-md-9">
+                <h3 class="h2">Un assistant personnel dans votre poche</h3>
+                <h4 class="text-muted">Une utilisation facilitée et des échanges simplifiés</h4>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <i class="fa fa-hand-point-up fa-4x text-primary mb-3"></i>
+                        <h5>Défiler les profils et les jobs</h5>
+                        <p class="font-size-3">Vous avez un aperçu des jobeurs compétents et de tous vos jobs en cours. Une utilisation facile pensée pour vous</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-comment fa-4x text-primary mb-3"></i>
+                        <h5>Communiquer avec le jobeur</h5>
+                        <p class="font-size-3">Entrez en contact avec votre jobeur via l’espace de discussion de votre application et retrouvez toutes vos discussions</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-user-plus fa-4x text-primary mb-3"></i>
+                        <h5>Utiliser le service booking</h5>
+                        <p class="font-size-3">Vous êtes satisfait de votre jobeur ? Vous pouvez de nouveau faire appel à lui rapidement via notre service booking</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"><img alt="Screen2" src="{{ asset('images/screen2-e459f189fe611467233ad3398d2bf06649e49c39789f06b0c1141526e7a03d9c.png') }}" width="100%"></div>
+        </div>
+    </div><hr><div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-9 order-md-2">
+                <h3 class="h2">Proposer ses services et gérer ses prestations en quelques clics depuis son téléphone</h3>
+                <h4 class="text-muted">L'application Alloservice vous permet de postuler en temps réel !</h4>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <i class="fa fa-credit-card fa-4x text-primary mb-3"></i>
+                        <h5>Augmenter ses revenus</h5>
+                        <p class="font-size-3">Avec l'application Alloservice, vous gérez vos activités rapidement et en quelques clics. Vous êtes plus réactif et gagnez ainsi plus d'argent</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-bell fa-4x text-primary mb-3"></i>
+                        <h5>Recevoir les jobs près de chez soi</h5>
+                        <p class="font-size-3">Avec les notifications, vous recevez les jobs près de chez vous en temps réel. Vous serez parmi les premiers à y postuler</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-check fa-4x text-primary mb-3"></i>
+                        <h5>Postuler en quelques clics</h5>
+                        <p class="font-size-3">Vous pouvez postuler à plus d'offres en quelques clics et être choisis plus rapidement</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 order-md-1"><img alt="Screen3" src="{{ asset('images/screen3-8f925ba905231ed1060401e50f9a25dad047d78310c5b011e8482046a4df043e.jpg') }}" width="100%"></div>
+        </div>
+        <div class="row mt-4 mb-3">
+            <div class="col-md-9">
+                <h3 class="h2">Une solution clé en main pour faciliter vos échanges</h3>
+                <h4 class="text-muted">Tout pour simplifier la prise de rendez-vous avec votre client</h4>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <i class="fa fa-comment fa-4x text-primary mb-3"></i>
+                        <h5>Communiquer avec le client</h5>
+                        <p class="font-size-3">Vous êtes choisi ? Entrez en contact avec votre client via l'espace de discussion de votre application</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-map-marker-alt fa-4x text-primary mb-3"></i>
+                        <h5>Trouver son itinéraire</h5>
+                        <p class="font-size-3">En un clic, faites apparaitre l'itinéraire et le temps de trajet pour vous rendre chez votre client</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-file-alt fa-4x text-primary mb-3"></i>
+                        <h5>Gérer ses documents</h5>
+                        <p class="font-size-3">Retrouvez tous vos documents depuis votre application : factures, attestations, etc. Vous pouvez les visualiser et les télécharger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"><img alt="Screen4" src="{{ asset('images/screen4-4657c5376b29a86281c0eab1021e8b7c35eb7dec9c89b79a13a21e5503d3dc98.png') }}" width="100%"></div>
+        </div>
+    </div><hr><div class="container pb-0 py-3 text-center">
+        <h3 class="h2">Téléchargez l'application</h3>
+        <h4 class="text-muted">Disponible sur iOS et Android</h4>
+        <div class="row mt-5">
+            <div class="col-md-4 col-6 offset-md-2">
+                <div class="mb-3">
+                    <a href="" target="_blank"><img alt="Apple badge" height="50px" src="{{ asset('images/apple-badge-8dfe72dd6da09f6e42137bc7eeae9bba69540e28fc792aaf96266dc0aed36e0f.png') }}"></a>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="mb-3">
+                    <a href="" target="_blank"><img alt="Google play badge" height="50px" src="{{ asset('images/google-play-badge-82bfd7160c955c71bca4cddf01f9deb0c00b2d1319.png') }}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

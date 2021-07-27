@@ -1,0 +1,220 @@
+{% extends "header.html.twig" %}
+
+{% block title %} Client - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <main role="main">
+        <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+                    <li title="Alloservice">
+                        <a class="text-primary font-weight-bold" href="{{ path('alloservice_site_centre_d_aide') }}">Alloservice</a>
+                    </li>
+                    <li title="Client">
+                        Client
+                    </li>
+                </ol>
+                <form accept-charset="UTF-8" action="/hc/fr/search" class="search" data-search="" method="get" role="search"><input name="utf8" type="hidden" value="✓"><input aria-label="Recherche" id="query" name="query" placeholder="Recherche" type="search"></form>
+            </nav>
+            <div class="category-container">
+                <div class="category-content">
+                    <header class="page-header">
+                        <h1>Client</h1>
+                        <p class="page-header-description">Demandeur de Services</p>
+                    </header>
+                    <div class="section-tree">
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001074769-Mon-compte">Mon compte</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360002470320-Inscription">Inscription</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412825-Comment-modifier-les-informations-de-mon-profil-">Comment modifier les informations de mon profil ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407929-Comment-renseigner-ou-modifier-mon-num%C3%A9ro-de-t%C3%A9l%C3%A9phone-">Comment renseigner ou modifier mon numéro de téléphone ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407889-Comment-modifier-mon-adresse-email-">Comment modifier mon adresse email ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407909-Comment-me-d%C3%A9sinscrire-de-Alloservice-">Comment me désinscrire de Alloservice ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003687285-J-ai-oubli%C3%A9-mon-mot-de-passe">J'ai oublié mon mot de passe</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606025-Demander-un-service">Demander un service</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005676169-Demander-un-service-Comment-%C3%A7a-marche-">Demander un service : Comment ça marche ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412865-Comment-d%C3%A9finir-le-prix-de-ma-demande-">Comment définir le prix de ma demande ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115004202585-Quels-services-puis-je-trouver-sur-Alloservice-">Quels services puis-je trouver sur Alloservice ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407369-Comment-modifier-la-date-ou-l-heure-de-ma-demande-">Comment modifier la date ou l'heure de ma demande ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005688605-Comment-cl%C3%B4turer-ma-demande-de-service-">Comment clôturer ma demande de service ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003924620-Comment-poster-un-job-priv%C3%A9-">Comment poster un job privé ?</a>
+                                </li>
+                            </ul>
+                            <a class="see-all-articles" href="https://help.alloservice.com/hc/fr/sections/115001606025-Demander-un-service">
+                                Afficher les 8&nbsp;articles
+                            </a>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606045-Choisir-mon-jobeur">Choisir mon jobeur</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407309-Comment-choisir-mon-jobeur-">Comment choisir mon jobeur ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412445-Comment-discuter-avec-un-jobeur-">Comment discuter avec un jobeur ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005689865-Comment-%C3%A9valuer-mon-jobeur-">Comment évaluer mon jobeur ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407729-Qui-sont-nos-jobeurs-">Qui sont nos jobeurs ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412465-Satisfaction-garantie">Satisfaction garantie</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001586409-Paiement-Remboursement">Paiement &amp; Remboursement</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360006109919-Comment-payer-en-ticket-CESU-">Comment payer en ticket CESU ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407649-Pourquoi-suis-je-pr%C3%A9lev%C3%A9-lors-de-la-r%C3%A9servation-">Pourquoi suis-je prélevé lors de la réservation ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005677809-Comment-valider-le-paiement-de-mon-jobeur-">Comment valider le paiement de mon jobeur ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005747885-Comment-ajouter-des-heures-suppl%C3%A9mentaires-">Comment ajouter des heures supplémentaires ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407609-Quels-sont-les-moyens-de-paiement-accept%C3%A9s-">Quels sont les moyens de paiement acceptés ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360001615999-Frais-de-service">Frais de service</a>
+                                </li>
+                            </ul>
+                            <a class="see-all-articles" href="https://help.alloservice.com/hc/fr/sections/115001586409-Paiement-Remboursement">
+                                Afficher les 9&nbsp;articles
+                            </a>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001628509-Absence-Annulation">Absence &amp; Annulation</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005875445-Mon-Jobeur-a-annul%C3%A9-ou-ne-s-est-pas-pr%C3%A9sent%C3%A9">Mon Jobeur a annulé ou ne s’est pas présenté</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005875285-Je-souhaite-annuler-ma-demande-de-service">Je souhaite annuler ma demande de service</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001646625-Facture-Attestation">Facture &amp; Attestation</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005690165-Je-souhaite-en-savoir-plus-sur-les-frais-de-service">Je souhaite en savoir plus sur les frais de service</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003628125-O%C3%B9-trouver-mes-factures-et-attestations-">Où trouver mes factures et attestations ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115004060769-Comment-fonctionne-le-CESU-">Comment fonctionne le CESU ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001090185-D%C3%A9clarer-mon-Jobeur">Déclarer mon Jobeur</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412525-Comment-d%C3%A9clarer-le-jobeur-">Comment déclarer le jobeur ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412545-Comment-recevoir-le-cr%C3%A9dit-d-imp%C3%B4t-">Comment recevoir le crédit d'impôt ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005678009-J-ai-oubli%C3%A9-de-d%C3%A9clarer-mon-Jobeur">J'ai oublié de déclarer mon Jobeur</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/360001211780-Assurance">Assurance</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360000382800-Que-couvre-l-assurance-">Que couvre l'assurance ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360000382780-Qui-est-couvert-">Qui est couvert ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003802480-Je-souhaite-faire-une-r%C3%A9clamation-">Je souhaite faire une réclamation
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606445-Parrainage">Parrainage</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005678129-Qu-est-ce-que-le-parrainage-chez-Alloservice-">Qu'est-ce que le parrainage chez Alloservice ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="Comment-fonctionne-le-parrainage-">Comment fonctionne le parrainage ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/360000642679-Carte-Cadeaux">Carte Cadeaux</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360001836239-Comment-obtenir-une-carte-cadeaux-">Comment obtenir une carte cadeaux ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

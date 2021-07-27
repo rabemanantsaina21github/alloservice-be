@@ -1,0 +1,552 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Service de peinture - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]--><div class="ypj-fluid-container">
+    <div class="py-2 border-bottom d-flex align-items-center justify-content-center">
+        <div class="promises-items-wrapper d-none d-lg-block">
+            <div class="promises-items">
+                <div class="ypj-fluid-container d-flex justify-content-between">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Réservez sereinement, vous êtes couvert en cas d’accident, casse, dégradation et malfaçon." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-shield-alt mr-2 font-size-5 text-primary"></i>Services assurés par AXA</a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Maitrisez votre budget et évitez les mauvaises surprises. Les prix sont fixés à l&#39;avance entre vous et votre prestataire." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-handshake mr-2 font-size-5 text-primary"></i>Prix fixé à l'avance</a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Tous les prestataires sont vérifiés, suivis et évalués pour chaque service rendu afin de vous garantir le meilleur niveau de satisfaction." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-user-check mr-2 font-size-5 text-primary"></i>Prestations encadrées</a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Notre service client vous accompagne 7j/7 pour vous assurer le bon déroulement de votre demande." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-phone mr-2 font-size-5 text-primary"></i>Assistance 7j/7</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel slide d-block d-lg-none u-width-100 mx-2" data-interval="3000" data-ride="carousel" id="promisesCaroussel">
+            <div class="carousel-inner caroussel-promises">
+                <div class="carousel-item active">
+                    <a class="ps-title text-dark remove-link-style cursor-pointe d-flex align-items-center justify-content-center my-2 pl-1 font-size-3r" data-content="Réservez sereinement, vous êtes couvert en cas d’accident, casse, dégradation et malfaçon." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-shield-alt mr-2 text-primary"></i>Services assurés par AXA</a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Maitrisez votre budget et évitez les mauvaises surprises. Les prix sont fixés à l&#39;avance entre vous et votre prestataire." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-handshake mr-2 text-primary"></i>Prix fixé à l'avance</a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Tous les prestataires sont vérifiés, suivis et évalués pour chaque service rendu afin de vous garantir le meilleur niveau de satisfaction." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-user-check mr-2 text-primary"></i>Prestations encadrées</a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Notre service client vous accompagne 7j/7 pour vous assurer le bon déroulement de votre demande." data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        <i class="fa fa-phone mr-2 text-primary"></i>Assistance 7j/7</a>
+                </div>
+            </div>
+            <a class="u-button-icon carousel-control-prev" data-slide="prev" href="#promisesCaroussel">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="u-button-icon carousel-control-next" data-slide="next" href="#promisesCaroussel">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+        <div class="my-2">
+            <ol class="breadcrumb mb-3 pl-0" itemscope="" itemtype="">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}" itemprop="item">
+                        <span itemprop="name">Accueil</span>
+                    </a><meta content="1" itemprop="position">
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service_list')}}" itemprop="item">
+                        <span itemprop="name">Service à domicile</span>
+                    </a><meta content="2" itemprop="position">
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Bricolage</span>
+                    </a><meta content="3" itemprop="position"></li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Rénovation</span>
+                    </a><meta content="4" itemprop="position">
+                </li>
+                <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Peinture intérieure</span>
+                    </a><meta content="5" itemprop="position">
+                </li>
+            </ol>
+        </div>
+        <div class="mt-3 text-justify">
+            <div class="content-intro">
+                <div class="d-flex align-items-bottom flex-wrap">
+                    <h1 class="mr-3">Peinture intérieure</h1>
+                </div>
+                <div data-component="toggle" data-handle-outside="false" data-toggle-classname="show-more-intro-wrapper--full">
+                    <div class="show-more-intro-wrapper" data-toggelable="">
+                        <p class="font-size-2 font-size-sm-3 text-muted">Envie de donner un coup de fraicheur à votre intérieur&nbsp;en laissant entrer les couleurs tendance de l’année&nbsp;? Pour un précieux gain de temps et un résultat impeccable, trouvez des spécialistes en peinture intérieure grâce à Alloservice, et ce à moindre coût. Nos spécialistes consciencieux et expérimentés en travaux de rénovation sont prêts à intervenir chez vous. Vous pouvez avoir confiance, nos jobeurs sont tous vérifiés à leur inscription et notés par leurs clients après intervention. Peindre un mur avec Alloservice, c’est facile, rapide et à petit prix.</p>
+                        <button class="btn btn-show-more btn-blue-only-text font-size-2 font-size-sm-3 font-weight-bold" data-clickable="">Lire plus...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mb-5">
+            <a class="btn btn-secondary font-weight-bold btn-lg btn-break btn-service-cta" href="">Demander un service de peinture</a>
+        </div>
+        <div class="my-5">
+            <h2>Nos bricoleurs sont à votre service</h2>
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Abderamane" src="{{ asset('images/medium_e1cace60.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Abderamane</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(257)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>278 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Emmanuelle</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Travail sérieux "</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Jean" src="{{ asset('images/medium_6c19d304.jpeg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Jean</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(309)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>352 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Jean-Yves</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Je recommande fortement le travail de Jean. 
+                                Merci de votre implication, sérieux et rigueur."
+                        </p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Lhassan " src="{{ asset('images/medium_01cf7a7e.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Lhassan
+                            </p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(193)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>200 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Douniazed</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Lhassan est très professionnel et efficace je le recommande vivement "</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Mohammed" src="{{ asset('images/medium_55474747.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Mohammed</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(126)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>192 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Marie</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Parfait"</p>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-medium d-block" href="">Voir tous les bricoleurs (38572)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <h2>Dernières annonces de peinture</h2>
+            <div class="row mt-3 d-flex align-items-stretch flex-wrap">
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Peinture intérieure à Anglet (64600)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Bonjour, 
+                                            J’ai besoin de 2 personnes pour repeindre les murs et plafond du salon de notre maison avant notre emménag...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    6 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>102,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Peinture intérieure à Aulnay-sous-Bois (93600)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">J'ignore s'il faut une 2ème couche... C'est un studio de 25  m². Sol &amp; plafond.</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    5 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>85,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Peinture intérieure à Roubaix (59100)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Appartement à rafraîchir en peinture blanche  (murs &amp; plafond)
+                                            1 séjour - 3 chambres - 1 cuisine - 1 couloir - 2 sdb...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    20 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>340,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Peinture intérieure à Bouchemaine (49080)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Double porte à repeindre. Jour et heure au choix selon vos 
+                                        Disponibilités, merci de faire proposition.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    2 h 30 de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>42,50</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-bold d-block" href="">Voir toutes les annonces de peinture (10233)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <div class="mt-5">
+                <h2 class="mt-0 mb-1">Comment ça marche ?</h2>
+                <div class="row mt-4">
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon1" height="200" src="{{ asset('images/hiw-icon1-c2b46308c928256d1bc34d7fcb07a162a7140c3f120d810f55dc9db87de74627.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Demandez un service</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Remplissez le formulaire et obtenez une estimation du prix et de la durée</p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon2" height="200" src="{{ asset('images/hiw-icon2-641d5c09d8789cb41711d0e41557929d8ee2a196bab3b2e47b875f03132b960e.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Choisissez votre jobeur</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Des jobeurs compétents et proches de chez vous vous proposent leurs services</p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon3" height="200" src="{{ asset('images/hiw-icon3-b21fb9288ea360942c1a3a595cd3d5e481725e37e615bb42e74ced0a7d98a56d.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Souriez, c'est fait !</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Votre jobeur vous rend service au prix et à la date convenus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="my-5">
+            <h2>Le service de peinture près de chez vous</h2>
+            <div class="d-flex flex-row flex-wrap">
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Paris</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Marseille</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Lyon</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Toulouse</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Nice</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Nantes</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Montpellier</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Peinture intérieure à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                            <div class="shadow"><img alt="Peinture intérieure à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Bordeaux</p>
+                        </h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="mb-4">
+            <div class="row mt-3">
+                <!--Antonio 987654321-->
+                {% for article in lastArticles %}
+                <div class="col-md-4">
+                    <a class="frosted-glass-hover text-dark text-decoration-none" href="{{ path('alloservice_site_readblog', {'cat_slug':article.category.slug, 'slug':article.slug}) }}">
+                        <div class="frosted-glass-shadow mb-3">
+                            <div class="picture rounded blog-picture"><img alt="{{article.title}}" class="" height="300" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450"></div>
+                            <div class="shadow"><img alt="{{article.title}}" class="" height="300" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450"></div>
+                        </div>
+                        <h3 class="font-size-4 mb-0">
+                            <span class="font-weight-normal mt-2">
+                                <strong>{{article.title}}</strong>
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="clearfix mb-2 mt-2">
+                        <div class="float-left text-muted font-size-2">
+                            <span>{{article.date | localizeddate('medium', 'none')}}</span>
+                        </div>
+                        <div class="float-right font-size-2">
+                            <span>
+                                <a class="text-muted" href="">{{article.category.name}}</a>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4 font-size-2">
+                        {{article.subtitle}}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="d-block">
+                <a href="{{ path('alloservice_site_homepage') }}" class="font-size-3 font-weight-medium">Voir tous les articles <i class="fas fa-chevron-right pl-1 font-size-1"></i></a>
+            </div>
+        </div>
+    </div>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') == 0 %}
+    <hr>
+    <div class="ypj-fluid-container text-justify">
+        <div class="my-5">
+            <div class="bottom-long-text">
+                <h2>Quelques travaux de peinture incontournables</h2>
+                <h3>Comment peindre un salon pour changer l’ambiance ?</h3>
+                <p>Le salon est une des pièces maîtresses de votre maison, si ce n’est la pièce à vivre la plus importante de votre maison. Vous y passez de nombreux moments en famille ou entre amis, vos enfants y jouent, tout le monde y dinent. De ce fait, la peinture du mur dans le salon doit être en accord avec les gouts et les envies de chacun mais aussi correspondre aux meubles et objets de décoration qui s’y trouvent déjà.<br>Choisir de peindre ou repeindre ses murs du salon est donc une décision à ne prendre à la légère afin de continuer à vous y sentir bien. Bien plus que les tendances à suivre, nous vous conseillons pour choisir au mieux la couleur de vos murs de commencer par peindre quelques bandes des couleurs de votre choix et les apposer aux murs quelques temps afin de voir laquelle retient le plus l’attention de tous sur le long terme.<br>Notons tout de même qu’au niveau tendance les couleurs neutres sont actuellement très utilisées pour peindre les murs du salon : blanc et beige mais aussi ocre, taupe, gris clair, gris perle… De nombreuses palettes de couleurs sont à votre disposition pour garder la peinture de votre salon relativement neutre mais éviter les couleurs fades.<br>Pour les inconditionnels des peintures aux couleurs vives telles que le rouge, le jaune ou le violet mieux vaut peindre les murs du salon dans des tons neutres assortis et de se limiter à peindre un mur ou deux dans une couleur vive de votre choix pour ne pas à avoir à regretter vos travaux de peinture par la suite !</p>
+                <h3>Comment et pourquoi repeindre les murs de la cuisine pour la garder en bon état ?</h3>
+                <p>La peinture de votre cuisine est soumise à de rudes épreuves tout au long de sa vie : éclaboussures de graisses chaudes, traces de doigts enfantins douteusement propres, humidité de l’évier, chaleur du four…<br>Alors pour conserver la peinture de votre cuisine dans un état qui reste agréable et facile à entretenir, l’idéal est de peindre régulièrement les murs après les avoir lessiver pour enlever toutes les éventuelles tâches de graisse, obstacles à la bonne adhérence et à la bonne tenue de la peinture de vos murs dans le temps.<br>Maintenant que vous êtes fins prêts à effectuer vos travaux de peinture, il s’agit d’effectuer votre choix de couleurs de peinture pour la cuisine, l’idéal sera bien sûr de prendre en compte son aménagement et, dans le cadre d’une cuisine américaine, la couleur des murs de votre salon. Libre à vous soit de choisir une couleur opposée à vos meubles de cuisine dans le cercle chromatique (une cuisine équipée en taupe peinte avec une couleur prune) soit de choisir une couleur de peinture pour votre cuisine qui soit en accord complémentaire avec la couleur de vos meubles ou de la peinture de votre salon (choisir une couleur aubergine pour un salon peint en beige ou gris par exemple).</p>
+                <h3>Comment peindre une chambre de bébé ou une chambre d’ado ?</h3>
+                <p>La peinture de la chambre de votre bébé tout comme la chambre de votre adolescent doit être choisie afin de créer une atmosphère calme et sereine, propice au repos.<br>Pour la peinture de la chambre de bébé, les nuances doivent être douces et poudrées afin de créer une atmosphère douce et rassurante pour votre bébé. Cependant n’hésitez pas à sortir de l’éternelle peinture rose pour les petites filles et bleue pour les petits garçons en choisissant parmi les couleurs tendances en peinture du moment pour les chambres de bébé que sont le lilas et le vert.<br>Quant à la peinture de la chambre de votre adolescent, le principe est le même ... à quelques nuances près ! La couleur des murs doit être apaisante et inciter au repos tout en n’oubliant pas que votre grand enfant y travaille beaucoup, de ce fait que l’atmosphère doit être aussi studieuse et inciter au travail. En revanche, les adolescents aiment tout particulièrement les couleurs vives ce qui, bien évidemment, se contredit avec les principes cités précédemment.<br>Des compromis existent afin d’obtenir des trêves au sein de la maisonnée et ne pas avoir à regretter le temps passé sur vos travaux de peinture ! Non on ne choisit pas une peinture pour une chambre d’adolescent en noir ou en rose fuchsia, par contre on peut choisir une couleur de peinture relativement sombre telle que du bleu foncé ou du violet qui sera éclairée par ses propres touches de décoration très viriles pour les jeunes hommes ou très girly pour les demoiselles. Les gammes de peintures proposées étant d’une variété incroyable, vous aurez de quoi peindre les murs de la chambre de votre adolescent sans aucun souci.</p>
+                <h2 class="mt-4">Confiez vos besoins de peinture intérieure sur Alloservice !</h2>
+                <h3>Faites le choix d’un peintre à domicile sur Alloservice et économiser votre argent, votre temps et votre énergie !</h3>
+                <p>Comme vous l’avez compris, les travaux de peinture demandent d’avoir du temps à y consacrer : entre le choix des peintures pour votre salon ou la chambre de votre futur bébé, l’achat du matériel nécessaire (rouleaux, pinceaux, scotch de masquage…), la préparation du chantier qui passe par une pièce si possible vide et des plinthes et portes couvertes de scotch de masquage puis la réparation éventuelle des murs ou du plafond à peindre et enfin les travaux de sous-couche puis de pose de la peinture, effectuer soi-même ce type de travaux requière patience, temps et beaucoup d’énergie.<br><strong>Si vous n’avez pas envie ou pas de temps à consacrer à ce type de travaux mais que votre cuisine ou votre salle de bains réclament des travaux de peinture en urgence, vous devez vous adresser à un peintre professionnel ou ... à un peintre expérimenté de YoubiJob !</strong><br>Pour créer un projet sur Alloservice et vous adresser à un Jobeur, il vous suffira de décrire grâce à notre formulaire en ligne les travaux de peinture précis que vous avez à effectuer et d’attendre que nos Jobeurs peintres à domicile vous contactent et vous communiquent leur prix pour la peinture. Libre à vous de faire votre choix parmi nos nombreux Jobeurs entre leurs compétences, leurs profils et bien sûr leurs tarifs pour la peinture de vos murs ou de votre plafond... Car bien sûr, outre leurs disponibilités et leurs compétences, vous obtiendrez des devis clairs et précis sur le prix des travaux de peinture que vous aurez à effectuer chez vous. Que vous souhaitiez seulement peindre ou repeindre un mur, peindre une pièce ou refaire toute la peinture intérieure de votre maison !
+                    <br>Alors n’hésitez plus, nos Jobeurs sont prêts à venir repeindre vos murs et leurs clics seront aussi rapides et affutés que leurs pinceaux !</p>
+                <h3>Repeindre ou peindre un mur et les plafonds de sa maison pour voir la vie tout en couleurs</h3>
+                <p>
+                    <strong>Grâce aux services de travaux de peinture à domicile proposés par Alloservice, faire effectuer un chantier de peinture pour rénover la peinture intérieure de sa maison devient simple et économique. Regardez leurs tarifs pour la peinture et comparez…</strong><br>Il serait alors bien dommage alors de continuer à supporter les couleurs rouges et jaunes des années 2000 de votre salon ou une peinture de cuisine défraichie alors qu’il est si simple de redonner vie et couleurs tendances à votre maison rien qu’en faisant peindre une pièce avec fraicheur !<br><strong>Choisissez tranquillement les couleurs de peinture que vous souhaitez voir pour égayer votre salon ou pour donner une nouvelle vie à votre salle de bains et nos Jobeurs feront le reste.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

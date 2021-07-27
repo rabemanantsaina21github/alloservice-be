@@ -1,0 +1,21 @@
+alloservice_blog:
+    resource: "@AlloserviceBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
+alloservice_admin:
+    resource: "@AlloserviceAdminBundle/Resources/config/routing.yml"
+    prefix:   /backoff
+
+alloservice_user:
+    resource: "@AlloserviceUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+alloservice_site:
+    resource: "@AlloserviceSiteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+# dodson 20190629
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.yaml"

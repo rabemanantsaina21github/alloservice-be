@@ -1,0 +1,64 @@
+{% extends "header.html.twig" %}
+
+{% block title %} Envoyer une demande - {{ parent() }} {% endblock %}
+
+{% block body %}
+<main role="main">
+    <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+                    <li title="alloservice">
+                        <a class="text-primary font-weight-normal" href="{{ path('alloservice_site_centre_d_aide') }}">alloservice</a>
+                    </li>
+                    <li title="Envoyer une demande">
+                        Envoyer une demande
+                    </li>
+                </ol>
+                <form action=""method="GET"  class="search">
+                    <input aria-label="Recherche" id="query" name="query" placeholder="Recherche" type="search">
+                </form>
+            </nav>
+            <h1>
+                <span>Formulaire de contact<span></span>
+                </span>
+            </h1>
+            <p>Votre satisfaction est notre priorité. Nos agents vous contacteront par email ou téléphone dans les plus brefs délais, afin de vous apporter leur aide.</p>
+            <p>Merci donc de compléter le formulaire ci-dessous.</p>
+            <p></p>
+                <!--<div class="notification notification-error notification-inline" id="upload-error" style="display: none;">
+                    <span data-upload-error-message=""></span>
+                </div>-->
+            <div>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+                <div class="form-field string required request_anonymous_requester_email">
+                    {{ form_label(form.email) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email) }}
+                </div>
+                <div class="form-field text  required  request_description">
+                    {{ form_label(form.description) }}
+                    {{ form_errors(form.description) }}
+                    {{ form_widget(form.description) }}
+                    <p id="request_description_hint">Veuillez saisir les détails de votre demande. Un membre de notre équipe d’assistance répondra dans les plus brefs délais.</p>
+                </div>
+                <div class="form-field string  required  request_custom_fields_45215889">
+                    {{ form_label(form.categories) }}
+                    {{ form_errors(form.categories) }}
+                    {{ form_widget(form.categories) }} 
+                </div>
+                <div class="form-field" style="margin-bottom: 28px">
+                    <div class="upload-dropzone" id="upload-dropzone">
+                        Pièces jointes
+                    </div>  
+                </div>
+                <div>
+                    <input type="submit" value="Envoyer" name="commit">
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</main>
+{% endblock %}

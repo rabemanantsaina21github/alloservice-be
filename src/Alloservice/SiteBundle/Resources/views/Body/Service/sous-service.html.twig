@@ -1,0 +1,571 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Service {{service.title}} - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="py-2 border-bottom d-flex align-items-center justify-content-center">
+        <div class="promises-items-wrapper d-none d-lg-block">
+            <div class="promises-items">
+                <div class="ypj-fluid-container d-flex justify-content-between">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text1}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle1}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text2}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle2}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text3}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle3}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text4}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle4}}
+                        {%endif%}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--CAROUSEL-->
+        <div class="carousel slide d-block d-lg-none u-width-100 mx-2" data-interval="3000" data-ride="carousel" id="promisesCaroussel">
+            <div class="carousel-inner caroussel-promises">
+                <div class="carousel-item active">
+                    <a class="ps-title text-dark remove-link-style cursor-pointe d-flex align-items-center justify-content-center my-2 pl-1 font-size-3r" data-content="{%if section4 is not null%}{{section4.text1}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle1}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text2}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle2}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text3}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle3}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text4}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle4}}
+                        {%endif%}
+                    </a>
+                </div>
+            </div>
+            <a class="u-button-icon carousel-control-prev" data-slide="prev" href="#promisesCaroussel">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="u-button-icon carousel-control-next" data-slide="next" href="#promisesCaroussel">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+        <!--CAROUSEL-->
+    </div>    
+    <div class="ypj-fluid-container">
+        <div class="my-2">
+            <ol class="breadcrumb mb-3 pl-0" itemscope="" itemtype="">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}" itemprop="item">
+                        <span itemprop="name">Accueil</span>
+                    </a><meta content="1" itemprop="position"></li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service_list')}}" itemprop="item">
+                        <span itemprop="name">Service à domicile</span>
+                    </a><meta content="2" itemprop="position"></li>
+                {%if service.service is not null%}
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service',{'slug': service.service.slug})}}" itemprop="item">
+                        <span itemprop="name">{{service.service.title}}</span>
+                    </a><meta content="3" itemprop="position"></li>
+                {%else%}
+                    {%if service.supService.service is not null%}
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service',{'slug': service.supService.service.slug})}}" itemprop="item">
+                        <span itemprop="name">{{service.supService.service.title}}</span>
+                    </a><meta content="3" itemprop="position"></li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_sousservice',{'slug': service.supService.slug,'s_slug': service.supService.service.slug})}}" itemprop="item">
+                        <span itemprop="name">{{service.supService.title}}</span>
+                    </a><meta content="3" itemprop="position"></li>
+                    {%else%}
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service',{'slug': service.supService.slug})}}" itemprop="item">
+                        <span itemprop="name">{{service.supService.title}}</span>
+                    </a><meta content="3" itemprop="position"></li>
+                    {%endif%}
+                {%endif%}
+                <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">{{service.title}}</span>
+                    </a><meta content="4" itemprop="position"></li>
+            </ol>
+        </div>
+        <div class="mt-3">
+            <div class="content-intro">
+                <div class="d-flex align-items-bottom flex-wrap">
+                    <h1 class="mr-3">{{service.title}}</h1>
+                </div>
+                {%if service.supService is not null%}
+                <div data-component="toggle" data-handle-outside="false" data-toggle-classname="show-more-intro-wrapper--full">
+                    <div class="show-more-intro-wrapper" data-toggelable="">
+                        <p class="font-size-2 font-size-sm-3 text-muted">{{service.description}}</p>
+                        <button class="btn btn-show-more btn-blue-only-text font-size-2 font-size-sm-3" data-clickable="">Lire plus...</button>
+                    </div>
+                </div>
+                {%endif%}
+            </div>
+        </div>
+        {%if service.supService is not null%}
+        <div class="mt-3 mb-5">
+            <a class="btn btn-green btn-lg btn-break btn-service-cta" href="{{path('alloservice_site_create_job',{'id': service.id})}}">{{service.button1}}</a>
+        </div>
+        {%endif%}
+        <div>
+            {%if service.supService is null%}
+            <h2 class="mb-3">{{service.serviceType}}</h2>
+            <div class="service-items d-flex flex-wrap"></div>
+            {%endif%}
+            {%for entity in service.subServices%}
+            <a class="btn-service-item mr-2 mb-2" href="{%if is_granted('IS_AUTHENTICATED_FULLY')%}{{path('alloservice_site_create_job',{'id': entity.id})}}{%else%}{{path('alloservice_site_sousservice2',{'slug': entity.slug, 's_slug1': entity.supService.service.slug, 's_slug2': entity.supService.slug})}}{%endif%}">{{entity.title}}</a>
+            {%endfor%}
+        </div>
+        <div class="my-5">
+            <h2>{{service.ourJobers}}</h2>
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Tarek" src="{{ asset('images/medium_Photo.jfif') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Tarek</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(920)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>1182 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Ramdane</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"trés bon jobeur"</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Guillaume" src="{{ asset('images/medium_27fbdec7.jfif') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Guillaume</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(304)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>313 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Corinne</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Excellent travail."</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Jean" src="{{ asset('images/medium_6c19d304.jfif') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Jean</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(309)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>352 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Jean-Yves</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Je recommande fortement le travail de Jean. 
+                            Merci de votre implication, sérieux et rigueur. 
+                            "</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Adel" src="{{ asset('images/medium_da449a24.jfif') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Adel</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(354)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>381 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">
+                                Nadia</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Adel a été ponctuel, précis et soigné dans don travail 
+                            Toujours souriant, professionnel et effi..."</p>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-medium d-block" href="">{{service.button3}} (38536)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <h2>{{service.lastServicePub}}</h2>
+            <div class="row mt-3 d-flex align-items-stretch flex-wrap">
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Percer mur porteur pour tableau, montage meuble, manut [...] à Paris-19E-Arrondissement (75019)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Nous avons une perceuse adaptée aux travaux à réaliser. La
+                                        Manutention porte sur des meubles et il y a un ascenseur.</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    2 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>34,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Poser une porte  à Paris (75002)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Il s’agit de poser une porte sur le meuble de rangement Leroy Merlin. Le meuble est monté mais je n’arrive pas à fixe...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    1 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>17,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Monter une petite cloison et poser des portes de placa [...] à Paris (75017)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Bonjour,
+                                         Je souhaite faire un placard dans le coin d'une pièce. Pour cela il faut construire le 3eme coté du placar...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    8 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>112,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Monter une petite cloison et poser des portes de placa [...] à Paris (75017)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Bonjour,
+                                        Je souhaite faire un placard dans le coin d'une pièce. Pour cela il faut construire le 3eme coté du placard...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    8 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>112,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-medium d-block" href="">{{service.button2}} (43308)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <div class="mt-5">
+                <h2 class="mt-0 mb-1">{%if section6 is not null%} {{section6.title}} {%endif%}</h2>
+                <div class="row mt-4">
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                        {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle1}}" src="{{asset(section6.img1)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle1}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text1}} {%endif%}
+                        </p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                        {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle2}}" src="{{asset(section6.img2)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle2}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text2}} {%endif%}
+                        </p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                        {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle3}}" src="{{asset(section6.img3)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle3}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text3}} {%endif%}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="my-5">
+            <h2>{{service.jobCity}}</h2>
+            <div class="d-flex flex-row flex-wrap">
+                {%for city in cities%}
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="{{service.title}} à {{city.name}}" src="{{ asset(city.getWebPath()) }}"></div>
+                            <div class="shadow"><img alt="{{service.title}} à {{city.name}}" src="{{ asset(city.getWebPath()) }}"></div>
+                        </div>
+                        <h3 class="font-size-13px mt-3">
+                            <span class="text-muted font-weight-medium">{{service.title}} à</span>
+                            <p class="text-dark font-weight-medium mt-1 mb-0 font-size-4">{{city.name}}</p>
+                        </h3>
+                    </a>
+                </div>
+                {%endfor%}
+            </div> 
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="mb-4">
+            <h2>{{service.jobBlog}}</h2>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <a class="frosted-glass-hover text-dark text-decoration-none" href="">
+                        <div class="frosted-glass-shadow mb-3">
+                            <div class="picture rounded blog-picture"><img alt="Comment éclairer ma terrasse ou balcon ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_4ec9d3f4.png') }}" width="450"></div>
+                            <div class="shadow"><img alt="Comment éclairer ma terrasse ou balcon ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_4ec9d3f4.png') }}" width="450"></div>
+                        </div>
+                        <h3 class="font-size-4 mb-0">
+                            <span class="font-weight-normal mt-2">
+                                <strong>Comment éclairer ma terrasse ou balcon ?</strong>
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="clearfix mb-2 mt-2">
+                        <div class="float-left text-muted font-size-2">
+                            <span>21 janvier 2019</span>
+                        </div>
+                        <div class="float-right font-size-2">
+                            <span>
+                                <a class="text-muted" href="/mon-exterieur">Mon extérieur</a>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4 font-size-2">Bien
+                         aménagé, le balcon ou la terrasse peut rapidement se transformer en un 
+                        lieu agréable où se ressourcer et donner de la perspective à 
+                        l’appartement. Toutes les astuces pour mieux éclairer votre balcon ou 
+                        votre terrasse.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="frosted-glass-hover text-dark text-decoration-none" href="">
+                        <div class="frosted-glass-shadow mb-3">
+                            <div class="picture rounded blog-picture"><img alt="Comment trouver un bricoleur ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_75c54ce5.jfif') }}" width="450"></div>
+                            <div class="shadow"><img alt="Comment trouver un bricoleur ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_75c54ce5.jfif') }}" width="450"></div>
+                        </div>
+                        <h3 class="font-size-4 mb-0">
+                            <span class="font-weight-normal mt-2">
+                                <strong>Comment trouver un bricoleur ?</strong>
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="clearfix mb-2 mt-2">
+                        <div class="float-left text-muted font-size-2">
+                            <span>
+                                3 janvier 2019</span>
+                        </div>
+                        <div class="float-right font-size-2">
+                            <span>
+                                <a class="text-muted" href="/ma-maison">Ma maison</a>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4 font-size-2">Une
+                         panne de courant ? Une fenêtre qui ne se ferme plus ? Un revêtement à 
+                        poser ? Vous avez bien besoin de l’aide d’un bricoleur mais ne savez où 
+                        chercher ? Toutes les astuces pour trouver un bricoleur près de chez 
+                        vous.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="frosted-glass-hover text-dark text-decoration-none" href="">
+                        <div class="frosted-glass-shadow mb-3">
+                            <div class="picture rounded blog-picture"><img alt="Comment réussir ses illuminations extérieures pour les fêtes ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_65d78716.png') }}" width="450"></div>
+                            <div class="shadow"><img alt="Comment réussir ses illuminations extérieures pour les fêtes ?" class="" height="300" itemprop="image" src="{{ asset('images/thumbnail_65d78716.png') }}" width="450"></div>
+                        </div>
+                        <h3 class="font-size-4 mb-0">
+                            <span class="font-weight-normal mt-2">
+                                <strong>Comment réussir ses illuminations extérieures pour les fêtes ?</strong>
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="clearfix mb-2 mt-2">
+                        <div class="float-left text-muted font-size-2">
+                            <span>
+                                9 décembre 2018</span>
+                        </div>
+                        <div class="float-right font-size-2">
+                            <span>
+                                <a class="text-muted" href="">Mon extérieur</a>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4 font-size-2">Les
+                         décorations extérieures de la maison pour les fêtes de Noël sont de 
+                        plus en plus prisées. Dans le jardin ou sur les rebords de fenêtres, 
+                        laissez libre cours à votre fantaisie pour réussir vos illuminations 
+                        extérieures !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

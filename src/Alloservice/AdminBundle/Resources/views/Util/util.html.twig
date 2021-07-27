@@ -1,0 +1,61 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Comptes Administrateurs - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">Comptes Administrateurs</h1>
+		<div class="admin-buttons">
+			<a href="{{path('alloservice_admin_article_add')}}" class="btn btn-yellow"><i class="fa fa-plus"></i> Ajouter</a>
+		</div>
+
+		<form method="POST">
+			<div class="admin-section-content">
+				<table class="tab">
+					<thead>
+						<th width="50px"></th>
+						<th>#ID</th>
+						<th>Mr/Mme</th>
+						<th>Nom et prénom(s)</th>
+						<th>E-mail</th>
+						<th>Pseudo</th>
+						<th>Date d'inscription</th>
+						<th>Etat</th>
+						<th width="120px">Options</th>
+					</thead>
+					<tbody>
+					{%for entity in tab%}
+						<tr>
+							<td><input type="checkbox" name="del[]" value="{{entity.id}}"/></td>
+							<td>{{entity.id}}</td>
+							<td>{{entity.genre}}</td>
+							<td>{{entity.name ~' '~ entity.lastname}}</td>
+							<td>{{entity.email}}</td>
+							<td>{{entity.username}}</td>
+							<td>{{entity.registrationDate | date('d/m/Y à H\\h:i')}}</td>
+							<td>
+								{%if entity.actived%}
+								activé
+								{%else%}
+								désactivé
+								{%endif%}
+							</td>
+							<td>
+								<a href="{{path('alloservice_admin_article_edit',{'id': entity.id})}}"><i class="fa fa-edit"></i> Modifier</a>
+							</td>
+						</tr>
+					{%endfor%}
+					</tbody>
+				</table>
+				<div class="admin-buttons">
+					<button type="submit" class="btn btn-yellow" onclick="return confirm('Voulez-vous supprimer la sélection ?');"><i class="fa fa-trash"></i> Supprimer la sélection</button>
+				</div>
+			</div>
+		</form>
+		<div class="navigation">
+		    {{ knp_pagination_render(tab) }}
+		</div>
+	</div>
+</section>
+{% endblock %}

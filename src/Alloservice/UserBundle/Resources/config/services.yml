@@ -1,0 +1,4 @@
+services:
+#    alloservice_user.example:
+#        class: Alloservice\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

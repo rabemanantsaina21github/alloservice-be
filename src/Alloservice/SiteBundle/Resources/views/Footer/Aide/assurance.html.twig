@@ -1,0 +1,58 @@
+{% extends "header.html.twig" %}
+
+{% block title %}
+    Assurance -
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <main role="main">
+        <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+                    <li title="Alloservice">
+                        <a class="text-primary font-weight-bold" href="{{ path('alloservice_site_centre_d_aide') }}">Alloservice</a>
+                    </li>
+                    <li title="Assurance">
+                        Assurance
+                    </li>
+                </ol>
+                <form accept-charset="UTF-8" action="/hc/fr/search" class="search" data-search="" method="get" role="search"><input name="utf8" type="hidden" value="✓"><input aria-label="Recherche" id="query" name="query" placeholder="Recherche" type="search"></form>
+            </nav>
+            <div class="category-container">
+                <div class="category-content">
+                    <header class="page-header">
+                        <h1>Assurance</h1>
+                    </header>
+                    <div class="section-tree">
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/360000148959-Fonctionnement-de-l-assurance">Fonctionnement de l'assurance</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003807639-Que-couvre-l-assurance-">Que couvre l'assurance ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003807659-Qui-est-couvert-">Qui est couvert ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/360000150520-Sinistre">Sinistre</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412485-Je-souhaite-faire-une-r%C3%A9clamation-d%C3%A9clarer-un-sinistre-">Je souhaite faire une réclamation / déclarer un sinistre
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

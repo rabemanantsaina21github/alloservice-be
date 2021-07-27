@@ -1,0 +1,27 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Modifier une catégorie - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">Modifier une catégorie</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.name)}}
+					{{form_widget(form.name)}}
+					{{form_errors(form.name)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}

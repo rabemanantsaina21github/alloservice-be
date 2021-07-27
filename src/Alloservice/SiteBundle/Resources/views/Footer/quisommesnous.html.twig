@@ -1,0 +1,75 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} A propos de l'{{ parent() }} {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="bg-cover bg-jobbing">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <div class="index-public-hero">
+            <div class="container text-center">
+                <h1 class="hero-title">Qui sommes-nous ?</h1>
+            </div>
+        </div>
+    </div>
+    <!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="bg-gray-200">
+        <div class="container">
+            <ul class="breadcrumb mb-0 pl-0">
+                <li class="breadcrumb-item">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+                </li>
+                <li class="breadcrumb-item active">Qui sommes-nous ?</li>
+            </ul>
+        </div>
+    </div>
+    <div class="py-5 bg-white">
+        <div class="container">
+            <h2 class="mb-3 text-center">Alloservice en quelques mots :</h2>
+            <ul class="font-size-3">
+                <li>Nous sommes un site dédié aux services à domicile</li>
+                <li>Nous sommes présent dans 3 pays, la France, la Suisse et la Belgique</li>
+                <li>Nous mettons en relation les demandeurs de service avec des prestataires proches de chez eux</li>
+                <li>Nous permettons à certains de gagner du temps et de se simplifier la vie et à d’autres de développer une activité de service pour réaliser un complément de revenu ou un revenu complet</li>
+            </ul>
+        </div>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <h2 class="mb-3 text-center">Comment Alloservice est né ?</h2>
+            <p class="font-size-3">Alloservice est né d’un besoin identifié par le fondateur, Bertrand, alors qu’il souhaitait organiser son anniversaire.</p>
+            <p></p>
+            <blockquote class="blockquote-sign font-size-3 text-justify">
+                <span>En voulant organiser mon anniversaire je me suis rendu compte qu’il n’y avait pas de site dédié qui me permettait d’identifier une personne compétente et à un prix accessible. Le temps me manquait terriblement et ne me permettait pas de traiter ma liste de chose à faire, pire que ça je ne voyais plus mes amis à force de leur dire : “Désolé, je n’ai pas le temps“. En regardant de plus près, je me suis rendu compte que je n’étais évidemment pas le seul dans cette situation. Pas besoin de réfléchir plus longtemps entre le manque de temps et de savoir-faire, il faut créer un site dédié aux services à domicile. Alloservice est né !</span>
+            </blockquote>
+            <p></p>
+            <h2 class="mb-3 text-center">Notre vocation</h2>
+            <p class="font-size-3 text-justify">Nous nous sommes donné comme mission d’améliorer le quotidien des gens, en rendant le service à domicile accessible par l’usage et par le prix. Nous permettons à des gens de se simplifier la vie et à d’autres de changer leur réalité économique pour la rendre plus confortable.</p>
+            <div class="font-size-3">Alloservice vous propose un service simple et économique :</div>
+            <ul class="font-size-3">
+                <li>Vous postez votre demande de service en quelques clics</li>
+                <li>vous recevez des offres des Jobeurs proches de chez vous en quelques minutes</li>
+                <li>Vous bénéficiez d’un service clés en main</li>
+            </ul>
+            <p class="font-size-3 text-justify">Tous les profils sont vérifiés et obtiennent des évaluations, dans 98 % des cas les membres sont satisfaits mais si ce n’est pas le cas, vous pouvez changer de prestataire en quelques clics et gratuitement.</p>
+            <p class="font-size-3 text-justify">Alloservice vous garantit un service en toute confiance et sécurité. Les services sont assurés par AXA automatiquement et sans coûts supplémentaires.
+                <a href="">En savoir plus.</a>
+            </p>
+            <h2 class="mb-3 text-center">Alloservice ? Oui, mais pour qui ?</h2>
+            <p class="font-size-3">Il y a 2 types de profil qui se rencontrent sur Alloservice, 2 profils qui ont des besoins différents mais néanmoins complémentaires.</p>
+            <p class="font-size-3">=&gt; Vous avez peu de temps à consacrer à vos besoins du quotidien, vous avez eu un contretemps ou vous souhaitez tout simplement ne plus effectuer certaines tâches du quotidien ? Pas de panique, c’est là que Alloservice intervient. Alloservice vous met en relation avec des prestataires pour vous aider.</p>
+            <p class="mb-5 text-center text-justify">
+                <a class="btn btn-secondary btn-break" href="{{path('alloservice_site_service_list')}}">Demander un service</a>
+            </p>
+            <p class="font-size-3 text-justify">=&gt; Vous voulez réaliser un complément de revenu voir un revenu complet en développant votre activité de service. Alloservice vous permet de créer votre profil, de le qualifier et de rencontrer des clients autour de chez vous. Alloservice étant positionné sur les services du domicile et le petit bricolage, l’activité et les prix pratiqués seront adaptés aux particuliers travailleurs ou aux entreprises unipersonnelles (auto-entrepreneur, micro entreprise).</p>
+            <p class="mb-5 text-center">
+                <a class="btn btn-info btn-break" href="{{path('alloservice_site_devenir-jobeur')}}">Devenir jobeur</a>
+            </p>
+            <h2 class="mb-3 text-center">Pourquoi nous ?</h2>
+            <p class="font-size-3 text-justify">En choisissant Alloservice, vous choisissez la sérénité. Nous vous accompagnons de l’expression de votre besoin à la réalisation de celui-ci en vous permettant de rencontrer des Jobeurs (prestataires de service) dans un cade légal et sécurisé.</p>
+            <p class="font-size-3 text-justify">Alloservice c’est une seule plateforme pour tous vos besoins. Les 8 catégories disponibles sur notre site vous permettent toute l’année de régler vos tracas et de faire baisser votre charge mentale en les confiant aux Jobeurs qui seront ravis de vous rendre service.</p>
+            <p class="font-size-3 text-justify">Au plaisir de vous voir sur notre plateforme.</p>
+            <p class="font-size-3 text-justify">L’équipe Alloservice.</p>
+        </div>
+    </div>
+{% endblock %}

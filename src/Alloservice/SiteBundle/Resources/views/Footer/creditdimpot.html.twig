@@ -1,0 +1,109 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} CESU - {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="bg-cover bg-tax-credit">
+    <!--navbar-->
+    {% include "inc/nav.html.twig" %}
+    <div class="index-public-hero">
+        <div class="container text-center">
+            <h1 class="hero-title">Comment fonctionne le CESU sur Alloservice ?</h1>
+            <h2 class="hero-subtitle">Alloservice un site dédié aux services à domicile vous permet de recruter, payer et déclarer vos prestataires de service en 1 clic</h2>
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+
+<div class="bg-gray-200">
+    <div class="container">
+        <ul class="breadcrumb mb-0 pl-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb-item active">Crédit d’impôts</li>
+        </ul>
+    </div>
+</div>
+<div class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center">
+            <div class="pb-5">
+                <svg aria-hidden="true" aria-label="50% réduction ou crédit d&#39;impôts" class="d-inline-block align-middle" height="128" role="img" version="1.1" viewbox="0 0 200 200" width="128">
+                    <g fill-rule="evenodd" fill="none">
+                        <circle cx="100" cy="100" fill="#2b7de8" r="100"></circle>
+                        <path d="M29.85 62.54h17.28v8H29.85v-8zm52.4-19.07c0 .68-.1 1.3-.3 1.86-.22.55-.56 1.04-1.02 1.45-.45.42-1.06.74-1.8.96-.75.23-1.65.34-2.7.34H65.3l-1.3 7.7c.86-.14 1.7-.25 2.52-.32.8-.08 1.6-.12 2.37-.12 2.44 0 4.6.38 6.48 1.12 1.88.75 3.46 1.77 4.74 3.06 1.28 1.3 2.24 2.8 2.9 4.54.64 1.74.97 3.6.97 5.6 0 2.48-.45 4.76-1.34 6.82-.88 2.06-2.12 3.83-3.7 5.33-1.57 1.5-3.46 2.66-5.64 3.48-2.2.82-4.58 1.23-7.2 1.23-1.5 0-2.95-.15-4.32-.47-1.38-.32-2.67-.75-3.87-1.3-1.2-.54-2.32-1.17-3.35-1.88-1.02-.72-1.95-1.48-2.78-2.3l3.07-4.1c.32-.4.7-.74 1.12-.96.42-.24.88-.35 1.37-.35.64 0 1.24.18 1.8.53l1.86 1.15c.67.42 1.46.8 2.35 1.14.9.34 2 .5 3.33.5s2.46-.2 3.4-.65c.94-.43 1.7-1.03 2.3-1.8.58-.75 1-1.63 1.27-2.64.27-1.02.4-2.1.4-3.25 0-2.26-.64-4-1.92-5.17-1.28-1.18-3.1-1.78-5.44-1.78-2.08 0-4.13.4-6.13 1.2l-6.15-1.68 3.97-23.32h23.86v4.1zm40.04 19.2c0 4.08-.45 7.6-1.33 10.6-.87 2.98-2.08 5.46-3.63 7.42-1.54 1.95-3.38 3.4-5.5 4.37-2.12.96-4.42 1.44-6.9 1.44-2.47 0-4.76-.47-6.86-1.43-2.1-.96-3.92-2.42-5.46-4.38-1.53-1.97-2.73-4.45-3.6-7.44-.86-2.98-1.3-6.5-1.3-10.6 0-4.06.44-7.6 1.3-10.58.87-3 2.07-5.46 3.6-7.42 1.54-1.97 3.36-3.42 5.46-4.37 2.1-.96 4.4-1.44 6.86-1.44 2.48 0 4.78.48 6.9 1.43 2.12.94 3.96 2.4 5.5 4.36 1.55 1.96 2.76 4.43 3.63 7.42.88 3 1.32 6.52 1.32 10.6zm-10.25 0c0-3.22-.2-5.86-.6-7.92-.42-2.06-.96-3.67-1.63-4.85-.67-1.17-1.43-1.97-2.3-2.4-.84-.45-1.7-.67-2.58-.67-.87 0-1.73.22-2.57.66-.85.43-1.6 1.23-2.24 2.4-.65 1.18-1.18 2.8-1.57 4.85-.4 2.06-.6 4.7-.6 7.92 0 3.24.2 5.9.6 7.94.4 2.06.92 3.67 1.57 4.86.65 1.18 1.4 2 2.24 2.43.84.43 1.7.64 2.57.64.88 0 1.74-.2 2.6-.65.85-.45 1.6-1.26 2.28-2.44.67-1.2 1.2-2.8 1.62-4.85.4-2.04.6-4.7.6-7.93zm36.32-9.37c0 1.38-.26 2.65-.76 3.8-.5 1.14-1.16 2.12-2 2.94-.82.83-1.8 1.46-2.9 1.9-1.1.46-2.24.7-3.43.7-1.32 0-2.53-.24-3.63-.7-1.1-.44-2.05-1.07-2.86-1.9-.8-.82-1.44-1.8-1.9-2.95-.44-1.15-.66-2.42-.66-3.8 0-1.44.22-2.75.67-3.92.44-1.17 1.07-2.17 1.88-3 .8-.83 1.76-1.48 2.86-1.94 1.1-.46 2.3-.7 3.63-.7 1.3 0 2.53.24 3.65.7 1.12.46 2.08 1.1 2.9 1.94.8.83 1.42 1.83 1.87 3 .44 1.17.67 2.48.67 3.92zm-6.2 0c0-.9-.07-1.62-.2-2.2-.16-.58-.36-1.05-.62-1.4-.26-.34-.57-.58-.93-.72-.35-.14-.74-.2-1.15-.2-.42 0-.8.06-1.15.2-.34.14-.64.38-.88.73s-.44.82-.57 1.4c-.14.58-.2 1.3-.2 2.2 0 .83.06 1.52.2 2.08.13.55.33 1 .57 1.32.24.33.54.57.88.7.35.14.73.2 1.15.2.4 0 .8-.06 1.15-.2.36-.13.67-.37.93-.7.26-.33.46-.77.6-1.32.15-.56.23-1.25.23-2.08zm18.1-8c.26-.28.58-.55.97-.8.38-.26.9-.38 1.58-.38h5.88l-28.55 36.74c-.26.33-.58.6-.97.8-.4.23-.87.34-1.42.34h-6.03l28.54-36.7zm9.88 27.8c0 1.4-.25 2.66-.75 3.82-.5 1.15-1.17 2.14-2 2.96-.83.82-1.8 1.46-2.9 1.9-1.1.46-2.25.7-3.45.7-1.3 0-2.52-.24-3.62-.7-1.1-.44-2.06-1.08-2.86-1.9-.8-.82-1.44-1.8-1.9-2.96-.44-1.16-.66-2.43-.66-3.8 0-1.45.23-2.75.68-3.93.45-1.18 1.08-2.18 1.9-3 .8-.84 1.75-1.5 2.85-1.95 1.1-.45 2.3-.68 3.62-.68 1.32 0 2.54.23 3.66.68 1.13.46 2.1 1.1 2.9 1.94.8.82 1.43 1.82 1.88 3 .45 1.17.67 2.47.67 3.9zm-6.18 0c0-.86-.08-1.58-.22-2.16-.15-.58-.36-1.05-.62-1.4-.26-.34-.56-.58-.92-.72-.34-.14-.73-.2-1.15-.2-.4 0-.8.06-1.14.2-.34.14-.63.38-.87.73-.25.34-.44.8-.58 1.4-.13.57-.2 1.3-.2 2.16 0 .84.07 1.53.2 2.1.14.54.33.98.58 1.3.24.34.53.58.88.72.36.13.74.2 1.15.2.42 0 .8-.07 1.16-.2.37-.14.67-.38.93-.7.26-.34.47-.78.62-1.33.14-.57.22-1.26.22-2.1z" fill="#FFF"></path>
+                        <text fill="#FFF" font-family="Lato-Regular, Lato" font-size="26" font-weight="normal">
+                            <tspan x="10" y="126.5">Crédit d'impôts</tspan>
+                            <tspan x="53" y="160">en 1 clic</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <h3 class="h4">En utilisant Alloservice, vous bénéficiez de 50% de crédit d’impôts sur les activités éligibles aux Service à la personne</h3>
+        <p class="font-size-3">En France, le service à la personne est légal et même accompagné depuis 2005 via le plan Borloo, c’est un plan de développement des services à la personne (loi n°2005-841 du 26/07/2005).</p>
+        <p class="font-size-3">Le plan Borloo a permis :</p>
+        <ul class="font-size-3">
+            <li>La création de chèque emploi service (il facilite la déclaration et le paiement des prestataires de service à la personne)</li>
+            <li>L’allègement de charges sociales pour les particuliers employeurs avec un crédit d’impôts de 50 %</li>
+        </ul>
+        <p class="font-size-3">Pour faciliter l’accès au crédit d’impôts, Alloservice vous permet de déclarer vos prestataires directement depuis le site.</p>
+        <div class="row mt-4">
+            <div class="col-md-4 offset-md-4">
+                <a class="btn btn-lg btn-yellow btn-block" href="{{path('alloservice_site_service_list')}}">Demander un service</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container">
+        <h3 class="mb-3 text-center">Comment ça marche ?</h3>
+        <p class="font-size-3">Lors de la sélection de votre prestataire sur Alloservice, nous vous proposons de prendre en charge les démarches administratives liées au déclaratif de votre Jobeur. Pour cela, il vous suffit de nous communiquer quelques informations tel que votre adresse postale et votre date de naissance. Vous recevrez ensuite dans votre compte Alloservice l’attestation fiscale nécessaire pour déduire 50 % des montants payés de vos impôts sur le revenu.</p>
+        <h3 class="mb-3 text-center">A quoi correspond le montant avec les charges sociales ?</h3>
+        <p class="font-size-3">Pour pouvoir bénéficier du crédit d’impôts de moins 50% sur Alloservice, vous devrez payer au total la rémunération nette de votre Jobeur, plus les charges sociales (accidents du travail, maladie, chômage, retraite).</p>
+        <h3 class="mb-3 text-center">A quoi correspond le montant après déduction fiscale ?</h3>
+        <p class="font-size-3">Grâce aux 50% de crédit d’impôts, la moitié de la somme réglée y compris les frais de service de Alloservice vous sera reversée lors de votre prochaine déclaration d’impôt. Le montant après déduction fiscale est calculé sur la base du montant total avec charges sociales, il correspond à la moitié de cette somme. Ce gain fiscal sera déduit de vos impôts lors de votre prochaine déclaration d’impôts, ou bien vous serez directement reversé si vous ne payez pas d’impôt.</p>
+        <p class="font-size-3 text-info">Exemple : Vous avez payé 3 360 euros pour votre ménage sur une année, vous pourrez déduire ou recevoir 1 680 euros.</p>
+        <h3 class="mb-3 text-center">Quels sont les avantages du CESU ?</h3>
+        <p class="font-size-3">Nous vous proposons sur Alloservice une offre simplifiée pour déclarer de votre prestataire de service à domicile dans le cadre des activités de service à la personne. Le Cesu concerne tous les particuliers à différents moments de leur vie, pour améliorer le quotidien, pour la prise en charge de quelques heures de ménage.</p>
+        <p class="font-size-3">Le Cesu c’est aussi la garantie pour le prestataire de disposer de droits à l’assurance maladie, au chômage, à la retraite, etc.</p>
+        <div class="font-size-3">Les avantages du Cesu sont :</div>
+        <ul class="font-size-3">
+            <li>
+                <strong>La simplification administrative :</strong>
+                Il n’y a plus de cotisations sociales à calculer, de fiche de paye à établir, Alloservice s’occupe de tout.</li>
+            <li>
+                <strong>Un crédit d'impôt :</strong>
+                Alloservice vous assiste pour bénéficier du crédit d'impôt, sur les sommes versées pour payer des services à la personne effectués à domicile. Ces sommes sont déductibles, selon les types de prestation, dans la limite d’un plafond de 12 000€ par an + 1500 € par personne à charge de votre foyer (dans la limite globale de 15.000 €).<br>Il existe d'autres paliers:<ul>
+                    <li>Pour les petits travaux de jardinage la limite est de 5000 € par an de dépenses déductibles</li>
+                    <li>Pour des travaux de petit bricolage, limités à 2 heures/prestation : 500 €/an de dépenses sont déductibles.</li>
+                    <li>Les travaux de prestations d’assistance informatique et Internet sont limités à 3000 € par an de dépenses déductibles.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Vous êtes couvert en d’accident du travail de votre employé :</strong>
+                En utilisant le Cesu, vous évitez tous les travers et les risques pénaux et financiers du « travail au noir ». Le Cesu vous permet ainsi à votre employé de bénéficier de tous ses droits sociaux, notamment en termes d’accident du travail.</li>
+        </ul>
+        <h3 class="mb-3 text-center">Dans quel cadre y ai-je droit ?</h3>
+        <div class="font-size-3">Vous bénéficiez du crédit d’impôts dans le cadre des activités éligible aux services à la personne telles que :</div>
+        <ul class="font-size-3">
+            <li>Petit bricolage (2 heures par intervention)</li>
+            <li>Jardinage</li>
+            <li>Garde d’enfant</li>
+            <li>Ménage</li>
+            <li>Assistance informatique</li>
+        </ul>
+        <div class="font-size-3">Pour bénéficier du crédit d’impôts via Alloservice, il faut que le job soit réalisé :</div>
+        <ul class="font-size-3">
+            <li>En France, dans votre résidence ou celle d’un ascendant</li>
+            <li>Par un jobeur employé et payé via un job posté depuis le site Alloservice</li>
+        </ul>
+        <div class="row mt-3">
+            <div class="col-md-4 offset-md-4">
+                <a class="btn btn-lg btn-secondary btn-block" href="{{path('alloservice_site_service_list')}}">Demander un service</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

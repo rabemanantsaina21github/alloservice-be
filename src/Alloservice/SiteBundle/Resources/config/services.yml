@@ -1,0 +1,4 @@
+services:
+#    alloservice_site.example:
+#        class: Alloservice\SiteBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

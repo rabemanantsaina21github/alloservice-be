@@ -1,0 +1,1083 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Paramètres d'alerte - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    {%include "inc/nav-1.html.twig"%}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-dashboard">
+                    <li class="active">
+                        <a href="{{path('alloservice_security_parameters')}}">Paramètres d'alerte</a>
+                    </li>
+                    <li>
+                        <a href="{{path('alloservice_security_parameters_facture')}}">Paiements et attestations</a>
+                    </li>
+                    <li>
+                        <a href="{{path('alloservice_security_parameters_password')}}">Mot de passe</a>
+                    </li>
+                    <li>
+                        <a href="{{path('alloservice_security_parameters_delete')}}">Supprimer mon compte</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="card mb-3">
+                    <div class="anchor">
+                        <a name="joblist">&nbsp;</a>
+                    </div>
+                    <div class="card-header h6">Paramètres JobList</div>
+                    <div class="alert alert-info rounded-0">Sélectionnez vos compétences et indiquez votre ville pour paramétrer votre JobList</div>
+                    <form accept-charset="UTF-8" action="" class="new_profile_joblist_form" id="new_profile_joblist_form" method="post">
+                        <div class="card-body">
+                            <div class="row">
+                                <label class="col-md-4 col-form-label" for="city">Code postal où vous souhaitez réaliser des jobs</label>
+                                <div class="col-md-4">
+                                    <div data-component="auto-complete" data-reset-placeholder="Code postal ou ville">
+                                        <input autocomplete="off" class="form-control dark-placeholder" data-city="true" data-provide="typeahead" id="city" name="city" placeholder="31000 Toulouse" size="30" type="text">
+                                        <span class="text-left"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 offset-md-4">
+                                    <div class="form-check">
+                                        <label>
+                                            <input checked="checked" class="form-check-input" id="alert_setting_email_joblist" name="alert_setting[email_joblist]" type="checkbox" value="1">
+                                            <div class="form-check-label font-weight-normal">Recevoir par e-mail les jobs proches de chez-moi</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 offset-md-4">
+                                    <div class="form-check">
+                                        <label>
+                                            <input checked="checked" class="form-check-input" id="alert_setting_push_joblist" name="alert_setting[push_joblist]" type="checkbox" value="1">
+                                            <div class="form-check-label font-weight-normal">Recevoir par notification les jobs proches de chez-moi (application mobile nécessaire)</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <div data-active-class="checkbox-blue-active" data-component="button-field" data-summary-field="">
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="skills">Quelles sont vos compétences ?
+                                        </label>
+                                    </div>
+                                    <div data-close-other="true" data-component="accordion" data-no-scroll="true">
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-0">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center">
+                                                        <img alt="Icon diy" height="64" src="{{ asset('images/icon-diy-634bf610422e5e9f6e237f0feaf2083b88eaa83e87adac490b1.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Petit bricolage</p>
+                                                        <p class="text-center text-sm-left">Réaliser
+                                                             des petite réparations ou installations dans la maison.
+                                                            Installer des étagères ou des tringles à rideaux. Changer un robinet ou 
+                                                            faire un joint de silicone. Changer un luminaire. Réparer des petits 
+                                                            trous ou faire des retouches de peinture.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-0" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="diy_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="diy_description_description" name="diy_description[description]" rows="5">Je suis pas compétent en bricolage. Je ne sais pas acquis comment développer mes savoir faire Non je suis pas outillé</textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">117</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Quelles sont vos compétences en bricolage ?</li>
+                                                                <li>Comment avez-vous acquis ou développé votre savoir-faire ?</li>
+                                                                <li>Êtes-vous bien outillé ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="diy">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Petit bricolage"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-1">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon diy plumbing" height="64" src="{{ asset('images/icon-diy_plumbing-4fd6175fece4ea3c62f0e1c08949a6f7848cb7c066.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Plomberie</p>
+                                                        <p class="text-center text-sm-left">Resserrer
+                                                             des tuyaux ou changer des joints. Déboucher des canalisations ou 
+                                                            nettoyer des siphons. Remplacer des flexibles. Réparer une chasse d’eau.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-1" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="diy_plumbing_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="diy_plumbing_description_description" name="diy_plumbing_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Que savez-vous de la plomberie ?</li>
+                                                                <li>Comment êtes-vous outillé ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="diy_plumbing">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Plomberie"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-2">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon diy renovation" height="64" src="{{ asset('images/icon-diy_renovation-2061fd2b69666b5c3537867659a4bd68915c0ea6.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Rénovation</p>
+                                                        <p class="text-center text-sm-left">Faire
+                                                             des petits travaux de rénovation. Repeindre un mur ou tapisser. Poser 
+                                                            un parquet flottant. Poser du carrelage sur une petite surface.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-2" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="diy_renovation_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="diy_renovation_description_description" name="diy_renovation_description[description]" rows="5">Non! j'ai pas encore rénové une maison. Mes atouts</textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">50</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous déjà rénové une maison, un appartement ?</li>
+                                                                <li>Quels sont vos atouts quand vous proposez vos services ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="diy_renovation">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Rénovation"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-3">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon diy electricity automation" height="64" src="{{ asset('images/icon-diy_electricity_automation-5a3b234058c8ef7db9bf8fb93b26.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Électricité et domotique</p>
+                                                        <p class="text-center text-sm-left">Remplacement
+                                                             de prises et interrupteurs. Installation de lampes et luminaires. 
+                                                            Installation de box domotique. Raccordement de capteurs et d’équipements
+                                                             domotique.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-3" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="diy_electricity_automation_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="diy_electricity_automation_description_description" name="diy_electricity_automation_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Quelles sont vos compétences en électricité ?</li>
+                                                                <li>Avez-vous une expertise en domotique ?</li>
+                                                                <li>Pouvez-vous conseiller les posteurs sur leur installation ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="diy_electricity_automation">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Électricité et domotique"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-4">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon gardening" height="64" src="{{ asset('images/icon-gardening-e96a953bed979e604de7f522422ef1d99927ef5c164bc.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Entretien du jardin</p>
+                                                        <p class="text-center text-sm-left">Ramasser
+                                                             des feuilles. Tondre la pelouse. Tailler une haie. Arroser le jardin. 
+                                                            Débroussailler une zone ou retourner la terre. Jardiner et évacuer les 
+                                                            déchets vert.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-4" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="gardening_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="gardening_description_description" name="gardening_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous la main verte ?</li>
+                                                                <li>Quelle expérience avez-vous du jardinage ?</li>
+                                                                <li>Avez-vous un grand jardin à vous occuper ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label class="col-form-label" for="stuff">Matériel dont je dispose</label>
+                                                            <div data-active-class="checkbox-blue-active" data-component="button-field">
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="4"><img alt="Icon mower" height="64" src="{{ asset('images/icon-mower-a0ee4ca04097fd905fa32baa4f7acc8f16494203a5b2e2d22.svg') }}" width="64"><span class="category-name">Tondeuse</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="mower"></label>
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="4"><img alt="Icon hedge trimmer" height="64" src="{{ asset('images/icon-hedge_trimmer-67397fd27f4c87b0e66b554e9a7bd46d6612d3c9e.svg') }}" width="64"><span class="category-name">Taille-haie</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="hedge_trimmer"></label>
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="4"><img alt="Icon trimmer" height="64" src="{{ asset('images/icon-trimmer-f4b4ac1503bef36b21ff943b3f60422ae98eeb9e66af8c2.svg') }}" width="64"><span class="category-name">Coupe bordure</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="trimmer"></label>
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="4"><img alt="Icon brush cutter" height="64" src="{{ asset('images/icon-brush_cutter-75365d16b03c3e9e5de462e05f3896590f66e85893.svg') }}" width="64"><span class="category-name">Débroussailleuse</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="brush_cutter"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="gardening">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Entretien du jardin"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-5">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon gardening tree cutting" height="64" src="{{ asset('images/icon-gardening_tree_cutting-e348f24a4c7014aab375bf5a624f7be0.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Découpe d'arbre</p>
+                                                        <p class="text-center text-sm-left">Couper un arbre, le débiter et emmener les déchets selon les besoins du jobs.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-5" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="gardening_tree_cutting_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="gardening_tree_cutting_description_description" name="gardening_tree_cutting_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous déjà coupé des arbres ? Si oui dans quelles circonstances ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label class="col-form-label" for="stuff">Matériel dont je dispose</label>
+                                                            <div data-active-class="checkbox-blue-active" data-component="button-field">
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="5"><img alt="Icon chain saw" height="64" src="{{ asset('images/icon-chain_saw-2b35c06db86abed715892f273ee05e82dd776a64483ee.svg') }}" width="64"><span class="category-name">Tronçonneuse</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="chain_saw"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="gardening_tree_cutting">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Découpe d'arbre"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-6">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon removal" height="64" src="{{ asset('images/icon-removal-fa58af31e89bcc6000f2e285e591173bd512f56541ecb4b.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Déménagement</p>
+                                                        <p class="text-center text-sm-left">Porter
+                                                             des cartons. Aider à porter des meubles encombrants. Déplacer de 
+                                                            l’électroménager. Charger et décharger un camion de déménagement.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-6" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="removal_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="removal_description_description" name="removal_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Combien de personnes avez-vous aidé à déménager ?</li>
+                                                                <li>Quel type de matériel avez-vous à votre disposition ?</li>
+                                                                <li>Quelles précautions prenez vous pour ne pas abimer les meubles ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label class="col-form-label" for="stuff">Matériel dont je dispose</label>
+                                                            <div data-active-class="checkbox-blue-active" data-component="button-field">
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="6"><img alt="Icon dolly" height="64" src="{{ asset('images/icon-dolly-909fc3271f3c41f617aa725cc4a7352227c4ec294c507f3d3.svg') }}" width="64"><span class="category-name">Diable</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="dolly"></label>
+                                                                <label class="d-inline-block align-top checkbox-squared checkbox-25" data-option-name="6"><img alt="Icon truck" height="64" src="{{ asset('images/icon-truck-e682950c625a2a292802897e5b2d51ccf56019933faf60e06.svg') }}" width="64"><span class="category-name">Camion</span><input class="hide-js" data-button-field="" data-options-checkbox="" id="stuffs_stuff_" name="stuffs[stuff][]" type="checkbox" value="truck"></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="removal">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Déménagement"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-7">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon cleaning" height="64" src="{{ asset('images/icon-cleaning-475662c2ae689737fa32516b118481568d03d7d9a0a956.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Ménage</p>
+                                                        <p class="text-center text-sm-left">Nettoyer
+                                                             une habitation ou des bureaux. Laver les vitres et les miroirs. 
+                                                            Dépoussiérer les meubles. Nettoyer les sanitaires et les salles de 
+                                                            bains. Ranger la vaisselle. Vider les poubelles. Nettoyer l’intérieur 
+                                                            d’une voiture.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-7" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="cleaning_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="cleaning_description_description" name="cleaning_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Depuis quand réalisez-vous des ménages ?</li>
+                                                                <li>Comment procédez-vous pour réaliser un bon ménage ?</li>
+                                                                <li>À quel niveau de propreté les posteurs peuvent-ils s’attendre avec vous ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="cleaning">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Ménage"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-8">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon ironing" height="64" src="{{ asset('images/icon-ironing-fa51b78d564e74decf1890fb12e17da22f46a28a6cdbd62.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Repassage</p>
+                                                        <p class="text-center text-sm-left">Repasser du linge de literie, des vêtements et des chemises.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-8" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="ironing_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="ironing_description_description" name="ironing_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Combien de vêtements pouvez-vous repasser en une heure ?</li>
+                                                                <li>Etes-vous équipé d’une centrale vapeur ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="ironing">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Repassage"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-9">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon baby sitting" height="64" src="{{ asset('images/icon-baby_sitting-61864c1e3725079938042440dfcd816cba95c6e604.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Garde d'enfants</p>
+                                                        <p class="text-center text-sm-left">Garder un enfant à partir de 3 ans. Garde à son domicile ou au domicile de l'enfant.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-9" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="baby_sitting_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="baby_sitting_description_description" name="baby_sitting_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous des enfants ? Si oui combien ?</li>
+                                                                <li>Avez-vous une expérience en tant que baby-sitter ?</li>
+                                                                <li>Pourquoi êtes-vous une super baby-sitter ?</li>
+                                                                <li>Avez-vous un diplôme de premiers secours ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="baby_sitting">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Garde d'enfants"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-10">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon pet sitting" height="64" src="{{ asset('images/icon-pet_sitting-8393162acdebeb48928d1e6d29474644065d1b87af9.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Garde d'animaux</p>
+                                                        <p class="text-center text-sm-left">Promener ou garder des animaux. La garde peut se faire au domicile de l’animal ou votre domicile selon les cas.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-10" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="pet_sitting_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="pet_sitting_description_description" name="pet_sitting_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous des animaux ? Si oui, combien ?</li>
+                                                                <li>Depuis quand vous occupez-vous d’animaux ?</li>
+                                                                <li>Que faites-vous pour gagner leur confiance ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="pet_sitting">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Garde d'animaux"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="true">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-11">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon it" height="64" src="{{ asset('images/icon-it-79c6feb00029d5d6aa2020f6f6111418c2e45438a077446ea926.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Informatique</p>
+                                                        <p class="text-center text-sm-left">Diagnostiquer
+                                                             une panne sur un PC ou un Mac. Installer un nouveau programme ou un 
+                                                            périphérique. Aider quelqu’un à utiliser une application. Configurer un 
+                                                            réseau wifi.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x text-primary" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-11" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="it_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="it_description_description" name="it_description[description]" rows="5">J'ai pas une information. Mes compétences en informatique sont basés en langages de programmation.</textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">98</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous une formation ? Si oui, laquelle ?</li>
+                                                                <li>Quelles sont vos compétences en informatique ?</li>
+                                                                <li>Quelles sont les OS sur lesquels vous pouvez intervenir ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input checked="checked" data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="it">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Informatique"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-12">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon event organize" height="64" src="{{ asset('images/icon-event_organize-6bd9d2aa0cbcfca2b2a6c27a4225dbe245bc70a3.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Conciergerie</p>
+                                                        <p class="text-center text-sm-left">Tous les types de petits services : acheter un bouquet de fleurs, faire la queue, aller au pressing, etc.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-12" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="event_organize_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="event_organize_description_description" name="event_organize_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Quel type de service aimez-vous rendre ?</li>
+                                                                <li>Quelles sont vos expériences passées dans ce domaine ?</li>
+                                                                <li>Avez-vous des spécialités ?</li>
+                                                                <li>Parlez-vous plusieurs langues ? Si oui, lesquelles ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="event_organize">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Conciergerie"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-13">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon event photography" height="64" src="{{ asset('images/icon-event_photography-b2cf2eef358a679b9bc3a56aa6f2cd9b1ea94.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Photographe</p>
+                                                        <p class="text-center text-sm-left">Photographie d’évènements.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-13" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="event_photography_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="event_photography_description_description" name="event_photography_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Quel appareil utilisez-vous ?</li>
+                                                                <li>Quelles sont vos spécialités ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="event_photography">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Photographe"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-14">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon event delivering" height="64" src="{{ asset('images/icon-event_delivering-253ec64d87914938d81ab2e0688f8d371a0dd1.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Livraison</p>
+                                                        <p class="text-center text-sm-left">Livraison de petits colis sur votre trajet. Distribution de flyers dans votre quartier.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-14" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="event_delivering_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="event_delivering_description_description" name="event_delivering_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Êtes-vous équipé pour la livraison de petits colis ou prospectus ? (vélo avec sacoche…)</li>
+                                                                <li>Quelles sont vos motivations pour être livreur ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="event_delivering">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Livraison"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-15">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon event preparing meals" height="64" src="{{ asset('images/icon-event_preparing_meals-c740002ef03cb46b1631b8e60d0303960.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Préparation de repas</p>
+                                                        <p class="text-center text-sm-left">Préparer un repas. Préparer un apéritif ou un cocktail dînatoire.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-15" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="event_preparing_meals_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="event_preparing_meals_description_description" name="event_preparing_meals_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous des spécialités culinaires ?</li>
+                                                                <li>Avez des expériences pour préparer des repas pour un grand groupe ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="event_preparing_meals">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Préparation de repas"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-16">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon tutoring" height="64" src="{{ asset('images/icon-tutoring-ceef918d8199cb5a595b76f2a5670f7c0f5eaeb2d9c5a7.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Soutien scolaire</p>
+                                                        <p class="text-center text-sm-left">Accompagner
+                                                             un enfant pour faire ses devoirs. Donner des cours pour renforcer une 
+                                                            compétence. Enseigner à lire. Enseigner le français, l’anglais…</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-16" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="tutoring_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="tutoring_description_description" name="tutoring_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous une expérience dans l’éducation ?</li>
+                                                                <li>Êtes vous patient et pédagogue ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="tutoring">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Soutien scolaire"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-joblist card-shadow" data-component="skill" data-description-max-length="300" data-description-min-length="50" data-was-checked="false">
+                                            <div class="panel-joblist-state panel-joblist-state-hover" data-accordion-target="element-17">
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center"><img alt="Icon administrative assistance" height="64" src="{{ asset('images/icon-administrative_assistance-c5cd82d6136086d96c30bbe9e4d4b.svg') }}" width="64"></div>
+                                                    <div class="col-md-8">
+                                                        <p class="font-size-4 font-weight-black text-center text-sm-left">Assistance administrative</p>
+                                                        <p class="text-center text-sm-left">Aider
+                                                             à traiter des factures. Remplir des formulaires administratifs. Aider à
+                                                             saisir ses déclarations sur Internet. Faciliter le traitement des 
+                                                            feuilles de soins.</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="text-muted text-center text-sm-left">
+                                                            <i class="fa fa-check-circle fa-4x" data-check=""></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-element-open="false" data-identifier="element-17" data-role="element" style="display: none;"><hr style="margin-top: 0px;"><div class="p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-component="text-length-counter" data-max="300">
+                                                                <label class="col-form-label" for="administrative_assistance_description_description">Présentez-vous</label>
+                                                                <textarea class="form-control" data-description="" data-input="" id="administrative_assistance_description_description" name="administrative_assistance_description[description]" rows="5"></textarea>
+                                                                <span class="text-muted">
+                                                                    <span data-helper="">
+                                                                        <span data-counter="">0</span>
+                                                                        / 300 caractères au maximum. 50 caractères au minimum</span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <p class="mt-3">Aidez la communauté Alloservice à évaluer vos compétences en répondant à ces questions :</p>
+                                                            <ul>
+                                                                <li>Avez-vous une expérience dans l’administration ou le secrétariat ?</li>
+                                                                <li>Êtes vous patient et pédagogue ?</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div><hr style="margin-bottom: 0px;"><div class="p-3">
+                                                    <p>Cochez la case pour activer votre compétence</p>
+                                                    <label><input data-checkbox="" id="skills_skill_" name="skills[skill][]" type="checkbox" value="administrative_assistance">
+                                                        Je déclare sur l'honneur avoir les compétences pour "Assistance administrative"</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Enregistrer mes catégories JobList</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div data-component="form">
+                    <div class="card mb-3">
+                        <div class="anchor">
+                            <a name="email">&nbsp;</a>
+                        </div>
+                        <div class="card-header h6">
+                            <div class="float-right">
+                                <span class="edit-heading-link hide-js" data-cancel-button="">
+                                    <i class="fas fa-undo"></i>
+                                    <span>Annuler</span>
+                                </span>
+                                <span class="edit-heading-link" data-edit-button="">
+                                    <i class="fa fa-edit"></i>
+                                    <span>Modifier</span>
+                                </span>
+                            </div>E-mail</div>
+                        <div class="alert alert-info rounded-0">Votre adresse e-mail
+                            <strong>antoniorabemanantsaina@gmail.com</strong>
+                            est confirmée</div>
+                        <div class="hide-js" data-edit-form="">
+                            <form accept-charset="UTF-8" action="/account/alerts_parameters/update_email#email" class="new_account_email_form" id="new_account_email_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="HY1RR7wkxZbOw0uMr6w60ukOIpWQRKo2ZIEZVu+Li5Y+vdlECLSdSx1v0x79ISE1wrs9MhK8Gh3KlDG93rkD4A=="><div class="card-body">
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-3" for="user_email">E-mail</label>
+                                        <div class="col-md-6"><input autocapitalize="off" autocomplete="email" autocorrect="off" class="form-control" id="user_email" name="user[email]" required="required" type="text" value="antoniorabemanantsaina@gmail.com"></div>
+                                    </div><hr><div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <label><input name="alert_setting[optin]" type="hidden" value="0"><input checked="checked" class="form-check-input" id="alert_setting_optin" name="alert_setting[optin]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">Je souhaite qu'on m'informe des nouveautés, cadeaux et bons plans !</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <label><input name="alert_setting[coreg]" type="hidden" value="0"><input checked="checked" class="form-check-input" id="alert_setting_coreg" name="alert_setting[coreg]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">Je souhaite recevoir les bons plans des partenaires de Alloservice !</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Enregistrer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body" data-show-form="">
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">E-mail</label>
+                                <div class="col-md-6">
+                                    <p class="edit-input" data-edit-button="">antoniorabemanantsaina@gmail.com</p>
+                                </div>
+                            </div><hr><div class="form-group row">
+                                <div class="col-md-12">
+                                    <p class="edit-input" data-edit-button="">
+                                        <i class="fa fa-check-square"></i>
+                                        Je souhaite qu'on m'informe des nouveautés, cadeaux et bons plans !</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p class="edit-input" data-edit-button="">
+                                        <i class="fa fa-check-square"></i>
+                                        Je souhaite recevoir les bons plans des partenaires de Alloservice !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-component="form">
+                    <div class="card mb-3">
+                        <div class="anchor">
+                            <a name="phone">&nbsp;</a>
+                        </div>
+                        <div class="card-header h6">
+                            <div class="float-right">
+                                <span class="edit-heading-link hide-js" data-cancel-button="">
+                                    <i class="fas fa-undo"></i>
+                                    <span>Annuler</span>
+                                </span>
+                                <span class="edit-heading-link" data-edit-button="">
+                                    <i class="fa fa-edit"></i>
+                                    <span>Modifier</span>
+                                </span>
+                            </div>Téléphone portable</div>
+                        <div class="hide-js" data-edit-form="">
+                            <form accept-charset="UTF-8" action="/account/alerts_parameters/update_phone#phone" class="new_account_phone_form" id="new_account_phone_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="HY1RR7wkxZbOw0uMr6w60ukOIpWQRKo2ZIEZVu+Li5Y+vdlECLSdSx1v0x79ISE1wrs9MhK8Gh3KlDG93rkD4A=="><div class="card-body">
+                                    <div data-component="phone-mask" data-country="fr">
+                                        <div class="form-group row">
+                                            <label class="col-md-4 col-form-label" for="user_phone">Numéro de téléphone portable</label>
+                                            <div class="col-md-3"><input autocomplete="off" class="form-control phone_mask" data-phone-mask="" id="user_phone" maxlength="14" name="user[phone]" placeholder="0X XX XX XX XX" required="required" type="tel" value="03 37 00 39 27"></div>
+                                            <div class="col-md-5">Format national (commence par 0)</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-4 col-form-label">Je souhaite être averti quand</label>
+                                        <div class="col-md-7">
+                                            <div class="form-check">
+                                                <label>
+                                                    <input checked="checked" class="form-check-input" id="alert_setting_sms_job_won" name="alert_setting[sms_job_won]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">Je remporte un job</div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label>
+                                                    <input checked="checked" class="form-check-input" id="alert_setting_sms_private_job" name="alert_setting[sms_private_job]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">Un posteur m'envoie une demande de job privé</div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label>
+                                                    <input checked="checked" class="form-check-input" id="alert_setting_sms_job_with_offers" name="alert_setting[sms_job_with_offers]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">J'ai un nouveau candidat</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <input class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="commit" type="submit" value="Enregistrer"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body" data-show-form="">
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label">Numéro de téléphone portable</label>
+                                <div class="col-md-7">
+                                    <p class="edit-input" data-edit-button="">03 37 00 39 27</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label">Je souhaite être averti quand</label>
+                                <div class="col-md-7 col">
+                                    <p class="edit-input" data-edit-button="">
+                                        <i class="fa fa-check-square"></i>
+                                        Je remporte un job</p>
+                                    <p class="edit-input" data-edit-button="">
+                                        <i class="fa fa-check-square"></i>
+                                        Un posteur m'envoie une demande de job privé</p>
+                                    <p class="edit-input" data-edit-button="">
+                                        <i class="fa fa-check-square"></i>
+                                        J'ai un nouveau candidat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

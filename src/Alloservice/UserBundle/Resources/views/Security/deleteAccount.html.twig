@@ -1,0 +1,82 @@
+{% extends "base-gray.html.twig" %}
+
+{%block title%} Supprimer mon compte - {{parent()}} {%endblock%}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+{%include "inc/nav-1.html.twig"%}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="nav nav-dashboard">
+                    <li>
+                        <a href="{{path('alloservice_security_parameters')}}">Paramètres d'alerte</a>
+                    </li>
+                    <li>
+                        <a href="{{path('alloservice_security_parameters_facture')}}">Paiements et attestations</a>
+                    </li>
+                    <li>
+                        <a href="{{path('alloservice_security_parameters_password')}}">Mot de passe</a>
+                    </li>
+                    <li class="active">
+                        <a href="{{path('alloservice_security_parameters_delete')}}">Supprimer mon compte</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="card mb-3">
+                    <div class="card-header h6 text-danger">Supprimer mon compte</div>
+                    <div class="card-body">Nous espérons que Alloservice est à la hauteur de vos attentes. Vous êtes tout de même libre de
+                        <a class="text-danger" data-target=".delete-account" data-toggle="modal" href="#">
+                            supprimer votre compte en cliquant ici</a> si vous le souhaitez.
+                        Plus aucun e-mail ne vous sera envoyé.
+                        <div class="modal fade delete-account">
+                            <form accept-charset="UTF-8" action="" class="edit_user" data-remote="true" id="edit_user" method="post" onsubmit="return false;">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Supprimer mon compte</h4>
+                                            <button aria-label="Fermer" class="close" data-dismiss="modal" type="button">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div data-component="show-if-multiple" data-field="#reason-select" data-target="#comment">
+                                                <p>Vous ne pourrez plus utiliser votre compte.
+                                                    <br><br>
+                                                    Vous ne pourrez plus annuler votre demande de suppression et toutes vos données seront supprimées.
+                                                    <br><br>
+                                                    En tant que jobeur, assurez-vous d'avoir obtenu tous vos paiements en ligne.<br>
+                                                    En tant que client, assurez-vous d'avoir été remboursé des jobs payés en
+                                                     ligne et non effectués. Si vous ne le faites pas, nous ne serons plus 
+                                                    en mesure de vous rembourser après la suppression de votre compte.
+                                                    <br><br>
+                                                    <strong>Pour quelle raison souhaitez-vous supprimer votre compte ?</strong>
+                                                </p>
+                                                <div class="hide-js alert alert-danger" data-error="">Erreur : veuillez remplir tous les champs</div>
+                                                <select class="form-control mb-3" id="reason-select" name="user[delete_account_reason]">
+                                                    <option selected="selected" value=""></option>
+                                                    <option value="no_time">Je n'ai plus le temps / J'ai retrouvé du travail</option>
+                                                    <option value="no_jobs">Je ne trouve pas de jobs</option>
+                                                    <option value="not_using_anymore">Je ne me sers plus de Alloservice</option>
+                                                    <option value="direct_with_jobber">Je gère directement ma relation avec mon jobeur</option>
+                                                    <option data-trigger-show="" value="other_website">J'utilise un autre site de service à la personne</option>
+                                                    <option data-trigger-show="" value="not_pleased">Je ne suis pas satisfait(e) du site</option>
+                                                    <option data-trigger-show="" value="other">Autre</option>
+                                                </select>
+                                                <textarea class="form-control hide-js" id="comment" name="user[delete_account_comment]" placeholder="Précisez svp…" style="display: none;"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-light btn-break btn-break" data-dismiss="modal" type="button">Annuler</button><input class="btn btn-danger btn-break btn-break" data-disable-with="Veuillez patienter" form_class="btn-form" name="commit" type="submit" value="Supprimer mon compte"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% set route_name = app.request.get('_route') %}
+<div class="d-flex flex-column">
+    <nav class="bg-gray border-bottom navbar navbar-expand navbar-dark mb-3">
+        <div class="container px-2">
+            <ul class="navbar-nav mr-auto flex-wrap">
+                <li {%if route_name starts with 'alloservice_site_tableau_de_bord'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_site_tableau_de_bord')}}">Tableau de bord</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_security_profile'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_security_profile_infoperso')}}">Profil</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_security_parameters'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_security_parameters')}}">Compte</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_site_notifications'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_site_notifications')}}">Notifications</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_site_messages'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_site_messages')}}">Messagerie</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_site_payouts'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_site_payouts_new')}}">Mes paiements</a>
+                </li>
+                <li {%if route_name starts with 'alloservice_site_cartescadeaux'%}class="active"{%endif%}>
+                    <a class="nav-link" href="{{path('alloservice_site_cartescadeaux_new')}}">Cartes cadeaux</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{#{path('alloservice_site_tableau_de_bord')}#}">Passer à la vue posteur</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,57 @@
+{% extends "base-gray.html.twig"%}
+
+{%block title%} Compte de paiement - {{parent()}} {%endblock%}
+
+{%block body%}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+{%include "inc/nav-1.html.twig"%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header h6">
+                    <div class="clearfix">
+                        <div class="float-left">Ma cagnotte</div>
+                        <div class="float-right">Revenu total :
+                            <div class="d-inline-block align-top">
+                                <div class="price-content">
+                                    <div class="price">
+                                        <span>0,00</span>
+                                        <span>€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p class="margin-b-0 pt-2">
+                                <strong>Votre cagnotte contient</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="d-flex">
+                                <div class="price-tag price-tag-lg">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>0,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" id="payments-waiting">
+                <div class="card-header h6">Mes paiements en attente (0)</div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

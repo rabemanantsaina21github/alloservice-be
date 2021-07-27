@@ -1,0 +1,351 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Informations professionnelles - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<!-- Nav-1 -->
+{% include "inc/nav-1.html.twig" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-dashboard">
+                <li>
+                    <a href="{{path('alloservice_security_profile_infoperso')}}">Informations personnelles</a>
+                </li>
+                <li class="active">
+                    <a href="{{path('alloservice_security_profile_infopro')}}">Informations professionnelles</a>
+                </li>
+                <li>
+                    <a href="{{path('alloservice_security_profile_trustsecurity')}}">Confiance et sécurité</a>
+                </li>
+                <li>
+                    <a href="{{path('alloservice_security_profile_status')}}">Statut de mon profil</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div data-component="form">
+                <div class="card mb-3">
+                    <div class="anchor">
+                        <a name="professional_detail">&nbsp;</a>
+                    </div>
+                    <div class="card-header h6">
+                        <div class="float-right">
+                            <span class="edit-heading-link hide-js" data-cancel-button="">
+                                <i class="fas fa-undo"></i>
+                                <span>Annuler</span>
+                            </span>
+                            <span class="edit-heading-link" data-edit-button="">
+                                <i class="fa fa-edit"></i>
+                                <span>Modifier</span>
+                            </span>
+                        </div>Statut professionel</div>
+                    <div class="alert alert-info rounded-0">Quel est votre statut actuel ?</div>
+                    <div class="hide-js" data-edit-form="">
+                        <form accept-charset="UTF-8" action="" method="post" class="new_profile_professional_detail_form" id="new_profile_professional_detail_form">
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="professional_detail_status">Statut professionnel</label>
+                                    <div class="col-md-4">
+                                        <select class="form-control form-select-inline" data-target="siret" data-value="1" id="professional_detail_status" name="" required="required">
+                                            <option value=""></option>
+                                            <option value="1">Entrepreneur</option>
+                                            <option selected="selected" value="2">Etudiant</option>
+                                            <option value="3">Retraité</option>
+                                            <option value="4">Employé</option>
+                                            <option value="5">Sans emploi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4">
+                                        <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Enregistrer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-body" data-show-form="">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Statut professionnel</label>
+                            <div class="col-md-8">
+                                <p class="edit-input" data-edit-button="">Etudiant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-component="form">
+                <div class="card mb-3">
+                    <div class="anchor">
+                        <a name="professional_experiences">&nbsp;</a>
+                    </div>
+                    <div class="card-header h6">
+                        <div class="float-right">
+                            <span class="edit-heading-link hide-js" data-cancel-button="">
+                                <i class="fas fa-undo"></i>
+                                <span>Annuler</span>
+                            </span>
+                            <span class="edit-heading-link hide-js" data-edit-button="">
+                                <i class="fa fa-edit"></i>
+                                <span>Modifier</span>
+                            </span>
+                        </div>Expériences professionelles</div>
+                    <div class="alert alert-info rounded-0">Votre parcours est unique. Ajoutez vos expériences professionnelles</div>
+                    <form accept-charset="UTF-8" action="" method="post" class="new_profile_professional_experiences_form" id="new_profile_professional_experiences_form">
+                        <div class="card-body">
+                            <div data-component="show-if" data-field="#no-experience-checkbox" data-target="#ux" data-value="1">
+                                <div class="has-error"></div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <label>
+                                                <input class="form-check-input" id="no-experience-checkbox" name="cv[no_experience]" type="checkbox" value="1"><div class="form-check-label font-weight-normal">Sans expérience professionnelle</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-component="add-field" data-max="2" data-min="1" id="ux">
+                                    <div class="hide-js">
+                                        <div data-role="element" data-visible="">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="user_experiences_clone_job_title">
+                                                    Titre du poste occupé
+                                                </label>
+                                                <div class="col-md-7">
+                                                    <input class="form-control" id="user_experiences_clone_job_title" name="user_experiences[clone][job_title]" type="text"></div>
+                                                <div class="col-md-2 d-none d-md-block">
+                                                    <a data-role="remove-element" href="#" >
+                                                        <i class="fa fa-minus"></i>
+                                                        Enlever
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="user_experiences_clone_job_duration">Durée de l'emploi</label>
+                                                <div class="col-md-2">
+                                                    <select class="form-control" id="user_experiences_clone_job_duration" name="user_experiences[clone][job_duration]">
+                                                        <option selected="selected" value=""></option>
+                                                        <option value="1">&lt; 1 an</option>
+                                                        <option value="2">1 an</option>
+                                                        <option value="3">2 ans</option>
+                                                        <option value="4">3 ans</option>
+                                                        <option value="5">&gt; 3 ans</option>
+                                                    </select>
+                                                </div>
+                                            </div>                            
+                                            <div class="d-block d-md-none">
+                                                <a data-role="remove-element" href="#">
+                                                    <i class="fa fa-minus"></i>
+                                                    Enlever</a>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div data-role="element" data-visible="true" style="display: block;">
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="">Titre du poste occupé</label>
+                                                <div class="col-md-7">
+                                                    <input class="form-control" id="" name="" type="text"></div>
+                                                <div class="col-md-2 d-none d-md-block">
+                                                    <a data-role="remove-element" href="#" style="display: none;">
+                                                        <i class="fa fa-minus"></i>
+                                                        Enlever
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 col-form-label" for="user_experiences_1562943126067_job_duration">Durée de l'emploi</label>
+                                                <div class="col-md-2">
+                                                    <select class="form-control" id="user_experiences_1562943126067_job_duration" name="user_experiences[1562943126067][job_duration]">
+                                                        <option selected="selected" value=""></option>
+                                                        <option value="1">&lt; 1 an</option>
+                                                        <option value="2">1 an</option>
+                                                        <option value="3">2 ans</option>
+                                                        <option value="4">3 ans</option>
+                                                        <option value="5">&gt; 3 ans</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <a data-role="remove-element" href="#">
+                                                    <i class="fa fa-minus"></i>
+                                                    Enlever</a>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <a data-role="add-element" href="#">
+                                            <i class="fa fa-plus"></i>
+                                            Ajouter une expérience professionnelle</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div data-component="form">
+                <div class="card mb-3" id="languages">
+                    <div class="card-header h6">
+                        <div class="float-right">
+                            <span class="edit-heading-link hide-js" data-cancel-button="">
+                                <i class="fas fa-undo"></i>
+                                <span>Annuler</span>
+                            </span>
+                            <span class="edit-heading-link hide-js" data-edit-button="">
+                                <i class="fa fa-edit"></i>
+                                <span>Modifier</span>
+                            </span>
+                        </div>Langues</div>
+                    <div class="alert alert-info rounded-0">La maîtrise des langues est un plus. Renseignez vos langues parlées</div>
+                    <form accept-charset="UTF-8" action="" class="new_profile_languages_form" id="new_profile_languages_form" method="post">
+                        <div class="card-body">
+                            <div data-component="add-field" data-max="4" data-min="1">
+                                <div class="has-error"></div>
+                                <div class="hide-js">
+                                    <div data-role="element" data-visible="false" style="display: none;">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-label" for="languages_clone_name">Langue parlée</label>
+                                            <div class="col-md-3">
+                                                <select class="form-control" id="languages_clone_name" name="languages[clone][name]">
+                                                    <option selected="selected" value=""></option>
+                                                    <option value="1">Chinois</option>
+                                                    <option value="2">Anglais</option>
+                                                    <option value="3">Espagnol</option>
+                                                    <option value="4">Japonais</option>
+                                                    <option value="5">Suédois</option>
+                                                    <option value="6">Russe</option>
+                                                    <option value="7">Malais-indonésien</option>
+                                                    <option value="8">Arabe</option>
+                                                    <option value="9">Portugais</option>
+                                                    <option value="10">Bengali</option>
+                                                    <option value="11">Norvégien</option>
+                                                    <option value="12">Danois</option>
+                                                    <option value="13">Grecque</option>
+                                                    <option value="14">Allemand</option>
+                                                    <option value="15">Italien</option>
+                                                    <option value="16">Français</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 d-none d-md-block">
+                                                <a data-role="remove-element" href="#" style="display: none;">
+                                                    <i class="fa fa-minus"></i>
+                                                    Enlever
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label" for="languages_clone_level">Niveau</label>
+                                            <div class="col-md-3">
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input" id="languages_clone_level_1" name="languages[clone][level]" type="radio" value="1">
+                                                        <div class="form-check-label font-weight-normal">Débutant</div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input" id="languages_clone_level_2" name="languages[clone][level]" type="radio" value="2">
+                                                        <div class="form-check-label font-weight-normal">Intermédiaire</div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label>
+                                                        <input class="form-check-input" id="languages_clone_level_3" name="languages[clone][level]" type="radio" value="3">
+                                                        <div class="form-check-label font-weight-normal">Confirmé</div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-block d-md-none">
+                                            <a data-role="remove-element" href="#" style="display: none;">
+                                                <i class="fa fa-minus"></i>
+                                                Enlever
+                                            </a>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div data-role="element" data-visible="true" style="display: block;">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 col-form-label" for="languages_1562943126097_name">Langue parlée</label>
+                                        <div class="col-md-3">
+                                            <select class="form-control" id="languages_1562943126097_name" name="languages[1562943126097][name]">
+                                                <option selected="selected" value=""></option>
+                                                <option value="1">Chinois</option>
+                                                <option value="2">Anglais</option>
+                                                <option value="3">Espagnol</option>
+                                                <option value="4">Japonais</option>
+                                                <option value="5">Suédois</option>
+                                                <option value="6">Russe</option>
+                                                <option value="7">Malais-indonésien</option>
+                                                <option value="8">Arabe</option>
+                                                <option value="9">Portugais</option>
+                                                <option value="10">Bengali</option>
+                                                <option value="11">Norvégien</option>
+                                                <option value="12">Danois</option>
+                                                <option value="13">Grecque</option>
+                                                <option value="14">Allemand</option>
+                                                <option value="15">Italien</option>
+                                                <option value="16">Français</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 d-none d-md-block">
+                                            <a data-role="remove-element" href="#" style="display: none;">
+                                                <i class="fa fa-minus"></i>
+                                                Enlever
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 col-form-label" for="languages_1562943126097_level">Niveau</label>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <label><input class="form-check-input" id="languages_1562943126097_level_1" name="languages[1562943126097][level]" type="radio" value="1"><div class="form-check-label font-weight-normal">Débutant</div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label><input class="form-check-input" id="languages_1562943126097_level_2" name="languages[1562943126097][level]" type="radio" value="2"><div class="form-check-label font-weight-normal">Intermédiaire</div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <label><input class="form-check-input" id="languages_1562943126097_level_3" name="languages[1562943126097][level]" type="radio" value="3"><div class="form-check-label font-weight-normal">Confirmé</div>
+                                                </label>
+                                            </div>
+                                        </div><input id="languages_1562943126097__destroy" name="languages[1562943126097][_destroy]" type="hidden" value="false"><input id="languages_1562943126097_id" name="languages[1562943126097][id]" type="hidden"></div>
+                                    <div class="d-block d-md-none">
+                                        <a data-role="remove-element" href="#" style="display: none;">
+                                            <i class="fa fa-minus"></i>
+                                            Enlever</a>
+                                    </div><hr></div>
+                                <a data-role="add-element" href="#">
+                                    <i class="fa fa-plus"></i>
+                                    Ajouter une langue</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

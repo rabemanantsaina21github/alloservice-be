@@ -1,0 +1,119 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Devenez jobeur - Etape 4 - {{ parent() }} {% endblock %}
+
+{%block body%}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h1 class="mb-3">Validation de votre pièce d'identité</h1>
+        </div>
+        <div class="col-md-4">
+            <div class="progress-status mt-4 mb-3">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-status-bar" role="progressbar" style="width:50%;">50 %</div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <form accept-charset="UTF-8" action="/devenez-jobeur/save_step_4" class="new_become_jobber_step4_form" enctype="multipart/form-data" id="new_become_jobber_step4_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="oUIPPhZ9e/TvtQ4HqToDRr++tpODXpDE1NODnnv6HtV5o+BfCt+Igvuyr09N25T0EKiIjDuJUDc6eBEKg3lL+Q=="><div class="alert alert-info mx-auto">
+                    <p>La vérification de votre identité permet aux autres membres de vous choisir en toute sécurité.</p>
+                    <p>Pièces acceptées en recto verso :</p>
+                    <ul>
+                        <li>Carte d'identité ou Carte de séjour ou permis de conduire</li>
+                    </ul>
+                    <p>Pièces acceptées en recto :</p>
+                    <ul>
+                        <li>Passeport UE ou Récépissé de demande de titre de séjour ou Visa avec autorisation de travail</li>
+                    </ul>
+                    <p>
+                        <i class="far fa-camera fa-lg"></i>
+                        <strong>Conseils pratiques</strong>
+                    </p>
+                    <ul class="mt-2">
+                        <li>Vous pouvez prendre en photo les documents demandés avec votre smartphone</li>
+                        <li>Vos documents ne doivent être ni flous, ni tronqués</li>
+                    </ul>
+                </div>
+                <div data-component="id-card">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <select class="form-control" data-field="" id="id_card_kind" name="id_card[kind]" required="required">
+                                    <option selected="selected" value="">Sélectionnez votre type de document d'identité</option>
+                                    <option value="id_card">Carte d'identité (CNI)</option>
+                                    <option value="passport">Passeport</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide-js" data-value="id_card" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="id_card_file_1">Photo ou scan du recto de votre carte d'identité</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i far fa-folder-open" id="id_card_file_1" name="id_card[file_1]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                        <span class="group-span-filestyle input-group-append" tabindex="0">
+                                            <label class="btn btn-light " for="id_card_file_1">
+                                                <span class="glyphicon i far fa-folder-open"></span>
+                                                Sélectionner un fichier</label>
+                                        </span>
+                                    </div>
+                                    <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                </div>
+                            </div>
+                            <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                <div class="well-panel">
+                                    <p class="text-muted">Exemple</p><img alt="Payment id recto example" class="img-fluid" height="240" src="step4_files/payment-id-recto-example-cbcfb8002d52f428425f6e9c174548f7411.png" width="340"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="id_card_file_2">Photo ou scan du verso de votre carte d'identité</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i far fa-folder-open" id="id_card_file_2" name="id_card[file_2]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                        <span class="group-span-filestyle input-group-append" tabindex="0">
+                                            <label class="btn btn-light " for="id_card_file_2">
+                                                <span class="glyphicon i far fa-folder-open"></span>
+                                                Sélectionner un fichier</label>
+                                        </span>
+                                    </div>
+                                    <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                </div>
+                            </div>
+                            <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                <div class="well-panel">
+                                    <p class="text-muted">Exemple</p><img alt="Payment id verso example" class="img-fluid" height="240" src="step4_files/payment-id-verso-example-1a547fba557146d8f96c2d5dbf7f1fb1f24.png" width="340"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide-js" data-value="passport" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="passport_file_1">Photo ou scan de votre passeport</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i far fa-folder-open" data-input="true" id="passport_file_1" name="id_card[file_1]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                        <span class="group-span-filestyle input-group-append" tabindex="0">
+                                            <label class="btn btn-light " for="passport_file_1">
+                                                <span class="glyphicon i far fa-folder-open"></span>
+                                                Sélectionner un fichier</label>
+                                        </span>
+                                    </div>
+                                    <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                </div>
+                            </div>
+                            <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                <div class="well-panel">
+                                    <p class="text-muted">Exemple</p><img alt="Payment passport open example" class="img-fluid" height="340" src="step4_files/payment-passport-open-example-61664e16cb15df493b1eb70ff2974c.png" width="340"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4 offset-md-8">
+                        <a href="">Etape suivante</a>
+                        <input class="btn btn-block btn-yellow" data-disable-with="Veuillez patienter" name="commit" type="submit" value="Poursuivre"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

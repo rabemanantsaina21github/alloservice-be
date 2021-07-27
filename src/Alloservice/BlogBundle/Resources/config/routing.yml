@@ -1,0 +1,11 @@
+alloservice_blog_homepage:
+    path:     /
+    defaults: { _controller: AlloserviceBlogBundle:Blog:index }
+
+alloservice_blog_by_category:
+    path:     /{slug}
+    defaults: { _controller: AlloserviceBlogBundle:Blog:by_category }
+
+alloservice_blog_read:
+    path:     /{cat_slug}/{slug}
+    defaults: { _controller: AlloserviceBlogBundle:Blog:read }

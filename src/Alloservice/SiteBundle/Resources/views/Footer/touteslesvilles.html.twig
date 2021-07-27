@@ -1,0 +1,855 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Toutes les villes de l'{{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="bg-white">
+        <div class="ypj-fluid-container pb-3">
+            <ol class="breadcrumb pt-3 pl-0" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}" itemprop="item">
+                        <span itemprop="name">Accueil</span>
+                    </a><meta content="1" itemprop="position"></li>
+                <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Toutes les villes</span>
+                    </a><meta content="2" itemprop="position"></li>
+            </ol>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row d-flex align-items-end">
+                        <div class="col-lg-6 col-md-8">
+                            <h1 class="mb-0">Toutes les villes</h1>
+                            <p class="text-muted mb-3">Votre ville ne figure pas dans cette liste ? Pas d’inquiétude nous sommes présents partout en France.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap">
+                        <div class="d-flex flex-row flex-wrap">
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Paris</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Marseille</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Lyon</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="toulouse">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Toulouse</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="nice">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Nice</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="nantes">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Nantes</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="montpellier">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Montpellier</p>
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="col-1dot5">
+                                <a class="text-decoration-none d-block frosted-glass-hover" href="bordeaux">
+                                    <div class="frosted-glass-shadow mb-1">
+                                        <div class="picture rounded" style="height:100px"><img alt="Service à domicile à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                                        <div class="shadow"><img alt="Service à domicile à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                                    </div>
+                                    <h3 class="font-size-4 mt-3">
+                                        <p class="text-dark font-weight-medium mb-0">Bordeaux</p>
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="font-size-3 font-weight-bold d-block" href="">Voir toutes les villes<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 pb-3">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="aix-en-provence">Aix-en-Provence</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="ajaccio">Ajaccio</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="albi">Albi</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="amiens">Amiens</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="angers">Angers</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="annecy">Annecy</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="antibes">Antibes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="antony">Antony</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="argenteuil">Argenteuil</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="arles">Arles</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="asnieres-sur-seine">Asnières-sur-Seine</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="aubervilliers">Aubervilliers</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="aulnay-sous-bois">Aulnay-sous-Bois</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="avignon">Avignon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="beauvais">Beauvais</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="belfort">Belfort</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="besancon">Besançon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="blois">Blois</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="bobigny">Bobigny</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="bondy">Bondy</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="bordeaux">Bordeaux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="boulogne-billancourt">Boulogne-Billancourt</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="boulogne-sur-mer">Boulogne-sur-Mer</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="bourges">Bourges</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="brest">Brest</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="brive-la-gaillarde">Brive-la-Gaillarde</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="beziers">Béziers</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="caen">Caen</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="cagnes-sur-mer">Cagnes-sur-Mer</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="calais">Calais</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="cannes">Cannes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="carcassonne">Carcassonne</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="cergy">Cergy</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="chalon-sur-saone">Chalon-sur-Saône</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="chambery">Chambéry</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="champigny-sur-marne">Champigny-sur-Marne</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="charleville-mezieres">Charleville-Mézières</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="chelles">Chelles</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="cholet">Cholet</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="chalons-en-champagne">Châlons-en-Champagne</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="chateauroux">Châteauroux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="clamart">Clamart</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="clermont-ferrand">Clermont-Ferrand</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="clichy">Clichy</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="clichy">Clichy</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="colmar">Colmar</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="colombes">Colombes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="courbevoie">Courbevoie</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="creteil">Créteil</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="dijon">Dijon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="draguignan">Draguignan</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="drancy">Drancy</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="dunkerque">Dunkerque</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="evreux">Evreux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="fontenay-sous-bois">Fontenay-sous-Bois</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="frejus">Fréjus</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="gap">Gap</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="grasse">Grasse</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="grenoble">Grenoble</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="hyeres">Hyères</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="issy-les-moulineaux">Issy-les-Moulineaux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="ivry-sur-seine">Ivry-sur-Seine</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="la-roche-sur-yon">La Roche-sur-Yon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="la-rochelle">La Rochelle</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="la-seyne-sur-mer">La Seyne-sur-Mer</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="laval">Laval</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="le-blanc-mesnil">Le Blanc-Mesnil</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="le-havre">Le Havre</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="le-mans">Le Mans</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="levallois-perret">Levallois-Perret</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="lille">Lille</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="limoges">Limoges</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="lorient">Lorient</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="lyon">Lyon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="maisons-alfort">Maisons-Alfort</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="">Marseille</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="meaux">Meaux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="metz">Metz</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="montauban">Montauban</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="montpellier">Montpellier</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="montreuil">Montreuil</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="mulhouse">Mulhouse</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="merignac">Mérignac</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="nancy">Nancy</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="nanterre">Nanterre</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="nantes">Nantes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="narbonne">Narbonne</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="neuilly-sur-seine">Neuilly-sur-Seine</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="nice">Nice</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="niort">Niort</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="noisy-le-grand">Noisy-le-Grand</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="nimes">Nîmes</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="orleans">Orléans</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="pantin">Pantin</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="paris">Paris</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="pau">Pau</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="perpignan">Perpignan</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="pessac">Pessac</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="poitiers">Poitiers</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="puteaux">Puteaux</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="quimper">Quimper</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="reims">Reims</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="rennes">Rennes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="roubaix">Roubaix</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="rouen">Rouen</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="rueil-malmaison">Rueil-Malmaison</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-brieuc">Saint-Brieuc</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-herblain">Saint-Herblain</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-malo">Saint-Malo</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-maur-des-fosses">Saint-Maur-des-Fossés</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-quentin">Saint-Quentin</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="saint-etienne">Saint-Étienne</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="sarcelles">Sarcelles</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="sartrouville">Sartrouville</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="sevran">Sevran</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="strasbourg">Strasbourg</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="tarbes">Tarbes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="toulon">Toulon</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="toulouse">Toulouse</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="tourcoing">Tourcoing</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="tours">Tours</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="troyes">Troyes</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="valence">Valence</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="vannes">Vannes</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="versailles">Versailles</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="villejuif">Villejuif</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="villeneuve-d-ascq">Villeneuve-d'Ascq</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="villeurbanne">Villeurbanne</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="vitry-sur-seine">Vitry-sur-Seine</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="venissieux">Vénissieux</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="epinay-sur-seine">Épinay-sur-Seine</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <p class="font-size-3">
+                                <a class="text-dark" href="evry">Évry</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,1081 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Les jobeurs en France - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="bg-cover bg-jobbing">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <div class="index-become-hero">
+            <div class="container text-center">
+                <h1 class="hero-title">Les jobeurs en France</h1>
+                <div class="hero-subsubtitle">
+                    <a class="link-white" href="{{ path('alloservice_site_homepage') }}">
+                        <i class="fa fa-chevron-circle-left"></i>
+                        Retour à l'accueil</a>
+                </div>
+                <h2 class="hero-subsubtitle font-weight-normal">
+                    <i class="fas fa-cog"></i>
+                    246681 prestations effectuées |
+                    <i class="fas fa-star"></i>
+                    évaluation moyenne 4.8 / 5</h2>
+                <div class="mt-3">
+                    <a class="btn btn-green btn-lg btn-shad btn-break" href="https://alloservice.fr/services">Demander un service</a>
+                </div>
+            </div>
+        </div>
+        <div class="promises-header"></div>
+        <div class="container">
+            <div class="d-none d-md-block">
+                <div class="d-flex justify-content-between text-white py-3">
+                    <div class="media">
+                        <div class="media-left mr-2">
+                            <i class="fas fa-key fa-2x pt-1"></i>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <span class="font-weight-black">Service clé en main</span><br><div class="font-size-2 font-weight-medium">Recrutez, assurez, payez en 1 clic</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left mr-2">
+                            <svg aria-hidden="true" aria-label="Revenus" class="d-inline-block align-middle" height="42" role="img" version="1.1" viewbox="0 0 96 96" width="42">
+                                <path d="M42.8 26.5c-3.24 1.8-10.05 3.27-17.76 3.24-5.88 0-11.2-.8-14.87-2.03-1.83-.58-3.23-1.3-4.02-1.92-.4-.3-.64-.6-.74-.77-.1-.18-.1-.24-.1-.28v-4.65c4.55 2.32 11.62 3.63 19.74 3.66 6.33 0 12.06-.84 16.4-2.27 1.23-.4 2.34-.87 3.34-1.38v4.64c0 .04 0 .1-.1.3-.2.3-.8.9-1.88 1.5zm0 9.17c-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.93-.4-.3-.64-.6-.74-.77-.1-.2-.1-.25-.1-.3v-4.64c4.55 2.32 11.62 3.63 19.74 3.65 6.33 0 12.06-.84 16.4-2.27 1.23-.4 2.34-.85 3.34-1.37v4.64c0 .04 0 .1-.1.3-.2.32-.8.92-1.88 1.5zm1.88 8.14c-.2.33-.8.93-1.88 1.5-3.24 1.8-10.05 3.27-17.76 3.24-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.92-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3V38.4c4.55 2.3 11.62 3.62 19.74 3.65 6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.65c-.2.32-.8.92-1.88 1.5-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.93-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13c4.55 2.32 11.62 3.63 19.74 3.66 6.32-.02 12.06-.85 16.4-2.28 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.64c-.2.3-.8.9-1.88 1.5-3.24 1.8-10.05 3.25-17.76 3.22-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.32-4.02-1.94-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13C9.85 60 16.92 61.3 25.04 61.33c6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.63c-.2.32-.8.92-1.88 1.5-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.02-1.83-.6-3.23-1.32-4.02-1.94-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13c4.55 2.33 11.62 3.64 19.74 3.67 6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zM42.8 16.98c-3.24 1.8-10.05 3.26-17.76 3.23-5.88.02-11.2-.8-14.87-2.02-1.83-.6-3.23-1.3-4.02-1.94-.4-.3-.64-.58-.74-.76-.08-.15-.1-.22-.1-.26 0-.04.02-.1.1-.26.2-.3.8-.92 1.9-1.5 3.23-1.8 10.04-3.25 17.75-3.23 5.88 0 11.2.8 14.87 2.02 1.82.6 3.23 1.3 4 1.94.4.3.64.58.76.76.1.15.1.22.1.26 0 .04-.02.12-.1.26-.2.32-.8.92-1.88 1.5zm47.1 68.9c-.17.3-.8.92-1.9 1.5-3.27 1.83-10.16 3.3-17.96 3.28-5.95 0-11.35-.82-15.05-2.05-1.86-.6-3.28-1.33-4.08-1.96-.4-.3-.64-.6-.75-.77-.1-.18-.1-.24-.1-.3v-5.2c4.6 2.37 11.75 3.7 19.97 3.72 6.4-.02 12.2-.86 16.6-2.3 1.24-.43 2.37-.9 3.38-1.4v5.2c0 .02 0 .08-.1.27zM88 67.37c-3.27 1.82-10.16 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.05-1.86-.6-3.28-1.34-4.08-1.96-.4-.3-.64-.6-.75-.78-.1-.2-.1-.25-.1-.3v-4.7c4.6 2.36 11.75 3.68 19.97 3.7 6.4 0 12.2-.84 16.6-2.3 1.24-.4 2.37-.87 3.38-1.4v4.7c0 .05 0 .1-.1.3-.2.33-.82.94-1.9 1.52zm0 9.76c-3.27 1.82-10.16 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.04-1.86-.6-3.28-1.34-4.08-1.96-.4-.3-.64-.6-.75-.78-.1-.2-.1-.25-.1-.3v-4.7c4.6 2.36 11.75 3.68 19.97 3.7 6.4 0 12.2-.85 16.6-2.3 1.24-.4 2.37-.87 3.38-1.4v4.7c0 .04 0 .1-.1.3-.2.33-.82.94-1.9 1.52zm0-19.4c-3.27 1.82-10.15 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.05-1.86-.6-3.28-1.33-4.08-1.96-.4-.32-.64-.6-.75-.8-.1-.14-.1-.2-.1-.24 0-.05 0-.12.1-.27.2-.33.8-.94 1.9-1.52 3.28-1.82 10.18-3.3 17.98-3.28 5.95 0 11.35.8 15.04 2.05 1.85.6 3.26 1.33 4.06 1.96.4.32.64.6.75.8.1.14.12.2.12.26 0 .03-.03.1-.1.25-.2.34-.82.95-1.9 1.53z" fill-rule="evenodd" fill="#ffffff"></path>
+                            </svg>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <span class="font-weight-black">3X moins cher</span><br><div class="font-size-2 font-weight-medium">Maitrisez votre budget</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left mr-2">
+                            <svg aria-hidden="true" aria-label="AXA réinventons notre métier" class="d-inline-block align-middle" height="42" role="img" version="1.1" viewbox="0 0 60 60" width="42">
+                                <path d="M0 0h60v60H0z" fill="#103184"></path>
+                                <path d="M37.137 29.474L60 0h-3.376l-22.94 29.474h3.453z" fill="#FF1821"></path>
+                                <path d="M45.452 42.643c1.036 2.898 3.173 10.44 4.022 11.04h-5.61s-.02-1.113-.262-1.977c-.24-.862-2.27-7.384-2.27-7.384h-8.91l-1.4 1.985s1.683 5.262 1.787 5.52c.18.465.983 1.857.983 1.857h-5.375s-.14-.804-.192-1.14c-.042-.27-.51-1.75-.51-1.75s-1.217 1.334-1.55 1.953c-.334.617-.483.937-.483.937h-4.206s-.14-.804-.193-1.14c-.04-.27-.555-1.868-.555-1.868s-1.178 1.428-1.513 2.046c-.332.618-.476.962-.476.962h-4.158s1.175-1.118 1.586-1.598c.693-.813 3.274-4.184 3.274-4.184l-1.035-3.58h-8.84s-5.043 6.62-5.24 6.825c-.202.2-1.67 2.308-1.704 2.538H0v-1.667c.05-.05.086-.088.104-.1.08-.06 3.822-4.7 7.258-9.275 3.088-3.99 5.986-7.87 6.24-8.24.616-.894 1.503-2.823 1.503-2.823h4.57s.142 1.775.276 2.206c.12.38 2.905 9.51 2.97 9.61l1.54-1.968-2.632-8.097s-.617-1.522-.818-1.75h5.34s-.042.783.174 1.45c.217.668 1.362 4.794 1.362 4.794s3.642-4.56 3.855-4.888c.4-.55.45-1.357.45-1.357h4.45s-.815.594-2.243 2.398c-.48.607-5.178 6.573-5.178 6.573s.41 1.398.61 2.093c.054.2.09.334.09.35 0 .005.105-.122.284-.35 1.21-1.535 6.725-8.758 7.06-9.377.27-.5.666-1.068.898-1.686h4.34s.1 1.295.233 1.654l2.717 9.41zm-6.05-6.775c-.676 1.44-4.665 6.238-4.665 6.238h6.316s-1.225-3.726-1.438-4.566c-.17-.668-.123-1.53-.123-1.632 0-.076-.015-.2-.09-.04zm-23.157 0c-.677 1.44-4.666 6.238-4.666 6.238h6.315s-1.224-3.726-1.437-4.566c-.17-.668-.124-1.53-.124-1.632 0-.076-.015-.2-.09-.04zm9.176 13.606l1.95-2.273c-.18-.162-1.277-2.99-1.277-2.99l-1.882 2.077 1.21 3.187z" fill="#FFF"></path>
+                            </svg>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <span class="font-weight-black">Services assurés par AXA</span><br><div class="font-size-2 font-weight-medium">Casse, dégradation &amp; accident</div>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left mr-2">
+                            <div class="badge-50-common badge-50-md">-50%</div>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <span class="font-weight-black">Crédit d'impôt en 1 clic</span><br><div class="font-size-2 font-weight-medium">Éligible selon la catégorie</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-md-none">
+                <div class="row text-white p-1">
+                    <div class="col-6 text-center">
+                        <i class="fas fa-key-skeleton"></i>
+                        <span class="font-weight-medium">Clé en main</span>
+                    </div>
+                    <div class="col-6 text-center">
+                        <svg aria-hidden="true" aria-label="Revenus" class="d-inline-block align-middle" height="16" role="img" version="1.1" viewbox="0 0 96 96" width="16">
+                            <path d="M42.8 26.5c-3.24 1.8-10.05 3.27-17.76 3.24-5.88 0-11.2-.8-14.87-2.03-1.83-.58-3.23-1.3-4.02-1.92-.4-.3-.64-.6-.74-.77-.1-.18-.1-.24-.1-.28v-4.65c4.55 2.32 11.62 3.63 19.74 3.66 6.33 0 12.06-.84 16.4-2.27 1.23-.4 2.34-.87 3.34-1.38v4.64c0 .04 0 .1-.1.3-.2.3-.8.9-1.88 1.5zm0 9.17c-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.93-.4-.3-.64-.6-.74-.77-.1-.2-.1-.25-.1-.3v-4.64c4.55 2.32 11.62 3.63 19.74 3.65 6.33 0 12.06-.84 16.4-2.27 1.23-.4 2.34-.85 3.34-1.37v4.64c0 .04 0 .1-.1.3-.2.32-.8.92-1.88 1.5zm1.88 8.14c-.2.33-.8.93-1.88 1.5-3.24 1.8-10.05 3.27-17.76 3.24-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.92-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3V38.4c4.55 2.3 11.62 3.62 19.74 3.65 6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.65c-.2.32-.8.92-1.88 1.5-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.3-4.02-1.93-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13c4.55 2.32 11.62 3.63 19.74 3.66 6.32-.02 12.06-.85 16.4-2.28 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.64c-.2.3-.8.9-1.88 1.5-3.24 1.8-10.05 3.25-17.76 3.22-5.88 0-11.2-.8-14.87-2.03-1.83-.6-3.23-1.32-4.02-1.94-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13C9.85 60 16.92 61.3 25.04 61.33c6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zm0 9.63c-.2.32-.8.92-1.88 1.5-3.24 1.8-10.05 3.26-17.76 3.23-5.88 0-11.2-.8-14.87-2.02-1.83-.6-3.23-1.32-4.02-1.94-.4-.3-.64-.6-.74-.76-.1-.2-.1-.25-.1-.3v-5.13c4.55 2.33 11.62 3.64 19.74 3.67 6.32 0 12.06-.84 16.4-2.27 1.22-.4 2.34-.87 3.34-1.38v5.14c0 .02 0 .08-.1.27zM42.8 16.98c-3.24 1.8-10.05 3.26-17.76 3.23-5.88.02-11.2-.8-14.87-2.02-1.83-.6-3.23-1.3-4.02-1.94-.4-.3-.64-.58-.74-.76-.08-.15-.1-.22-.1-.26 0-.04.02-.1.1-.26.2-.3.8-.92 1.9-1.5 3.23-1.8 10.04-3.25 17.75-3.23 5.88 0 11.2.8 14.87 2.02 1.82.6 3.23 1.3 4 1.94.4.3.64.58.76.76.1.15.1.22.1.26 0 .04-.02.12-.1.26-.2.32-.8.92-1.88 1.5zm47.1 68.9c-.17.3-.8.92-1.9 1.5-3.27 1.83-10.16 3.3-17.96 3.28-5.95 0-11.35-.82-15.05-2.05-1.86-.6-3.28-1.33-4.08-1.96-.4-.3-.64-.6-.75-.77-.1-.18-.1-.24-.1-.3v-5.2c4.6 2.37 11.75 3.7 19.97 3.72 6.4-.02 12.2-.86 16.6-2.3 1.24-.43 2.37-.9 3.38-1.4v5.2c0 .02 0 .08-.1.27zM88 67.37c-3.27 1.82-10.16 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.05-1.86-.6-3.28-1.34-4.08-1.96-.4-.3-.64-.6-.75-.78-.1-.2-.1-.25-.1-.3v-4.7c4.6 2.36 11.75 3.68 19.97 3.7 6.4 0 12.2-.84 16.6-2.3 1.24-.4 2.37-.87 3.38-1.4v4.7c0 .05 0 .1-.1.3-.2.33-.82.94-1.9 1.52zm0 9.76c-3.27 1.82-10.16 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.04-1.86-.6-3.28-1.34-4.08-1.96-.4-.3-.64-.6-.75-.78-.1-.2-.1-.25-.1-.3v-4.7c4.6 2.36 11.75 3.68 19.97 3.7 6.4 0 12.2-.85 16.6-2.3 1.24-.4 2.37-.87 3.38-1.4v4.7c0 .04 0 .1-.1.3-.2.33-.82.94-1.9 1.52zm0-19.4c-3.27 1.82-10.15 3.3-17.96 3.27-5.95 0-11.35-.8-15.05-2.05-1.86-.6-3.28-1.33-4.08-1.96-.4-.32-.64-.6-.75-.8-.1-.14-.1-.2-.1-.24 0-.05 0-.12.1-.27.2-.33.8-.94 1.9-1.52 3.28-1.82 10.18-3.3 17.98-3.28 5.95 0 11.35.8 15.04 2.05 1.85.6 3.26 1.33 4.06 1.96.4.32.64.6.75.8.1.14.12.2.12.26 0 .03-.03.1-.1.25-.2.34-.82.95-1.9 1.53z" fill-rule="evenodd" fill="#ffffff"></path>
+                        </svg>
+                        <span class="font-weight-medium">3X moins cher</span>
+                    </div>
+                </div>
+                <div class="row text-white text-center p-1">
+                    <div class="col-6">
+                        <svg aria-hidden="true" aria-label="AXA réinventons notre métier" class="d-inline-block align-middle" height="26" role="img" version="1.1" viewbox="0 0 60 60" width="26">
+                            <path d="M0 0h60v60H0z" fill="#103184"></path>
+                            <path d="M37.137 29.474L60 0h-3.376l-22.94 29.474h3.453z" fill="#FF1821"></path>
+                            <path d="M45.452 42.643c1.036 2.898 3.173 10.44 4.022 11.04h-5.61s-.02-1.113-.262-1.977c-.24-.862-2.27-7.384-2.27-7.384h-8.91l-1.4 1.985s1.683 5.262 1.787 5.52c.18.465.983 1.857.983 1.857h-5.375s-.14-.804-.192-1.14c-.042-.27-.51-1.75-.51-1.75s-1.217 1.334-1.55 1.953c-.334.617-.483.937-.483.937h-4.206s-.14-.804-.193-1.14c-.04-.27-.555-1.868-.555-1.868s-1.178 1.428-1.513 2.046c-.332.618-.476.962-.476.962h-4.158s1.175-1.118 1.586-1.598c.693-.813 3.274-4.184 3.274-4.184l-1.035-3.58h-8.84s-5.043 6.62-5.24 6.825c-.202.2-1.67 2.308-1.704 2.538H0v-1.667c.05-.05.086-.088.104-.1.08-.06 3.822-4.7 7.258-9.275 3.088-3.99 5.986-7.87 6.24-8.24.616-.894 1.503-2.823 1.503-2.823h4.57s.142 1.775.276 2.206c.12.38 2.905 9.51 2.97 9.61l1.54-1.968-2.632-8.097s-.617-1.522-.818-1.75h5.34s-.042.783.174 1.45c.217.668 1.362 4.794 1.362 4.794s3.642-4.56 3.855-4.888c.4-.55.45-1.357.45-1.357h4.45s-.815.594-2.243 2.398c-.48.607-5.178 6.573-5.178 6.573s.41 1.398.61 2.093c.054.2.09.334.09.35 0 .005.105-.122.284-.35 1.21-1.535 6.725-8.758 7.06-9.377.27-.5.666-1.068.898-1.686h4.34s.1 1.295.233 1.654l2.717 9.41zm-6.05-6.775c-.676 1.44-4.665 6.238-4.665 6.238h6.316s-1.225-3.726-1.438-4.566c-.17-.668-.123-1.53-.123-1.632 0-.076-.015-.2-.09-.04zm-23.157 0c-.677 1.44-4.666 6.238-4.666 6.238h6.315s-1.224-3.726-1.437-4.566c-.17-.668-.124-1.53-.124-1.632 0-.076-.015-.2-.09-.04zm9.176 13.606l1.95-2.273c-.18-.162-1.277-2.99-1.277-2.99l-1.882 2.077 1.21 3.187z" fill="#FFF"></path>
+                        </svg>
+                        <span class="font-weight-medium">Services assurés</span>
+                    </div>
+                    <div class="col-6">
+                        <div class="badge-50-common badge-50-sm">-50%</div>
+                        <span class="font-weight-medium">Crédit d'impôt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <ul class="breadcrumb mb-3 pl-0">
+        <li class="breadcrumb-item">
+            <a class="link-gray" href="https://alloservice.fr/">Accueil</a>
+        </li>
+        <li class="breadcrumb-item active">Tous les jobeurs</li>
+    </ul></div><div class="container my-3">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="font-size-4">Toutes les annonces de jobeurs en France</p>
+            <p class="font-size-4">38573 annonces de jobeurs en France</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 order-md-2">
+            <div class="card mb-3">
+                <div class="card-header h6">Profils des jobeurs</div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/bricoleur">Bricoleur</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/plombier">Plombier</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/electricien">Électricien</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/jardinier">Jardinier</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/demenageur">Déménageur</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/femme-de-menage">Femme de ménage</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/baby-sitter">Baby-sitter</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/pet-sitter">Pet-sitter</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/dog-sitter">Dog-sitter</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/cat-sitter">Cat-sitter</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/informaticien">Informaticien</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/concierge">Concierge</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header h6">Villes</div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/paris">Jobeur à Paris</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/marseille">Jobeur à Marseille</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/lyon">Jobeur à Lyon</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/toulouse">Jobeur à Toulouse</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/nice">Jobeur à Nice</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/nantes">Jobeur à Nantes</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/montpellier">Jobeur à Montpellier</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/bordeaux">Jobeur à Bordeaux</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/strasbourg">Jobeur à Strasbourg</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://alloservice.fr/jobeurs/rennes">Jobeur à Rennes</a>
+                        </li>
+                    </ul><hr><div class="dropdown">
+                        <a class="dropdown-listing dropdown-list-category dropdown-toggle cursor-pointer" data-toggle="dropdown" role="button">Choisissez votre ville</a>
+                        <div class="dropdown-menu scrollable-menu" role="menu">
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/aix-en-provence">Aix-en-Provence</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/ajaccio">Ajaccio</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/albi">Albi</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/amiens">Amiens</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/angers">Angers</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/annecy">Annecy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/antibes">Antibes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/antony">Antony</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/argenteuil">Argenteuil</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/arles">Arles</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/asnieres-sur-seine">Asnières-sur-Seine</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/aubervilliers">Aubervilliers</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/aulnay-sous-bois">Aulnay-sous-Bois</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/avignon">Avignon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/beauvais">Beauvais</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/belfort">Belfort</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/besancon">Besançon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/blois">Blois</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/bobigny">Bobigny</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/bondy">Bondy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/bordeaux">Bordeaux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/boulogne-billancourt">Boulogne-Billancourt</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/boulogne-sur-mer">Boulogne-sur-Mer</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/bourges">Bourges</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/brest">Brest</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/brive-la-gaillarde">Brive-la-Gaillarde</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/beziers">Béziers</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/caen">Caen</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/cagnes-sur-mer">Cagnes-sur-Mer</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/calais">Calais</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/cannes">Cannes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/carcassonne">Carcassonne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/cergy">Cergy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/chalon-sur-saone">Chalon-sur-Saône</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/chambery">Chambéry</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/champigny-sur-marne">Champigny-sur-Marne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/charleville-mezieres">Charleville-Mézières</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/chelles">Chelles</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/cholet">Cholet</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/chalons-en-champagne">Châlons-en-Champagne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/chateauroux">Châteauroux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/clamart">Clamart</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/clermont-ferrand">Clermont-Ferrand</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/clichy">Clichy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/clichy">Clichy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/colmar">Colmar</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/colombes">Colombes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/courbevoie">Courbevoie</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/creteil">Créteil</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/dijon">Dijon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/draguignan">Draguignan</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/drancy">Drancy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/dunkerque">Dunkerque</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/evreux">Evreux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/fontenay-sous-bois">Fontenay-sous-Bois</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/frejus">Fréjus</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/gap">Gap</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/grasse">Grasse</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/grenoble">Grenoble</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/hyeres">Hyères</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/issy-les-moulineaux">Issy-les-Moulineaux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/ivry-sur-seine">Ivry-sur-Seine</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/la-roche-sur-yon">La Roche-sur-Yon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/la-rochelle">La Rochelle</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/la-seyne-sur-mer">La Seyne-sur-Mer</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/laval">Laval</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/le-blanc-mesnil">Le Blanc-Mesnil</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/le-havre">Le Havre</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/le-mans">Le Mans</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/levallois-perret">Levallois-Perret</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/lille">Lille</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/limoges">Limoges</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/lorient">Lorient</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/lyon">Lyon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/maisons-alfort">Maisons-Alfort</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/marseille">Marseille</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/meaux">Meaux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/metz">Metz</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/montauban">Montauban</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/montpellier">Montpellier</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/montreuil">Montreuil</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/mulhouse">Mulhouse</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/merignac">Mérignac</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/nancy">Nancy</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/nanterre">Nanterre</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/nantes">Nantes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/narbonne">Narbonne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/neuilly-sur-seine">Neuilly-sur-Seine</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/nice">Nice</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/niort">Niort</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/noisy-le-grand">Noisy-le-Grand</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/nimes">Nîmes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/orleans">Orléans</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/pantin">Pantin</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/paris">Paris</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/pau">Pau</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/perpignan">Perpignan</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/pessac">Pessac</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/poitiers">Poitiers</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/puteaux">Puteaux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/quimper">Quimper</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/reims">Reims</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/rennes">Rennes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/roubaix">Roubaix</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/rouen">Rouen</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/rueil-malmaison">Rueil-Malmaison</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-brieuc">Saint-Brieuc</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-herblain">Saint-Herblain</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-malo">Saint-Malo</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-maur-des-fosses">Saint-Maur-des-Fossés</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-quentin">Saint-Quentin</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/saint-etienne">Saint-Étienne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/sarcelles">Sarcelles</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/sartrouville">Sartrouville</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/sevran">Sevran</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/strasbourg">Strasbourg</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/tarbes">Tarbes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/toulon">Toulon</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/toulouse">Toulouse</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/tourcoing">Tourcoing</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/tours">Tours</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/troyes">Troyes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/valence">Valence</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/vannes">Vannes</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/versailles">Versailles</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/villejuif">Villejuif</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/villeneuve-d-ascq">Villeneuve-d'Ascq</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/villeurbanne">Villeurbanne</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/vitry-sur-seine">Vitry-sur-Seine</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/venissieux">Vénissieux</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/epinay-sur-seine">Épinay-sur-Seine</a>
+                            <a class="dropdown-item" href="https://alloservice.fr/jobeurs/evry">Évry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 text-center">
+                <div class="card-body">
+                    <p class="h5 font-weight-normal mb-3 text-secondary">Demandez les services d'un jobeur</p>
+                    <a class="btn btn-secondary btn-break" href="">Service à domicile</a>
+                </div>
+            </div>
+            <div class="card mb-3 text-center">
+                <div class="card-body">
+                    <p class="h5 font-weight-normal mb-3 text-primary">Réalisez des jobs près de chez vous</p>
+                    <a class="btn btn-yellow btn-break" href="">Devenir jobeur</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="https://alloservice.fr/jobeur/tarek-paris-248353">
+                                    <div class="img-user img-120"><img alt="Profil de Tarek" class="img-fluid" src="{{ asset('images/mlarge_Photo...jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="https://alloservice.fr/jobeur/tarek-paris-248353">Tarek</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                1182 jobs faits</p>
+                            <p>32 ans — 75010 Paris</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Je suis à la recherche d'un complément des revenus, je suis un bricoleur. Donc, je vous propose mes services de bricolage, manutention, courses, transport, ménage, repassage, peinture, déménagement, montage des meubles, menuiserie, informatique, maçonnerie.
+                                Je suis à votre service.
+                                A bientôt je...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Alexandre" class="img-fluid" src="{{ asset('images/mlarge_CCF01072013_00000.jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Alexandre</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                860 jobs faits</p>
+                            <p>35 ans — 93170 Bagnolet</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Prêt à aider, serviable, n'hésitez pas à me contacter pour quelque job que ce soit, je suis titulaire d'un diplome de technicien d'assistance informatique, je suis aussi bricoleur, j'ai mon propre véhicule et peux vous emmener où vous le désirez, pour les déménagements, je dispose également d'une...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Zola" class="img-fluid" src="{{ asset('images/mlarge_b4bde07c.jpeg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Zola</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                553 jobs faits</p>
+                            <p>33 ans — 75005 Paris-5E-Arrondissement</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Jeune père de famille aimant la vie, je travaille dans le secteur très dynamique du Web. Je suis équipé d'un monospace 8 places très spacieux et apte à toute sorte de missions (déménagement, livraisons, transport de personnes...). Résidant en plein coeur de Paris, je peux effectuer très aisément ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Stéphane" class="img-fluid" src="{{ asset('images/mlarge_b22135fe.jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Stéphane</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                551 jobs faits</p>
+                            <p>37 ans — 93310 Le Pré-Saint-Gervais</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Bonjour, Je m'appelle Stéphane, et suis professionnel des métiers tout corps d'état électricité, plomberie, chauffage, petit entretien pose installation. Vous pouvez me faire confiance, les évaluations laissées lors de mes jobs effectués sur le site témoignent de mes capacités. N'hésitez pas à me...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Didier" class="img-fluid" src="{{ asset('images/mlarge_1d252179.JPG') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Didier</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                526 jobs faits</p>
+                            <p>58 ans — 94800 Villejuif</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-pro-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#2B7DE8"></stop>
+                                            <stop offset="100%" stop-color="#1664CA"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-a)" transform="translate(5)"></path>
+                                        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold">
+                                            <tspan x="30" y="94">PRO</tspan>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Entreprise vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">autoentrepreneur (homme toutes mains )en cours d 'inscrition,alloservice est pour moi l'opportunité de trouver du travail.
+                                mes amis et mes relations,me decrivent comme une personne sociable,serieuse dans son travail,precis,meticuleux,ponctuel,ne compte pas les heures ,toujours 
+                                disponible.
+                                mes co...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Malek" class="img-fluid" src="{{ asset('images/mlarge_da50b436.JPG') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Malek</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                516 jobs faits</p>
+                            <p>45 ans — 75017 Paris-17E-Arrondissement</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Je me présente, je suis Malek. Je suis un bricoleur passionné et pouvoir aider les personnes dans ce domaine est donc un plaisir pour moi. D'humeur joviale, je suis très actif mais également rigoureux dans le travail. Je maitrise tout corps de métier, tel que la plomberie,l'électricité, la maçonn...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Sherif" class="img-fluid" src="{{ asset('images/mlarge_53395c24.jpeg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Sherif</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                453 jobs faits</p>
+                            <p>48 ans — 75010 Paris</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-pro-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#2B7DE8"></stop>
+                                            <stop offset="100%" stop-color="#1664CA"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-a)" transform="translate(5)"></path>
+                                        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold">
+                                            <tspan x="30" y="94">PRO</tspan>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Entreprise vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Après avoir obtenu la satisfaction et La confiance de mes clients, j'ai pu devenir AUTO-ENTREPRENEUR ,J'ai une formation de peintre en décoration. j'ai CAP, peintre applicateur de revêtement,j’ai une formation HABILITATION électrique B1,B2V,Bc, J'ai une dizaine d'années d'expérience dans le domai...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Mohammed" class="img-fluid" src="{{ asset('images/mlarge_7402feb4.jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Mohammed</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                431 jobs faits</p>
+                            <p>47 ans — 93110 Rosny-sous-Bois</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Bonjour, je suis un homme à tout faire. J'étais propriétaire de ma maison et j'ai tout rénové moi meme .je bricole tout corps d'état avec une grande expérience du bricolage . Je suis fonctionnaire et j'aimerais arrondir mes fin de mois, car j'ai quatre filles et c'est un peu dur. Merci d'avance p...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Eric " class="img-fluid" src="{{ asset('images/mlarge_814.jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Eric
+                                </a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                395 jobs faits</p>
+                            <p>57 ans — 94800 Villejuif</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-pro-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#2B7DE8"></stop>
+                                            <stop offset="100%" stop-color="#1664CA"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-a)" transform="translate(5)"></path>
+                                        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold">
+                                            <tspan x="30" y="94">PRO</tspan>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Entreprise vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Bonjour tout le monde, 
+                                
+                                Je suis Eric, ouvrier dans le bâtiment depuis l'âge de 15 ans. Je suis très bon bricoleur en général et compétant dans les domaines de la plomberie, maçonnerie, le carrelage, le placo, installation de cuisine, salle de bain etc. Je suis quelqu'un de très professionnel e...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <div class="mb-2">
+                                <a href="">
+                                    <div class="img-user img-120"><img alt="Profil de Adel" class="img-fluid" src="{{ asset('images/mlarge_da449a24.jpg') }}"></div>
+                                </a>
+                            </div>
+                            <p class="font-size-4">
+                                <a href="">Adel</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </p>
+                            <p>
+                                <i class="fas fa-check text-muted"></i>
+                                381 jobs faits</p>
+                            <p>38 ans — 93600 Aulnay-sous-Bois</p>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#41E8B0"></stop>
+                                            <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                        </lineargradient>
+                                        <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                        <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <g transform="translate(5)">
+                                            <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                            <use xlink:href="#path-security-b"></use>
+                                        </g>
+                                        <g transform="translate(5)">
+                                            <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                            <use xlink:href="#path-security-c"></use>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Identité vérifiée</small>
+                            </div>
+                            <div class="user-badge-profile">
+                                <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="20" role="img" version="1.1" viewbox="0 0 200 200" width="20">
+                                    <defs>
+                                        <lineargradient id="linear-pro-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#2B7DE8"></stop>
+                                            <stop offset="100%" stop-color="#1664CA"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                    <g fill-rule="evenodd" fill="none">
+                                        <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-a)" transform="translate(5)"></path>
+                                        <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold">
+                                            <tspan x="30" y="94">PRO</tspan>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <small class="d-inline-block">Entreprise vérifiée</small>
+                            </div>
+                            <p class="user-card-desc mt-2 mb-0">Bonjour je suis peintre macon avec 20 ans d expérience je fais du carrelage faience parquet enduit peinture bricolage prix honet j ai camionnette et tous les outils je me déplace a Paris et ile de france j ai l assurance décennale et je peux fournir une facture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pagination justify-content-between m-0">
+                    <li class="page-item disabled">
+                        <span class="page-link pagination-border-radius">← Précédent</span>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link pagination-border-radius" href="">Suivant
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div></div><div id="batBeacon0.012636796119391391" style="width:0px; height:0px; display:none; visibility:hidden;"><img alt="" height="0" id="batBeacon0.3496127929716728" src="" style="width:0px; height:0px; display:none; visibility:hidden;" width="0"></div><div class="bg-white py-5">
+    <div class="container text-center">
+        <p class="h2 module-title mb-4">Les dernières évaluations des jobeurs</p>
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Elie" src="{{ asset('images/mlarge_a3c4ffbf.jpg') }}"></a>
+                </div>
+                <p></p>
+                <span class="font-size-4">
+                    <a class="text-dark" href="">Elie</a>
+                </span><br><span class="font-size-3">
+                    <a class="text-dark" href="">Tondre la pelouse et arracher les mauvaises herbes
+                    </a>
+                </span><br><p>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                </p>
+                <p class="text-muted">« Bonne prestation : travail efficace et rapide. 
+                    Réactif pour se rendre disponible. »</p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Rim" src="{{ asset('images/mlarge_3ca31362.jpg') }}"></a>
+                </div>
+                <p></p>
+                <span class="font-size-4">
+                    <a class="text-dark" href="">Rim</a>
+                </span><br><span class="font-size-3">
+                    <a class="text-dark" href="">Repassage</a>
+                </span><br><p>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                </p>
+                <p class="text-muted">« Travail de qualité, comme d habitude »</p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Hervé" src="{{ asset('images/mlarge_9e89d78d.jpg') }}"></a>
+                </div>
+                <p></p>
+                <span class="font-size-4">
+                    <a class="text-dark" href="">Hervé</a>
+                </span><br><span class="font-size-3">
+                    <a class="text-dark" href="">Pose de lampes et luminaires</a>
+                </span><br><p>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                    <i class="fas fa-star user-star user-star-active"></i>
+                </p>
+                <p class="text-muted">« Top! À recommander ! »</p>
+            </div>
+        </div>
+    </div></div><div class="pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-md-2 mb-4">
+                <h3 class="h2 mt-0">Le service entre particuliers<br>
+                    <span class="text-muted font-weight-normal">en toute sérénité</span>
+                </h3><img alt="Logo sap" src="{{ asset('images/logo-sap-83b43340027f96585c20a773459600c640ab340740a2cc50e66ad86d93f1a734.png') }}"></div>
+            <div class="col-md-6 order-md-1">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 font-size-4 text-muted">
+                        <div class="card card-shadow mb-3">
+                            <div class="card-body">
+                                <i class="fas fa-check px-2"></i>
+                                Vérification des profils</div>
+                        </div>
+                        <div class="card card-shadow mb-3">
+                            <div class="card-body">
+                                <i class="fas fa-check px-2"></i>
+                                Service assuré</div>
+                        </div>
+                        <div class="card card-shadow mb-3">
+                            <div class="card-body">
+                                <i class="fas fa-check px-2"></i>
+                                Agréé Service à la personne</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div><div class="bg-white">
+    <div class="container py-5">
+        <p class="h2 module-title mb-4">Les derniers jobeurs inscrits</p>
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Gerardo" src="{{ asset('images/mlarge_c941e086.jpg') }}"></a>
+                </div>
+                <p></p>
+                <p class="font-size-4">
+                    <a class="text-dark" href="">Gerardo</a>
+                </p>
+                <p class="text-muted">« Je suis sur Youpijob pour un partage de connaissance… Mes amis disent que je suis... à l’écoute »</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Delphine" src="{{ asset('images/mlarge_0cb001cc.jpg') }}"></a>
+                </div>
+                <p></p>
+                <p class="font-size-4">
+                    <a class="text-dark" href="">Delphine</a>
+                </p>
+                <p class="text-muted">« Je travaille à domicile pour des personnes âgées mais j'ai du temps pendant la journée et la soirée. Je viens de terminer des études d'educatrice spécialisée. Je peux garder vos enfants, vos animaux... Jusqu'à fin juillet 2019. »</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <p>
+                    <a href=""></a>
+                </p>
+                <div class="img-user img-120">
+                    <a href=""><img alt="Profil de Corentin" src="{{ asset('images/mlarge_bba4ff32.JPG') }}"></a>
+                </div>
+                <p></p>
+                <p class="font-size-4">
+                    <a class="text-dark" href="">Corentin</a>
+                </p>
+                <p class="text-muted">« Bonjour, je m'appel Corentin Griffon, je suis actuellement étudiant en BTS. Afin de payer ma poursuite d'étude, je souhaite vous aider dans votre quotidien . »</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

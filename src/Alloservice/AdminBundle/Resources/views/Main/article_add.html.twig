@@ -1,0 +1,77 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}{%if edit is defined and edit == 1%}Article : {{entity.title}}{%else%}Ajouter un article{%endif%} - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{%if edit is defined and edit == 1%}Article : {{entity.title}}{%else%}Ajouter un article{%endif%}</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.title)}}
+					{{form_widget(form.title)}}
+					{{form_errors(form.title)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.subtitle)}}
+					{{form_widget(form.subtitle)}}
+					{{form_errors(form.subtitle)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.category)}}
+					{{form_widget(form.category)}}
+					{{form_errors(form.category)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.content)}}
+					{{form_widget(form.content)}}
+					{{form_errors(form.content)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.file)}}<br>
+					{{form_widget(form.file)}}
+					{{form_errors(form.file)}}
+					{%if edit is defined and edit == 1%}
+					<div style="max-width:160px">
+						<img src="{{asset(entity.getThumbPath()) | imagine_filter('300x200')}}" alt="" class="img-thumbnail" />
+					</div>
+					{%endif%}
+				</div>
+				<div class="form-ctrl">
+					{{form_widget(form.state)}}
+					{{form_label(form.state)}}
+					{{form_errors(form.state)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript">
+	tinymce.init({
+		selector: '.wysiwyg',
+		theme: "modern",
+		height: 200,
+		menubar: false,
+		plugins: [
+			"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker toc",
+        	"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+        	"save table contextmenu directionality emoticons template paste textcolor importcss colorpicker textpattern codesample"
+		],
+		toolbar: 'code | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | link unlink | subscript superscript',
+		content_css: [
+			'{{asset("css/responsive.css")}}',
+			'{{asset("css/style-admin.css")}}']
+	});
+</script>
+{% endblock %}

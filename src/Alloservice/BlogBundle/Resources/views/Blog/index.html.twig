@@ -1,0 +1,91 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Blog {{ parent() }} : un quotidien plus malin et plus serein {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="container">
+    	<h1 class="text-center my-5">Astuces et conseils pour le quotidien</h1>
+        <div class="row mb-4">
+        	{%if article is not null%}
+            <div class="col-md-12">
+                <a href="{{ path('alloservice_blog_read', {'cat_slug':article.category.slug, 'slug':article.slug}) }}">
+                    <div style="background: url('{{asset(article.getThumbPath()) | imagine_filter('720x480')}}') no-repeat;background-size: cover;background-position:center;height:450px;position:relative;border-radius:4px;">
+                        <div class="blog-header-post-content">
+                            <h2 class="h4 mt-3 px-2 font-size-5 text-center text-white">{{article.title}}</h2>
+                            <div class="media mb-3">
+                                <div class="media-body align-self-center">
+                                    <div class="font-size-3 pl-3 text-white text-justify">{{article.subtitle}}</div>
+                                </div>
+                                <div class="media-right align-self-center">
+                                    <i class="fa fa-chevron-right fa-2x text-white pr-2 pl-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {%endif%}
+        </div>
+        <div class="my-4">
+            <div class="row">
+            	{%for cat in categories%}
+                <div class="col-md-3 text-center mb-2">
+                    <a class="btn btn-lg btn-light btn-block " href="{{path('alloservice_blog_by_category',{'slug': cat.slug})}}">{{cat.name}}</a>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9" itemscope="" itemtype="http://schema.org/Blog">
+                <!-- gododson -->
+                {#articles.currentPageNumber#}
+                {#articles.totalCount#}
+                {%for entity in articles%}
+                <div class="card mb-3" itemscope="" itemtype="">
+                    <div class="blog-post">
+                        <div class="blog-post-left">
+                            <a href="{{ path('alloservice_blog_read', {'cat_slug':entity.category.slug, 'slug':entity.slug}) }}"><img alt="{{entity.title}}" class="blog-post-img" height="200" itemprop="image" src="{{asset(entity.getThumbPath()) | imagine_filter('300x200')}}" width="300"></a>
+                        </div>
+                        <div class="blog-post-right">
+                            <div class="p-3">
+                                <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                    <a class="text-dark" href="{{ path('alloservice_blog_read', {'cat_slug':entity.category.slug, 'slug':entity.slug}) }}" itemprop="url">{{entity.title}}</a>
+                                </h2>
+                                <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-05-20" datetime="2019-05-20" itemprop="datePublished">{{entity.date | localizeddate('medium','none')}}</time>
+                                <p class="mt-3 font-size-3 mb-3" itemprop="description">{{entity.subtitle}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+                <nav>
+                    <ul class="pagination justify-content-between m-0">
+                        <li class="page-item disabled">
+                            <span class="page-link pagination-border-radius">← Précédent</span>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link pagination-border-radius font-weight-bold" href="">Suivant
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 text-center">
+                    <div class="card-body">
+                        <p class="h5 font-weight-normal mb-3 text-secondary">Besoin d'aide ? Trouvez quelqu'un pour vous aider</p>
+                        <a class="btn btn-secondary btn-break" href="{{path('alloservice_site_service_list')}}">Demander un service</a>
+                    </div>
+                </div>
+                <div class="card mb-3 text-center">
+                    <div class="card-body">
+                        <p class="h5 font-weight-normal mb-3 text-primary">Réalisez des jobs et augmentez vos revenus</p>
+                        <a class="btn btn-yellow btn-break" href="{{path('alloservice_site_devenir-jobeur')}}">Devenir jobeur</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

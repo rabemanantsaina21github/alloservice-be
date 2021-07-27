@@ -1,0 +1,58 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Pays - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">Pays</h1>
+		<div class="form form-container">
+			{{form_start(form)}}
+				<h4>Ajouer nouveau pays</h4>
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.code)}}
+					{{form_widget(form.code)}}
+					{{form_errors(form.code)}}
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+			{{form_end(form)}}
+		</div>
+
+		<form method="POST">
+			<div class="admin-section-content">
+				<table class="tab">
+					<thead>
+						<th width="50px"></th>
+						<th>#ID</th>
+						<th>Nom</th>
+						<th>Code</th>
+						<th width="120px">Options</th>
+					</thead>
+					<tbody>
+					{%for entity in tab%}
+						<tr>
+							<td><input type="checkbox" name="del[]" value="{{entity.id}}"/></td>
+							<td>{{entity.id}}</td>
+							<td>{{entity.getName()}}</td>
+							<td>{{entity.code}}</td>
+							<td>
+								<a href="{{path('alloservice_admin_city_country_edit',{'id': entity.id})}}"><i class="fa fa-edit"></i> Modifier</a>
+							</td>
+						</tr>
+					{%endfor%}
+					</tbody>
+				</table>
+				<div class="admin-buttons">
+					<button type="submit" class="btn btn-yellow" onclick="return confirm('Voulez-vous supprimer la sélection ?');"><i class="fa fa-trash"></i> Supprimer la sélection</button>
+				</div>
+			</div>
+		</form>
+		<div class="navigation">
+		    {{ knp_pagination_render(tab) }}
+		</div>
+	</div>
+</section>
+{% endblock %}

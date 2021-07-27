@@ -1,0 +1,107 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}{%if edit is defined and edit == 1%}Service : {{entity.title}}{%else%}Ajouter un service{%endif%} - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{%if edit is defined and edit == 1%}Service : {{entity.title}}{%else%}Ajouter un service{%endif%}</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.title)}}
+					{{form_widget(form.title)}}
+					{{form_errors(form.title)}}
+				</div>
+				<div class="form-ctrl">
+					{%if form.service is defined%}
+					{{form_label(form.service)}}
+					{{form_widget(form.service)}}
+					{{form_errors(form.service)}}
+					{%endif%}
+					
+					{%if form.supService is defined%}
+					{{form_label(form.supService)}}
+					{{form_widget(form.supService)}}
+					{{form_errors(form.supService)}}
+					{%endif%}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.description)}}
+					{{form_widget(form.description)}}
+					{{form_errors(form.description)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.file)}}<br>
+					{{form_widget(form.file)}}
+					{{form_errors(form.file)}}
+					{%if edit is defined and edit == 1%}
+					<div style="max-width:160px">
+						<img src="{{asset(entity.getWebPath())}}" alt="" class="img-thumbnail" />
+					</div>
+					{%endif%}
+				</div>
+				<h4>À remplir aussi</h4>
+				<div class="form-ctrl">
+					{{form_label(form.metaTitle)}}
+					{{form_widget(form.metaTitle)}}
+					{{form_errors(form.metaTitle)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.serviceType)}}
+					{{form_widget(form.serviceType)}}
+					{{form_errors(form.serviceType)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.otherJob)}}
+					{{form_widget(form.otherJob)}}
+					{{form_errors(form.otherJob)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.ourJobers)}}
+					{{form_widget(form.ourJobers)}}
+					{{form_errors(form.ourJobers)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.lastServicePub)}}
+					{{form_widget(form.lastServicePub)}}
+					{{form_errors(form.lastServicePub)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.jobCity)}}
+					{{form_widget(form.jobCity)}}
+					{{form_errors(form.jobCity)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.jobBlog)}}
+					{{form_widget(form.jobBlog)}}
+					{{form_errors(form.jobBlog)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.button1)}}
+					{{form_widget(form.button1)}}
+					{{form_errors(form.button1)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.button2)}}
+					{{form_widget(form.button2)}}
+					{{form_errors(form.button2)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.button3)}}
+					{{form_widget(form.button3)}}
+					{{form_errors(form.button3)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}

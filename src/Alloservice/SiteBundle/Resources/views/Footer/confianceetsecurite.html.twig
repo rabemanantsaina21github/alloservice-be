@@ -1,0 +1,126 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Confiance & Sécurité - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div
+        class="bg-cover bg-trust-security">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <div class="index-public-hero">
+            <div class="container text-center">
+                <h1 class="hero-title">Le service entre particuliers en toute sérénité</h1>
+                <ul class="list-inline list-promises">
+                    <li class="list-inline-item h4 text-white font-weight-normal">
+                        <i class="fas fa-check"></i>
+                        Profils vérifiés et évalués</li>
+                    <li class="list-inline-item h4 text-white font-weight-normal">
+                        <i class="fas fa-check"></i>
+                        Jobs assurés</li>
+                    <li class="list-inline-item h4 text-white font-weight-normal">
+                        <i class="fas fa-check"></i>
+                        Service client disponible</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="bg-gray-200">
+    <div class="container">
+        <ul class="breadcrumb mb-0 pl-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb-item active">Confiance &amp; Sécurité garanties</li>
+        </ul>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 px-0">
+                <img class="img-fluid" src="{{ asset('images/trust-jobber-922ce5bb30a1759ab26f7ed1abf364f21fc6ced8325018a00840d0491201faa4.jpg') }}" alt="Trust jobber" width="1200" height="800"></div>
+            <div class="col-sm-7">
+                <div class="pb-3 mt-4 px-2">
+                    <h2 class="mb-3">Confiance et sécurité garanties</h2>
+                    <p class="font-size-3">Toutes les évaluations sont réelles, elles sont laissées par les autres membres une fois la prestation terminée</p>
+                    <p class="font-size-3">- 98 % des membres sont satisfaits des services rendus</p>
+                    <p class="font-size-3">- Vous savez à qui vous allez ouvrir la porte</p>
+                    <p class="font-size-3">Nous vérifions les profils des Jobeurs :</p>
+                    <ul class="font-size-3">
+                        <li>la photo</li>
+                        <li>la carte d’identité</li>
+                        <li>la carte vitale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ypj-fluid-container">
+    <div class="mt-5">
+        <p class="h2 mt-0 mb-1">Comment ça marche ?</p>
+        <div class="row mt-4">
+            <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon1" height="200" src="{{ asset('images/hiw-icon1-c2b46308c928256d1bc34d7fcb07a162a7140c3f120d810f55dc9db87de74627.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Demandez un service</p>
+                <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Remplissez le formulaire et obtenez une estimation du prix et de la durée</p>
+            </div>
+            <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon2" height="200" src="{{ asset('images/hiw-icon2-641d5c09d8789cb41711d0e41557929d8ee2a196bab3b2e47b875f03132b960e.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Choisissez votre jobeur</p>
+                <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Des jobeurs compétents et proches de chez vous vous proposent leurs services</p>
+            </div>
+            <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0"><img alt="Hiw icon3" height="200" src="{{ asset('images/hiw-icon3-b21fb9288ea360942c1a3a595cd3d5e481725e37e615bb42e74ced0a7d98a56d.svg') }}" width="200"><p class="h5 font-weight-medium mt-2">Souriez, c'est fait !</p>
+                <p class="font-size-3 font-weight-normal text-muted hiw-text-size">Votre jobeur vous rend service au prix et à la date convenus</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="py-5 px-2">
+                    <h2 class="mb-3">Services assurés par AXA</h2>
+                    <p class="font-size-3">La qualité de service est une de nos préoccupations première. Le niveau de prestation rendue par les Jobeurs est suivi par nos équipes, pour vous garantir la meilleure expérience.</p>
+                    <p class="font-size-3">Nous avons en plus souscrit à une solution d’assurance qui vous couvre en cas d’accident ou de dégradation.</p>
+                    <p class="font-size-3">
+                        <a href="" target="_blank" class="text-info font-weight-medium">+ d’informations concernant l’assurance</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-5 px-0"><img alt="Trust family" class="img-fluid" height="800" src="{{ asset('images/trust-family-73cffa946f0fb421373c03f74fcca0386c9480fed0b2477de985f61a6b8e525d.jpg') }}" width="1200"></div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-200 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center"><img alt="Trust lock" height="72" src="{{ asset('images/trust-lock-f215b066e0e023f7ea6b85d104e63aedc6964a0a80fa397df15f47f1c3b67591.svg') }}" width="72"><p class="h3 font-weight-normal mt-2">Paiement sécurisé</p>
+                <p class="font-size-3">Vous réglez directement votre Jobeur depuis le site. Simple et sécurisé</p>
+            </div>
+            <div class="col-sm-4 text-center"><img alt="Trust credit card" height="72" src="{{ asset('images/trust-credit-card-93f72c21559bc172ba43b46f3d1ed2e30dddcb9c40c2133e1d4057107e20c877.svg') }}" width="72"><p class="h3 font-weight-normal mt-2">Prix défini</p>
+                <p class="font-size-3">Lors de la sélection le montant de la prestation est défini. Pas de mauvaise surprise</p>
+            </div>
+            <div class="col-sm-4 text-center"><img alt="Trust calendar" height="72" src="{{ asset('images/trust-calendar-db0622565b5db14a3cd9b63b4765ee568ac6751d87e5b53ef54a5ed5a71d3e50.svg') }}" width="72"><p class="h3 font-weight-normal mt-2">Annulation gratuite</p>
+                <p class="font-size-3">Vous pouvez annuler la prestation. Dans ce cas vous êtes remboursé.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 px-0"><img alt="Trust satisfy" class="img-fluid" height="800" src="{{ asset('images/trust-satisfy-074e3ddcdfbbdaf47edfe86e2febe5906a657425f240a86776abe72689ac07c4.jpg') }}" width="1200"></div>
+            <div class="col-sm-6">
+                <div class="py-5 px-2">
+                    <h2 class="mb-3">Satisfaction garantie</h2>
+                    <p class="font-size-3">Vous ne payez qu’une fois le job effectué.<br>Lors de la sélection vous réservez la prestation, l'argent est prélevé et conservé sur un compte temporaire.</p>
+                    <ul class="font-size-3 mb-3">
+                        <li>Vous pouvez si nécessaire changer de jobeur sans frais</li>
+                        <li>En cas d'absence de votre Jobeur, notre équipe vous aide à retrouver un jobeur dans les meilleurs délais</li>
+                        <li>Vous pouvez en cas de besoin annuler votre demande de service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>{% endblock %}

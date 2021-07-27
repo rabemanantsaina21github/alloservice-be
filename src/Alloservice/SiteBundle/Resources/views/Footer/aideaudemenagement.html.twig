@@ -1,0 +1,658 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Aide au déménagement - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]> <p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="py-2 border-bottom d-flex align-items-center justify-content-center">
+    <div class="promises-items-wrapper d-none d-lg-block">
+        <div class="promises-items">
+            <div class="ypj-fluid-container d-flex justify-content-between">
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Réservez sereinement, vous êtes couvert en cas d’accident, casse, dégradation et malfaçon." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-shield-alt mr-2 font-size-5 text-primary"></i>
+                    Services assurés par AXA
+                </a>
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Maitrisez votre budget et évitez les mauvaises surprises. Les prix sont fixés à l&#39;avance entre vous et votre prestataire." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-handshake mr-2 font-size-5 text-primary"></i>
+                    Prix fixé à l'avance
+                </a>
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Tous les prestataires sont vérifiés, suivis et évalués pour chaque service rendu afin de vous garantir le meilleur niveau de satisfaction." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-user-check mr-2 font-size-5 text-primary"></i>
+                    Prestations encadrées</a>
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="Notre service client vous accompagne 7j/7 pour vous assurer le bon déroulement de votre demande." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-phone mr-2 font-size-5 text-primary"></i>
+                    Assistance 7j/7
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="carousel slide d-block d-lg-none u-width-100 mx-2" data-interval="3000" data-ride="carousel" id="promisesCaroussel">
+        <div class="carousel-inner caroussel-promises">
+            <div class="carousel-item active">
+                <a class="ps-title text-dark remove-link-style cursor-pointe d-flex align-items-center justify-content-center my-2 pl-1 font-size-3r" data-content="Réservez sereinement, vous êtes couvert en cas d’accident, casse, dégradation et malfaçon." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-shield-alt mr-2 text-primary"></i>
+                    Services assurés par AXA
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Maitrisez votre budget et évitez les mauvaises surprises. Les prix sont fixés à l&#39;avance entre vous et votre prestataire." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-handshake mr-2 text-primary"></i>
+                    Prix fixé à l'avance
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Tous les prestataires sont vérifiés, suivis et évalués pour chaque service rendu afin de vous garantir le meilleur niveau de satisfaction." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-user-check mr-2 text-primary"></i>
+                    Prestations encadrées
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="Notre service client vous accompagne 7j/7 pour vous assurer le bon déroulement de votre demande." data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" data-original-title="" title="">
+                    <i class="fa fa-phone mr-2 text-primary"></i>
+                    Assistance 7j/7
+                </a>
+            </div>
+        </div>
+        <a class="u-button-icon carousel-control-prev" data-slide="prev" href="#promisesCaroussel">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="u-button-icon carousel-control-next" data-slide="next" href="#promisesCaroussel">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </div>
+</div>
+<div class="ypj-fluid-container">
+    <div class="my-2">
+        <ol class="breadcrumb mb-3 pl-0" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                <a class="link-gray" itemprop="item" href="{{ path('alloservice_site_homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta content="1" itemprop="position">
+            </li>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                <a class="link-gray" itemprop="item" href="{{path('alloservice_site_service_list')}}">
+                    <span itemprop="name">
+                        Service à domicile
+                    </span>
+                </a>
+                <meta content="2" itemprop="position">
+            </li>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                <a class="link-gray" itemprop="item" href="">
+                    <span itemprop="name">Déménagement</span>
+                </a>
+                <meta content="3" itemprop="position">
+            </li>
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="">
+                <a class="link-gray" itemprop="item" href="">
+                    <span itemprop="name">Aide au déménagement</span>
+                </a>
+                <meta content="4" itemprop="position">
+            </li>
+        </ol>
+    </div>
+    <div class="mt-3 text-justify">
+        <div class="content-intro">
+            <div class="d-flex align-items-bottom flex-wrap">
+                <h1 class="mr-3">Aide au déménagement</h1>
+            </div>
+            <div data-component="toggle" data-handle-outside="fase" data-toggle-classname="show-more-intro-wrapper--full">
+                <div class="show-more-intro-wrapper" data-toggelable="">
+                    <p class="font-size-2 font-size-sm-3 text-muted">
+                        Vous déménagez dans une ville où vous ne connaissez personne ou vos amis ne sont pas disponibles pour vous donner un coup de main le Jour J&nbsp;? Sur Youpijob, trouvez des jobeurs près de chez vous spécialisés dans le déménagement, qui prendront soin de vos cartons et de vos gros meubles. Ils assurent le chargement comme le déchargement de vos affaires avec précaution. Après chaque prestation, les clients les notent. Leur identité est vérifiée par nos recruteurs dès qu’ils s’inscrivent. L’aide au déménagement avec Youpijob, c’est rapide, pratique, facile et pas cher.
+                    </p>
+                    <button class="btn btn-show-more btn-blue-only-text font-size-2 font-size-sm-3 font-weight-bold" data-clickable="">
+                        Lire plus...
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 mb-5">
+        <a class="btn btn-secondary font-weight-bold btn-lg btn-break btn-service-cta" href="">
+            Demander un service d'aide au déménagement
+        </a>
+    </div>
+    <div class="my-5">
+        <h2>Nos déménageurs sont à votre service</h2>
+        <div class="row mt-3">
+            <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                    <div>
+                        <div class="avatar-border">
+                            <div class="img-user img-80">
+                                <img alt="Profil de Veyrard" src="{{ asset('images/medium_0a5e383d.jpg') }}"></div>
+                        </div>
+                    </div>
+                    <div class="ml-2">
+                        <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Veyrard</p>
+                        <p class="user-star-active font-weight-black text d-flex align-items-center">
+                            <span class="rate-small">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </span> <span class="font-size-2 ml-1">(123)</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="mb-1 font-weight-medium pl-2">
+                    <i class="fa fa-briefcase mr-2 fa-fw"></i>
+                    130 jobs faits
+                </div>
+                <p></p>
+                <div class="border rounded p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <strong class="text-truncate">
+                            Alexandre
+                        </strong>
+                        <div class="rate-small text-nowrap">
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Ponctuel, aimable et efficace. Super"</p>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                    <div>
+                        <div class="avatar-border">
+                            <div class="img-user img-80">
+                                <img alt="Profil de Michael" src="{{ asset('images/medium_3ffeae96.jpg') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-2">
+                        <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">
+                            Michael
+                        </p>
+                        <p class="user-star-active font-weight-black text d-flex align-items-center">
+                            <span class="rate-small">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </span>
+                            <span class="font-size-2 ml-1">(157)</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="mb-1 font-weight-medium pl-2">
+                    <i class="fa fa-briefcase mr-2 fa-fw"></i>
+                    163 jobs faits
+                </div>
+                <p></p>
+                <div class="border rounded p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <strong class="text-truncate">Emmanuel</strong>
+                        <div class="rate-small text-nowrap">
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Parfait. Ponctuel. Aimable. Prudent. Efficace. Je recommande. "</p>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                    <div>
+                        <div class="avatar-border">
+                            <div class="img-user img-80">
+                                <img alt="Profil de Jean" src="{{ asset('images/medium_6c19d304.jpeg') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-2">
+                        <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Jean</p>
+                        <p class="user-star-active font-weight-black text d-flex align-items-center">
+                            <span class="rate-small">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </span>
+                            <span class="font-size-2 ml-1">(309)</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="mb-1 font-weight-medium pl-2">
+                    <i class="fa fa-briefcase mr-2 fa-fw"></i>
+                    352 jobs faits
+                </div>
+                <p></p>
+                <div class="border rounded p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <strong class="text-truncate">Serge</strong>
+                        <div class="rate-small text-nowrap">
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Parfait"</p>
+                </div>
+                <p></p>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                    <div>
+                        <div class="avatar-border">
+                            <div class="img-user img-80">
+                                <img alt="Profil de Hicham" src="{{ asset('images/medium_4f0fe5e4.JPG') }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-2">
+                        <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Hicham</p>
+                        <p class="user-star-active font-weight-black text d-flex align-items-center">
+                            <span class="rate-small">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </span>
+                            <span class="font-size-2 ml-1">(128)</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="mb-1 font-weight-medium pl-2">
+                    <i class="fa fa-briefcase mr-2 fa-fw"></i>
+                    156 jobs faits
+                </div>
+                <p></p>
+                <div class="border rounded p-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <strong class="text-truncate">Jordan</strong>
+                        <div class="rate-small text-nowrap">
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                            <i class="fas fa-star user-star user-star-active"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Merci. Très méthodique."</p>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <a class="font-size-3 font-weight-bold d-block" href="">
+            Voir tous les déménageurs (38572)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+        </a>
+    </div>
+    <div class="my-5">
+        <h2>Dernières annonces d'aide au déménagement</h2>
+        <div class="row mt-3 d-flex align-items-stretch flex-wrap">
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="py-2 h-100">
+                    <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                        <div class="mr-1">
+                            <strong>
+                                <a class="font-size-3 text-dark" href="">
+                                    Aide au déménagement à Saint-Paul-de-Vence (06480)
+                                </a>
+                            </strong>
+                            <div class="mt-2">
+                                <div class="mb-1 text-muted service-job-description font-size-2">
+                                    Il y a 35 m3 à prendre chez un stockeur à la colle sur loup et à livrer dans ma maison à la colle sur loup : il y a 2...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                            <span class="pr-2 font-size-2">
+                                <i class="fa fa-stopwatch fa-lg"></i>
+                                6 h 30 de service
+                            </span>
+                            <div class="font-size-4 font-weight-black text-primary">
+                                <div class="price-content">
+                                    <div class="price">
+                                        <span>110,50</span> <span>€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="py-2 h-100">
+                    <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                        <div class="mr-1">
+                            <strong>
+                                <a class="font-size-3 text-dark" href="">
+                                    Aide au déménagement à Notre-Dame-de-Sanilhac (24660)
+                                </a>
+                            </strong>
+                            <div class="mt-2">
+                                <div class="mb-1 text-muted service-job-description font-size-2">
+                                    Assurer le chargement d'un camion pour environ 12m3 de meubles et cartons
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                            <span class="pr-2 font-size-2">
+                                <i class="fa fa-stopwatch fa-lg"></i>
+                                4 h de service
+                            </span>
+                            <div class="font-size-4 font-weight-black text-primary">
+                                <div class="price-content">
+                                    <div class="price"><span>68,00</span> <span>€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="py-2 h-100">
+                    <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                        <div class="mr-1">
+                            <strong>
+                                <a class="font-size-3 text-dark" href="">
+                                    Aide au déménagement (75020)
+                                </a>
+                            </strong>
+                            <div class="mt-2">
+                                <div class="mb-1 text-muted service-job-description font-size-2">
+                                    Bonjour, Je suis à la recherche de 3 personnes (ou une petite équipe) pour décharger un camion de déménagement (21m3)...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                            <span class="pr-2 font-size-2">
+                                <i class="fa fa-stopwatch fa-lg"></i>
+                                2 h 30 de service
+                            </span>
+                            <div class="font-size-4 font-weight-black text-primary">
+                                <div class="price-content">
+                                    <div class="price"><span>50,00</span> <span>€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-3">
+                <div class="py-2 h-100">
+                    <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                        <div class="mr-1">
+                            <strong>
+                                <a class="font-size-3 text-dark" href="">
+                                    Aide au déménagement à Montélimar (26200)
+                                </a>
+                            </strong>
+                            <div class="mt-2">
+                                <div class="mb-1 text-muted service-job-description font-size-2">
+                                    Nous aurions besoin d'une personne avec une petite camionnette pour réaliser ce déménagement : il faudrait prendre 1 ...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                            <span class="pr-2 font-size-2">
+                                <i class="fa fa-stopwatch fa-lg"></i>
+                                6 h 30 de service
+                            </span>
+                            <div class="font-size-4 font-weight-black text-primary">
+                                <div class="price-content">
+                                    <div class="price">
+                                        <span>110,50</span> <span>€</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="font-size-3 font-weight-bold d-block" href="">
+            Voir toutes les annonces d'aide au déménagement (22295)
+            <i class="fas fa-chevron-right pl-1 font-size-1"></i>
+        </a>
+    </div>
+    <div class="my-5">
+        <div class="mt-5">
+            <h2 class="mt-0 mb-1">Comment ça marche ?</h2>
+            <div class="row mt-4">
+                <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                    <img src="{{ asset('images/hiw-icon1-c2b46308c928256d1bc34d7fcb07a162a7140c3f120d810f55dc9db87de74627.svg') }}" alt="Hiw icon1" width="200" height="200">
+                    <p class="h5 font-weight-medium mt-2">Demandez un service</p>
+                    <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                        Remplissez le formulaire et obtenez une estimation du prix et de la durée
+                    </p>
+                </div>
+                <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                    <img src="{{ asset('images/hiw-icon2-641d5c09d8789cb41711d0e41557929d8ee2a196bab3b2e47b875f03132b960e.svg') }}" alt="Hiw icon2" width="200" height="200">
+                    <p class="h5 font-weight-medium mt-2">Choisissez votre jobeur</p>
+                    <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                        Des jobeurs compétents et proches de chez vous vous proposent leurs services
+                    </p>
+                </div>
+                <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                    <img src="{{ asset('images/hiw-icon3-b21fb9288ea360942c1a3a595cd3d5e481725e37e615bb42e74ced0a7d98a56d.svg') }}" alt="Hiw icon3" width="200" height="200">
+                    <p class="h5 font-weight-medium mt-2">Souriez, c'est fait !</p>
+                    <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                        Votre jobeur vous rend service au prix et à la date convenus
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ypj-fluid-container">
+    <div class="my-5">
+        <h2>Le service d'aide au déménagement près de chez vous</h2>
+        <div class="d-flex flex-row flex-wrap">
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Paris</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement " src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement " src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Marseille</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement " src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement " src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Lyon</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Toulouse</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Nice</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Nantes</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Montpellier</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="col-1dot5">
+                <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                    <div class="frosted-glass-shadow mb-1">
+                        <div class="picture rounded" style="height:100px">
+                            <img alt="Aide au déménagement" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}">
+                        </div>
+                        <div class="shadow">
+                            <img alt="Aide au déménagement" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mt-3">
+                        <p class="text-dark font-weight-medium mb-0">Bordeaux</p>
+                    </h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ypj-fluid-container">
+    <div class="mb-4">
+        <div class="row mt-3">
+            <!--Antonio 123456789-->
+            {%for article in lastArticles%}
+            <div class="col-md-4">
+                <a class="frosted-glass-hover text-dark text-decoration-none" href="{{ path('alloservice_site_readblog', {'cat_slug':article.category.slug, 'slug':article.slug}) }}">
+                    <div class="frosted-glass-shadow mb-3">
+                        <div class="picture rounded blog-picture">
+                            <img alt="{{article.title}}" class="" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450" height="300">
+                        </div>
+                        <div class="shadow">
+                            <img alt="{{article.title}}" class="" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450" height="300">
+                        </div>
+                    </div>
+                    <h3 class="font-size-4 mb-0">
+                        <span class="font-weight-normal mt-2">
+                            <strong></strong>
+                        </span>
+                    </h3>
+                </a>
+                <div class="clearfix mb-2 mt-2">
+                    <div class="float-left text-muted font-size-2">
+                        <span>{{article.date | localizeddate('medium','none')}}</span>
+                    </div>
+                    <div class="float-right font-size-2">
+                        <span>
+                            <a class="text-muted" href="">{{article.category.name}}</a>
+                        </span>
+                    </div>
+                </div>
+                <p class="text-muted mb-4 font-size-2">
+                    {{article.subtitle}}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="d-block">
+            <a href="{{ path('alloservice_site_homepage') }}" class="font-size-3 font-weight-medium">Voir tous les articles <i class="fas fa-chevron-right pl-1 font-size-1"></i></a>
+        </div>
+    </div>
+</div>
+{% if is_granted('IS_AUTHENTICATED_FULLY') == 0 %}
+<hr>
+<div class="ypj-fluid-container text-justify">
+    <div class="my-5">
+        <div class="bottom-long-text">
+            <h2>
+                Le déménagement, une épreuve qu'on renouvelle en moyenne 4 fois dans une vie
+            </h2>
+            <p>
+                Ça y est, le printemps est arrivé et la période des déménagements avec. Mais difficile quand on se prépare à déménager d'échapper au stress et à la fatigue. Épuisant, éprouvant, un déménagement est rarement une sinécure et, une fois l'installation terminée, on se surprend souvent à penser : plus jamais ! Sauf que selon plusieurs études, les français déménagent en moyenne 4 fois dans leur vie ! Ainsi, les locataires seraient les plus mobiles et ont tendance à déménager tous les six ans environ, alors que les propriétaires sont - logiquement - plus attachés à leur bien et déménagent tous les quinze ans en moyenne. C'est donc une épreuve que l'on est tous amenés à revivre plusieurs fois, en espérant gagner un peu d'expérience à chaque déménagement pour peut-être même avoir découvert comment déménager sereinement à la quatrième tentative !
+            </p>
+            <p>
+                Alors, pour que son déménagement se passe au mieux, mieux vaut apprendre le plus rapidement possible à se plier aux formalités de déménagement obligatoires, à savoir : prévenir son propriétaire, l'agence ou le syndic de son départ par lettre recommandée au moins trois mois avant la date du déménagement, contacter les crèches et écoles aux environs du nouveau logement pour que déménager ne rime pas avec journée d'école perdue pour les enfants, transférer tous ses comptes et contrats à sa nouvelle adresse, renouveler l'assurance du logement dès le premier jour après avoir déménagé, résilier tous ses abonnements - électricité, eau, TV, internet - et en créer de nouveaux, déclarer son changement d'adresse à tous les organismes publics, etc.<br>Mais, une fois toutes ces formalités de déménagement effectuées, reste encore le plus dur : tout mettre en cartons ! Pour ne pas rapidement se retrouver enterré sous les cartons de déménagement, mieux vaut alors effectuer un grand tri - en fait le ménage de printemps que l'on a repoussé pendant des années - il faut alors tout dépoussiérer, trier, jeter, classer, ranger, avec méthode et organisation pour ne pas se retrouver débordé à l'arrivée. Prévoyez d'ailleurs un nombre conséquent de cartons de déménagement, parce qu'on a toujours tendance à sous-estimer le volume pris par ses affaires, puis protégez tous vos meubles qui ne peuvent pas être emballés.</p><p>Enfin, si vous avez déjà passé toutes ces étapes haut-la-main, n'hésitez plus à demander de l'aide au déménagement, vous l'avez bien mérité ! Ce n'est pas un drame en soi, nous n'avons pas tous une horde de copains aux gros bras prêts à joyeusement sacrifier leurs weekends pour se démettre une vertèbre en soulevant votre canapé. Aucune honte, en plus vous n'avez plus à vous en remettre à une société de déménagement spécialisée et à ses tarifs exorbitants. <strong>Grâce à Youpijob, vous trouvez facilement autant de déménageurs dévoués que nécessaire, tous prêts à vous aider quelle que soit la taille de votre appartement ou de votre maison.</strong> Munis de diables et de camions de déménagement adaptés, nos déménageurs possèdent tout l'équipement nécessaire pour emmener vos cartons à bon port en toute sécurité. Alors oubliez les entreprises de déménagement classiques et découvrez comment déménager le cœur léger et l'esprit tranquille !
+            </p>
+            <h2 class="mt-4">Trouver une aide au déménagement en quelques clics</h2>
+            <p>
+                  Aujourd'hui, avec l'avènement du mobilier pas cher - merci IKEA - et une offre de déco design quasi infinie - merci Instagram - nos intérieurs regorgent de mille et uns petits meubles et autres bibelots tendance très jolis, mais qui prennent un volume gigantesque quand arrive le jour de tout mettre en carton pour pouvoir déménager. Alors, une fois que vous avez passé des journées entières à démonter tous les meubles IKEA qu'il avait déjà été bien difficile à monter, à envoyer des courriers de résiliation à presque toutes les agences du quartier et à entourer de papier bulle toutes les affaires qui n'aiment pas être manipulées, personne ne vous jettera la première pierre - et surtout pas vos amis - si vous faites appel à de vrais déménageurs pour déplacer tout ce capharnaüm plutôt que de risquer un lumbago. C'est qu'on ne s'improvise pas déménageur si facilement et qu'on n'est de toute façon pas tous des forces de la nature capables de soulever des montagnes. Et puis, il va bien falloir payer la location d'un camion de déménagement, ce qui implique de se mettre au volant d'un 10 m3 dans les rues étroites du centre-ville, à risquer la rayure inutile et des encore des frais supplémentaires. Vous avez donc bien raison de tout déléguer à des professionnels.</p><p>Oui, mais c'est au moment où l'on commence à chercher une société de déménagement que la mission se complique car, avec les devis qui s'accumulent, on se rend vite compte qu'il va être très difficile de s'en sortir pour un tarif déménagement pas cher. On découvre en effet que toutes les entreprises de déménagement pratiquent des tarifs déménagement déjà élevés, auxquels se rajoutent en fait toutes les options non comprises dans la formule de base. Alors pour peu que vous ayez un meuble de valeur ou un peu volumineux, de la vaisselle en pagaille ou tout simplement beaucoup de cartons, la note risque vite de s'annoncer très salée. Sans mentionner le doublement voire le triplement des tarifs déménagement quand arrive l'été ! Pourtant, aujourd'hui il existe d'autres solutions pour recevoir une aide au déménagement sans faire appel à une société de déménagement spécialisée.
+            </p>
+            <p>
+                <strong>En effet, si vous voulez déménager pas cher, tournez-vous vers la consommation collaborative !</strong>
+                En simple, le jobbing vous permet de faire appel à vos voisins plutôt qu'à des grandes enseignes spécialisés pour toutes les petites missions du quotidien : bricolage, jardinage et bien entendu déménagement, de nombreux particuliers et micro-entrepreneurs ont du temps libre à revendre et connaissent toutes les techniques pour faire rentrer tous vos cartons dans un camion de 10 m3, pour manipuler votre faïence sans risquer aucune casse et même pour vous donner toutes leurs astuces pour soulever votre armoire normande sans mal de dos. Alors, n'hésitez plus et permettez à un particulier de votre région d'arrondir ses fins de mois en vous facilitant la vie ! Non seulement vous donnerez à un déménageur particulier - plutôt qu'au grand patron d'une grande chaine - un complément de revenu bienvenu, mais vous pourrez aussi aider une micro-entreprise à développer sa notoriété, c'est vous qui choisissez !
+            </p>
+            <p>
+                Ainsi, en faisant appel aux déménageurs de Youpijob, vous n'avez plus à faire de savants calculs pour déchiffrer et comparer des devis qui ne comprennent jamais les même options ni les même éléments. Sur Youpijob rien de tel, vous postez votre besoin en quelques clics seulement et, selon les informations que vous avez donné, la plateforme calcule automatiquement le nombre d'heures qui seront nécessaires pour vous déménager ainsi que le taux horaire auquel payer vos déménageurs. Ensuite c'est fini ! Aucun frais supplémentaire si vous possédez un meuble volumineux ou même si vous ne voulez déplacer qu'un seul appareil électroménager ! Vous définissez le nombre de déménageurs dont vous pensez avoir besoin et vous n'avez plus qu'à choisir votre ou vos déménageurs. De cette manière, il n'y a plus de mauvaise surprise possible, vous ne vous en sortirez jamais avec le coût d'un déménagement de palace :
+                <strong>sur Youpijob vous avez l'assurance de bénéficier d'un tarif déménagement imbattable, pour une prestation d'une qualité toujours irréprochable.</strong></p><p>En plus, pour vous garantir de faire appel aux meilleurs, Youpijob vous permet de consulter les description de chaque jobeur, mais également toutes les évaluations reçues par chaque déménageur pour tous les déménagements qu'il a déjà effectué. Ainsi vous êtes assuré du sérieux et du professionnalisme de votre jobeur et vous pouvez même faire appel au déménageur dont l'expérience correspond le plus à la mission que vous souhaitez lui confier. Alors, si vous doutez encore de pouvoir bénéficier d'un prix déménagement avantageux, postez votre besoin sur Youpijob et comparez les tarifs déménagement pratiqués. Avec les déménageurs de Youpijob, vous trouverez toujours un jobeur disponible pour vous rendre service pour un coût déménagement imbattable, tout en vous garantissant un déménagement sérieux, efficace et professionnel !
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

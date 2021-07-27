@@ -1,0 +1,128 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Presse - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="bg-cover bg-press">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <div class="index-public-hero">
+            <div class="container-xs">
+                <h1 class="hero-title">Presse</h1>
+            </div>
+        </div>
+    </div>
+    <!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="bg-gray-200">
+        <div class="container-xs">
+            <ul class="breadcrumb mb-0 pl-0">
+                <li class="breadcrumb-item">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+                </li>
+                <li class="breadcrumb-item active">Presse</li>
+            </ul>
+        </div>
+    </div>
+    <div class="py-5 bg-white">
+        <div class="container-xs">
+            <h2>Alloservice</h2>
+            <p>Alloservice a été créée en Septembre 2012 et est située en France, en Suisse et en Belgique. Fondée par Bertrand Tournier, cette plateforme est le n°1 Européen du jobbing.</p>
+            <p>Alloservice met en relation des personnes manquant de temps pour réaliser certaines tâches du quotidien avec des personnes compétentes dans leurs domaines, prêtes à les aider contre rémunération.</p>
+            <p>Communautaire, facile d'utilisation et fondée sur la confiance et la sécurité, Alloservice est plus qu'un site, c'est un style de vie !</p>
+        </div>
+    </div>
+    <div class="py-5 border-top bg-white">
+        <div class="container-xs">
+            <h2 class="mb-3">Logo</h2>
+            <div class="row mt-3 mb-5">
+                <div class="col-md-4 mb-3">
+                    <div class="border rounded d-flex align-items-center justify-content-center py-5 mb-2 h-130px">
+                        <img alt="Alloservice logo ver" class="img-fluid" src="{{ asset('images/alloservice-logo-ver-e7730270f4fcd53499c8ad28e2acb535206e8ff84757f5b73e8a5cd7cc02b06a.svg') }}" width="100"></div>
+                    <p class="mb-1 font-weight-medium">Logo vertical en couleurs</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_vertical_logo.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_vertical_logo.svg">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="rounded d-flex align-items-center justify-content-center py-5 mb-2 bg-primary h-130px"><img alt="Alloservice logo ver@white" class="img-fluid" src="{{ asset('images/alloservice-logo-ver@white-3cc0d4f42b8578e13f5156e127f356d8af13fd8ab7d0c5acb6eee359739fb86a.svg') }}" width="100"></div>
+                    <p class="mb-1 font-weight-medium">Logo vertical en blanc</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_vertical_logo@white.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_vertical_logo@white.svg">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="border rounded d-flex align-items-center justify-content-center py-5 mb-2">
+                        <img alt="Alloservice logo" class="img-fluid" src="{{ asset('images/alloservice-logo-eaa7368aa01af4a03234e41eacc0b10d070374d01e35fcc37d6719d8a67a436f.svg') }}" width="130"></div>
+                    <p class="mb-1 font-weight-medium">Logo horizontal en couleurs</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_horizontal_logo.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_horizontal_logo.svg">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="rounded d-flex align-items-center justify-content-center py-5 mb-2 bg-primary h-130px"><img alt="Alloservice logo@white" class="img-fluid" src="{{ asset('images/alloservice-logo@white-74380bbdd7f5c9fbee83ffbd945ba9c65385e8090fa1c42074e6f811b17d9a06.svg') }}" width="130"></div>
+                    <p class="mb-1 font-weight-medium">Logo horizontal en blanc</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_horizontal_logo@white.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_horizontal_logo@white">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="border rounded d-flex align-items-center justify-content-center py-5 mb-2 h-130px"><img alt="Alloservice logo icon" class="img-fluid" src="{{ asset('images/alloservice-logo-icon-28da6850f141f6bb7eb1ab108a30f3c6fc6019045944e18054546ca625572b31.svg') }}" width="50"></div>
+                    <p class="mb-1 font-weight-medium">Icône en couleurs</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_icon_logo.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_icon_logo.svg">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="rounded d-flex align-items-center justify-content-center py-5 mb-2 bg-primary h-130px"><img alt="Alloservice logo icon@white" class="img-fluid" src="{{ asset('images/alloservice-logo-icon@white-151a07ebfaf98d8efa069a1ea1d0a4ad87e6b5adf249a241c2e1d8cb0af246f4.svg') }}" width="50"></div>
+                    <p class="mb-1 font-weight-medium">Icône en blanc</p>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_icon_logo@white.png">
+                        <span>Télécharger en PNG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                    <a class="d-block mb-1 font-size-2 " download="" href="https://alloservice.fr/press/alloservice_icon_logo.svg">
+                        <span>Télécharger en SVG</span>
+                        <i class="fa fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <div class="col-md-7">
+                    <h2 class="mb-3">Orthographe</h2>
+                    <p class="font-size-3 mb-0">Alloservice est une chaîne de caractères contigus dont seul le Y est en majuscule. Tous les autres caractères doivent être écrits en minuscules.</p>
+                </div>
+            </div>
+            <div>
+                <h2>Contact</h2>
+                <p class="mb-0">Aelya Noiret</p>
+                <p class="mb-0">
+                    <a class="text-info" href="mailto:presse@alloservice.com">presse@alloservice.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

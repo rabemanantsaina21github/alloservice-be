@@ -1,0 +1,2510 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Avis clients - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="bg-cover bg-reviews">
+        <!--navbar-->
+        {% include "inc/nav.html.twig" %}
+        <!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+        <div class="index-public-hero">
+            <div class="container text-center">
+                <h1 class="hero-title">Avis clients</h1>
+                <h2 class="hero-subtitle">Découvrez les avis des clients Alloservice collectés par eKomi, une société indépendante d'avis clients qui garantit la transparence et l'authenticité des avis</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-center" style="margin-top:-60px;">
+    <p>
+        <img alt="Badge eKomi avis clients Alloservice" src="{{ asset('images/silver-5d05ad25c09ee29a3466a53e92a6dc15ebbe2f23977de69fc34d5f70687b66f3.png') }}"></p>
+    <p>
+        <i class="fas fa-star fa-2x user-star user-star-active"></i>
+        <i class="fas fa-star fa-2x user-star user-star-active"></i>
+        <i class="fas fa-star fa-2x user-star user-star-active"></i>
+        <i class="fas fa-star fa-2x user-star user-star-active"></i>
+        <i class="fas fa-star-half-alt fa-2x user-star user-star-active"></i>
+    </p>
+    <span class="font-size-5">4,51</span>
+    <span>
+        / 5</span>
+    <p class="text-muted">
+        <strong>2394</strong>
+        avis laissés par les clients</p>
+</div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3>Les 50 derniers avis</h3>
+            <div class="reviews-ekomi">
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>1</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">29/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Rapidité, le fait de recevoir les notifications par sms, la compétence de l intervenant
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Rapidité, le fait de recevoir les notifications par sms, la compétence de l intervenant
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">29/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>2</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">28/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Bon site
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Bon site
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">28/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>3</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">28/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Le jobeur *** était remarquable en tout points !
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Le jobeur *** était remarquable en tout points !
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">28/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>4</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">27/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Le jobeur qui m'a été recommandé a effectué un travail tout à fait conforme à mon attente -<br>je souhaiterais pouvoir l'employer de façon régulière. Pouvez-vous m'aider ?
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Le jobeur qui m'a été recommandé a effectué un travail tout à fait conforme à mon attente -<br>je souhaiterais pouvoir l'employer de façon régulière. Pouvez-vous m'aider ?
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">27/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>5</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">26/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        tres bien !!<br>Maxime travaille bien : rapidité, efficacité et gentillesse
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    tres bien !!<br>Maxime travaille bien : rapidité, efficacité et gentillesse
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">26/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>6</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">26/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Ravie de ce site que m'a conseillé mon fils : j'ai été en contact très rapidement avec un jobeur efficace. Merci
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Ravie de ce site que m'a conseillé mon fils : j'ai été en contact très rapidement avec un jobeur efficace. Merci
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">26/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>7</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">25/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Le service est sérieux et j’ai été contente de la prestation
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Le service est sérieux et j’ai été contente de la prestation
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">25/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>8</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">25/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très rapide et pratique
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très rapide et pratique
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">25/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>9</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">24/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très satisfaite
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très satisfaite
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">24/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>10</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">23/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Toujours très réactif avec des profils de confiance, sans compter les tarifs très  compétitifs. J’ai déjà fait appel à trois profils et n’aI jamais été déçue. Un vrai plus pour un coup de main au jardin ou au nettoyage de fond.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Toujours très réactif avec des profils de confiance, sans compter les tarifs très  compétitifs. J’ai déjà fait appel à trois profils et n’aI jamais été déçue. Un vrai plus pour un coup de main au jardin ou au nettoyage de fond.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">23/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>11</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">23/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très bonne surprise
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très bonne surprise
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">23/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>12</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">23/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Bonne experience. Tres contente
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Bonne experience. Tres contente
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">23/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>13</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">22/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Service rapide, pas cher et professionnel.<br>De plus la commission du site est tout à fait correct et, sécurisante.👍
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Service rapide, pas cher et professionnel.<br>De plus la commission du site est tout à fait correct et, sécurisante.👍
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">22/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>14</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">22/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *** correspond bien à son descriptif
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *** correspond bien à son descriptif
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">22/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>15</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">21/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        1ère expérience et excellente. Facile de faire sa demande et possibilité de choisir son jobeur par rapport à plusieurs propositions. simple, rapide et efficace. Bravo !
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    1ère expérience et excellente. Facile de faire sa demande et possibilité de choisir son jobeur par rapport à plusieurs propositions. simple, rapide et efficace. Bravo !
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">21/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>16</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">20/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Je n'ai que des compliments à formuler pour l'organisme "YouipiJob".<br>L'aide que j'ai reçu du Jobeur *** à été extrêmement satisfaisante.<br>Je continuerais à avoir recours à YouipiJob et conseillerais ce magnifique site à tout le monde.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Je n'ai que des compliments à formuler pour l'organisme "YouipiJob".<br>L'aide que j'ai reçu du Jobeur *** à été extrêmement satisfaisante.<br>Je continuerais à avoir recours à YouipiJob et conseillerais ce magnifique site à tout le monde.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">20/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>17</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">19/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        RAS, tout est ok.<br>Merci
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    RAS, tout est ok.<br>Merci
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">19/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>18</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">18/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Facile, économique. Même en proposant un job la veille j’ai pu avoir le choix et valider un jobber dont j’ai été totalement satisfait.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Facile, économique. Même en proposant un job la veille j’ai pu avoir le choix et valider un jobber dont j’ai été totalement satisfait.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">18/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>19</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">18/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        tres satisfait
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    tres satisfait
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">18/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>20</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">18/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très pratique et efficace
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très pratique et efficace
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">18/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>21</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">18/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très satisfait.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très satisfait.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">18/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>22</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">17/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        J'ai trouvé rapidement.<br>Merci beaucoup.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    J'ai trouvé rapidement.<br>Merci beaucoup.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">17/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>23</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Efficace et très sérieux.<br>Malgré la difficulté il a su faire face. Motivé et ne baisse pas les bras.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Efficace et très sérieux.<br>Malgré la difficulté il a su faire face. Motivé et ne baisse pas les bras.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>24</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très pratique, rapide et efficace
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très pratique, rapide et efficace
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>25</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très sérieux. Et efficace.!<br>Très bonne motivation malgré le montage difficile du canapé d'angle il ne s'est pas découragé
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très sérieux. Et efficace.!<br>Très bonne motivation malgré le montage difficile du canapé d'angle il ne s'est pas découragé
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>26</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        C'est la premiere fois pour moi .<br>Franchement super pratique ,facile,rapide,<br>Sécurisé.<br>Tout pour plaire !
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    C'est la premiere fois pour moi .<br>Franchement super pratique ,facile,rapide,<br>Sécurisé.<br>Tout pour plaire !
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>27</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Personne très compétente et professionnelle
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Personne très compétente et professionnelle
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>28</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Ras
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Ras
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>29</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Je suis satisfaite parce que le travail s'est passé sans problèmes et que l'intervenant à bien fait son travail ! Bonne communication avec Alloservice  ! Egalement .
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Je suis satisfaite parce que le travail s'est passé sans problèmes et que l'intervenant à bien fait son travail ! Bonne communication avec Alloservice  ! Egalement .
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>30</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *****
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *****
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>31</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">16/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très bon service des joueurs.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très bon service des joueurs.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">16/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>32</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">14/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Vraiment pratique!
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Vraiment pratique!
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">14/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>33</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">14/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *** parfait
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *** parfait
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">14/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>34</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">14/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *****
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *****
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">14/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>35</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">14/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Simple et efficace, tout est expliqué : un service excellent.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Simple et efficace, tout est expliqué : un service excellent.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">14/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>36</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">14/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très facile d’acces réponse immédiate et mise en contact très rapide avec une personne dont l’intervention m’a entièrement satisfaite. Je n’hes Pas à vous recommander à mes amis et à faire appel à nouveau à vos services. Merci
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très facile d’acces réponse immédiate et mise en contact très rapide avec une personne dont l’intervention m’a entièrement satisfaite. Je n’hes Pas à vous recommander à mes amis et à faire appel à nouveau à vos services. Merci
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">14/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>37</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">13/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très bonne application. Utilisation aisée et pratique.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très bonne application. Utilisation aisée et pratique.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">13/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>38</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">13/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *****
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *****
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">13/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>39</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">12/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Dommage que vous n’anno pas le prix exact au départ ( avec les charges)
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Dommage que vous n’anno pas le prix exact au départ ( avec les charges)
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">12/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>40</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">12/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *** nous a fait un super travail, propre , je recommande il est ponctuel, aimable, je le demanderai pour de nouveaux services sans hésiter un grand merci à ***
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *** nous a fait un super travail, propre , je recommande il est ponctuel, aimable, je le demanderai pour de nouveaux services sans hésiter un grand merci à ***
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">12/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>41</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">12/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Le jobeur a fait du très bon travail honnête sérieux professionnalisme à recommander
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Le jobeur a fait du très bon travail honnête sérieux professionnalisme à recommander
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">12/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>42</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">12/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Les jobeurs sont ponctuels, sympathiques, compétents; que demander de plus ? C'est la 2ème fois que je fais appel à Alloservice, et je suis toujours aussi satisfaite. Je le recommande vivement.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Les jobeurs sont ponctuels, sympathiques, compétents; que demander de plus ? C'est la 2ème fois que je fais appel à Alloservice, et je suis toujours aussi satisfaite. Je le recommande vivement.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">12/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>43</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">11/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        *****
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    *****
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">11/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>44</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">10/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Super service
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Super service
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">10/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>45</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">10/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        ravi de ce site et des jobeurs
+                                        <br>Prix adéquat
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    ravi de ce site et des jobeurs
+                                    <br>Prix adéquat
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">10/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>46</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">10/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Dispositif pratique. Quelques améliorations pourraient être apportées au site car on cherche parfois les fonctions
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Dispositif pratique. Quelques améliorations pourraient être apportées au site car on cherche parfois les fonctions
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">10/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>47</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">09/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Des jobbers efficaces ; Site de confiance ....
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Des jobbers efficaces ; Site de confiance ....
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">09/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>48</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star"></i>
+                                    </div>
+                                    <div class="text-muted">09/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Je suis globalement content,  je pense que ça serait utile si je pouvais facilement augmenter l'argent que je propose au bricoleur une fois que j'ai fait mon choix.  Dans mon cas il a fallu payer un peu plus, mais j'ai pas pu modifier (just augmenter bien sur) la somme proposer.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Je suis globalement content,  je pense que ça serait utile si je pouvais facilement augmenter l'argent que je propose au bricoleur une fois que j'ai fait mon choix.  Dans mon cas il a fallu payer un peu plus, mais j'ai pas pu modifier (just augmenter bien sur) la somme proposer.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">09/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>49</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">09/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        J'ai reçu des bons conseils après ma demande et surtout deux bons jobeurs. Ca m'a beaucoup aidé.
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    J'ai reçu des bons conseils après ma demande et surtout deux bons jobeurs. Ca m'a beaucoup aidé.
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">09/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media media-review">
+                    <div class="media-left align-self-center pr-1">
+                        <div class="media-review-circle">
+                            <div class="text-center text-secondary">
+                                <strong>50</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="card card-body mb-0">
+                            <div class="d-none d-sm-block">
+                                <div class="media-review-body-left">
+                                    <div class="font-size-1">
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                        <i class="fas fa-star user-star user-star-active"></i>
+                                    </div>
+                                    <div class="text-muted">09/03/2019</div>
+                                </div>
+                                <div class="media-review-body-right">
+                                    <div class="font-size-3">
+                                        <i class="fa fa-angle-double-left text-muted"></i>
+                                        Très bien
+                                        <i class="fa fa-angle-double-right text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-sm-none">
+                                <p class="text-center font-size-1">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </p>
+                                <p class="font-size-3">
+                                    <i class="fa fa-angle-double-left text-muted"></i>
+                                    Très bien
+                                    <i class="fa fa-angle-double-right text-muted"></i>
+                                </p>
+                                <div class="clearfix">
+                                    <div class="float-right text-muted">09/03/2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mb-4 font-weight-bold">
+                <a href="" target="_blank">Voir tous les avis</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Product",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.51",
+        "ratingCount": "2394",
+        "reviewCount": "2394"
+      }
+    }
+</script>
+{% endblock %}

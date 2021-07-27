@@ -1,0 +1,111 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}{%if edit is defined and edit == 1%}Modifier une section{%else%}Ajouter une section{%endif%} - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{%if edit is defined and edit == 1%}Modifier une section{%else%}Ajouter une section{%endif%}</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.title)}}
+					{{form_widget(form.title)}}
+					{{form_errors(form.title)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.description)}}
+					{{form_widget(form.description)}}
+					{{form_errors(form.description)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.subtitle1)}}
+					{{form_widget(form.subtitle1)}}
+					{{form_errors(form.subtitle1)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.img1)}}
+					{{form_widget(form.img1)}}
+					{{form_errors(form.img1)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.text1)}}<br>
+					{{form_widget(form.text1)}}
+					{{form_errors(form.text1)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.subtitle2)}}
+					{{form_widget(form.subtitle2)}}
+					{{form_errors(form.subtitle2)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.img2)}}
+					{{form_widget(form.img2)}}
+					{{form_errors(form.img2)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.text2)}}<br>
+					{{form_widget(form.text2)}}
+					{{form_errors(form.text2)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.subtitle3)}}
+					{{form_widget(form.subtitle3)}}
+					{{form_errors(form.subtitle3)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.img3)}}
+					{{form_widget(form.img3)}}
+					{{form_errors(form.img3)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.text3)}}<br>
+					{{form_widget(form.text3)}}
+					{{form_errors(form.text3)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.subtitle4)}}
+					{{form_widget(form.subtitle4)}}
+					{{form_errors(form.subtitle4)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.img4)}}
+					{{form_widget(form.img4)}}
+					{{form_errors(form.img4)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.text4)}}<br>
+					{{form_widget(form.text4)}}
+					{{form_errors(form.text4)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript">
+	tinymce.init({
+		selector: '.wysiwyg',
+		theme: "modern",
+		height: 200,
+		menubar: false,
+		plugins: [
+			"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker toc",
+        	"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+        	"save table contextmenu directionality emoticons template paste textcolor importcss colorpicker textpattern codesample"
+		],
+		toolbar: 'code | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist | link unlink | subscript superscript',
+		content_css: [
+			'{{asset("css/responsive.css")}}',
+			'{{asset("css/style-admin.css")}}']
+	});
+</script>
+{% endblock %}

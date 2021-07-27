@@ -1,0 +1,989 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Postez une annonce de job et dites ce dont vous avez besoin - {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="bg-white text-center d-none d-sm-block">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex p-3">
+                <div class="bullet-circle bullet-green" style="min-width:24px;min-height:24px;max-width:24px;max-height:24px;">1</div>
+                <div class="pl-2 font-size-3 font-size-4">Demandez un service</div>
+            </div>
+            <div class="d-flex p-3">
+                <div class="bullet-circle bullet-green" style="min-width:24px;min-height:24px;max-width:24px;max-height:24px;">2</div>
+                <div class="pl-2 font-size-3 font-size-4">Recevez des offres</div>
+            </div>
+            <div class="d-flex p-3">
+                <div class="bullet-circle bullet-green" style="min-width:24px;min-height:24px;max-width:24px;max-height:24px;">3</div>
+                <div class="pl-2 font-size-3 font-size-4">Choisissez votre jobeur</div>
+            </div>
+        </div>
+        <p class="pt-3 pb-4">
+            <svg aria-hidden="true" aria-label="Icone Confiance et Sécurité garanties" class="d-inline-block align-middle mr-1" height="28" role="img" version="1.1" viewbox="0 0 200 200" width="28">
+                <defs>
+                    <linearGradient id="linear-trust-security" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#2F84F5"></stop>
+                        <stop offset="100%" stop-color="#2B7DE8"></stop>
+                    </linearGradient>
+                    <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-trust-security"></path>
+                </defs>
+                <g fill-rule="evenodd" fill="none">
+                    <g transform="translate(5)">
+                        <use fill="url(#linear-trust-security)" xlink:href="#path-trust-security"></use>
+                        <use xlink:href="#path-trust-security"></use>
+                    </g>
+                    <path d="M154.57 69.434c0-1.97-2.092-2.762-3.652-3.025l-32.75-4.803-14.682-29.913c-.59-1.25-1.696-2.694-3.197-2.694-1.502 0-2.607 1.445-3.197 2.694L82.41 61.607 49.65 66.41C48.024 66.67 46 67.462 46 69.433c0 1.18.852 2.303 1.628 3.153l23.75 23.276-5.61 32.87c-.066.46-.125.86-.125 1.318 0 1.71.85 3.29 2.74 3.29.912 0 1.763-.33 2.607-.79l29.3-15.518 29.3 15.518c.783.46 1.694.79 2.605.79 1.89 0 2.673-1.58 2.673-3.29 0-.458 0-.857-.067-1.316l-5.608-32.87 23.683-23.277c.852-.85 1.695-1.963 1.695-3.153z" fill="#194885"></path>
+                </g>
+            </svg>
+            <span class="d-inline-block align-middle mr-1 font-size-4">Confiance et sécurité garanties : identité des jobeurs vérifiée et services assurés par
+                <svg aria-hidden="true" aria-label="AXA réinventons notre métier" class="d-inline-block align-middle mr-2" height="28" role="img" version="1.1" viewbox="0 0 60 60" width="28">
+                    <path d="M0 0h60v60H0z" fill="#103184"></path>
+                    <path d="M37.137 29.474L60 0h-3.376l-22.94 29.474h3.453z" fill="#FF1821"></path>
+                    <path d="M45.452 42.643c1.036 2.898 3.173 10.44 4.022 11.04h-5.61s-.02-1.113-.262-1.977c-.24-.862-2.27-7.384-2.27-7.384h-8.91l-1.4 1.985s1.683 5.262 1.787 5.52c.18.465.983 1.857.983 1.857h-5.375s-.14-.804-.192-1.14c-.042-.27-.51-1.75-.51-1.75s-1.217 1.334-1.55 1.953c-.334.617-.483.937-.483.937h-4.206s-.14-.804-.193-1.14c-.04-.27-.555-1.868-.555-1.868s-1.178 1.428-1.513 2.046c-.332.618-.476.962-.476.962h-4.158s1.175-1.118 1.586-1.598c.693-.813 3.274-4.184 3.274-4.184l-1.035-3.58h-8.84s-5.043 6.62-5.24 6.825c-.202.2-1.67 2.308-1.704 2.538H0v-1.667c.05-.05.086-.088.104-.1.08-.06 3.822-4.7 7.258-9.275 3.088-3.99 5.986-7.87 6.24-8.24.616-.894 1.503-2.823 1.503-2.823h4.57s.142 1.775.276 2.206c.12.38 2.905 9.51 2.97 9.61l1.54-1.968-2.632-8.097s-.617-1.522-.818-1.75h5.34s-.042.783.174 1.45c.217.668 1.362 4.794 1.362 4.794s3.642-4.56 3.855-4.888c.4-.55.45-1.357.45-1.357h4.45s-.815.594-2.243 2.398c-.48.607-5.178 6.573-5.178 6.573s.41 1.398.61 2.093c.054.2.09.334.09.35 0 .005.105-.122.284-.35 1.21-1.535 6.725-8.758 7.06-9.377.27-.5.666-1.068.898-1.686h4.34s.1 1.295.233 1.654l2.717 9.41zm-6.05-6.775c-.676 1.44-4.665 6.238-4.665 6.238h6.316s-1.225-3.726-1.438-4.566c-.17-.668-.123-1.53-.123-1.632 0-.076-.015-.2-.09-.04zm-23.157 0c-.677 1.44-4.666 6.238-4.666 6.238h6.315s-1.224-3.726-1.437-4.566c-.17-.668-.124-1.53-.124-1.632 0-.076-.015-.2-.09-.04zm9.176 13.606l1.95-2.273c-.18-.162-1.277-2.99-1.277-2.99l-1.882 2.077 1.21 3.187z" fill="#FFF"></path>
+                </svg>
+            </span>
+            <span class="d-inline-block align-middle">
+                <a href="https://youpijob.fr/confiance-securite" target="_blank">+ d’informations</a>
+            </span>
+        </p>
+    </div>
+</div>
+
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="container" data-component="collapse-step">
+    <div data-calculate-path="true" data-category-other="false" data-component="price" data-fees="0.2" data-locale="fr">
+        <form accept-charset="UTF-8" action="/jobs" class="new_job_removal_cat14_form" data-identifier="job_form" id="job_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="yOyn/cKJs258STUIDQOe0zKRpBy8rBGSxnJbkk0hDqCgbcWZQmKCIx/HbpTuCMTb14ePApW7u8zuhLEpBX6KMA=="><input id="opt" name="opt" type="hidden"><input id="job_previous_job_id" name="job[previous_job_id]" type="hidden"><div class="row">
+                <div class="col-lg-8 offset-lg-2 pt-4">
+                    <h1 class="h3 text-center">{{service.title}}</h1>
+                    <p class="font-size-3 mb-3 text-center">
+                        <a href="https://youpijob.fr/services">Changer la catégorie</a>
+                    </p><input id="job_category" name="job[category]" type="hidden" value="3014"><div class="mb-3">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-4 d-none d-md-block">
+                                    <div class="bg-cover bg-banner-removal"></div>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="card-body">
+                                        <p class="h4 font-weight-normal mb-3 u-color-removal text-center">Déménager Zen et Pas Cher !</p>
+                                        <ul class="default-list pl-3 mb-2">
+                                            <li>
+                                                <p class="font-size-2 font-size-sm-3 mb-2">
+                                                    <i class="fas fa-check text-muted"></i>
+                                                    Trouvez des bras pour charger et décharger.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-size-2 font-size-sm-3 mb-2">
+                                                    <i class="fas fa-check text-muted"></i>
+                                                    Renseignez l'adresse de départ et d'arrivée.</p>
+                                            </li>
+                                            <li>
+                                                <p class="font-size-2 font-size-sm-3 mb-2">
+                                                    <i class="fas fa-check text-muted"></i>
+                                                    Satisfaction garantie</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-new-job" id="accordion">
+                        <div class="card" data-component="fields-group">
+                            <div class="card-header h6" id="headingOne" role="tab">
+                                <p class="float-right">
+                                    <a aria-expanded="false" class="hide-js collapsed" data-edit-link="" data-toggle="collapse" href="#details" style="display: inline;">
+                                        <i class="far fa-edit"></i>
+                                        Modifier</a>
+                                </p>Détails du besoin<div class="mt-3 hide-js clearfix" data-summary="" style="display: block;">
+                                    <p class="item-job-digest">
+                                        <i class="far fa-pen-square"></i>
+                                        <span>Aide au déménagement</span>
+                                    </p>
+                                    <p class="item-job-digest"><img alt="Icon destination address mandatory" height="24" src="Postez%20une%20annonce%20de%20job%20et%20dites%20ce%20dont%20vous%20avez%20besoin%202_fichiers/icon_destination_address_mandatory-1cbf705b2b93944620d40d651.svg" width="24">
+                                        <span>21 Rue Laffitte, 64140 Billère, France</span>
+                                    </p>
+                                    <p class="item-job-digest"><img alt="Icon destination address optional" height="24" src="Postez%20une%20annonce%20de%20job%20et%20dites%20ce%20dont%20vous%20avez%20besoin%202_fichiers/icon_destination_address_optional-f0492ad1d8614b46df4fa56946.svg" width="24">
+                                        <span>21 Rue Laffitte, 64140 Billère, France</span>
+                                    </p>
+                                    <p class="item-job-digest"><img alt="Icon cat1 specific" height="24" src="Postez%20une%20annonce%20de%20job%20et%20dites%20ce%20dont%20vous%20avez%20besoin%202_fichiers/icon_cat1_specific-e73e6f7ef9f35d6da9739fa782d8c7e688c116574.svg" width="24">
+                                        <span>25m²</span>
+                                    </p>
+                                    <p class="item-job-digest">
+                                        <i class="far fa-user"></i>
+                                        <span>1</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-labelledby="headingOne" class="collapse" data-collapse="" data-parent="#accordion" id="details" style="">
+                                <div class="card-body" data-component="removal-volume">
+                                    <div class="form-group" data-field-group="">
+                                        <label class="col-form-label" for="job_title">De quel service avez-vous besoin ?</label><input class="form-control" data-component="field-validator" data-summary-field="" id="job_title" maxlength="80" name="job[title]" placeholder="De quoi avez-vous besoin ?" size="80" type="text" value="Aide au déménagement"></div>
+                                    <div data-start-city="">
+                                        <div data-component="address-auto-complete" data-session-token="e86d6c1b-2d3e-4913-884f-c1e6ff1fbb09">
+                                            <div data-component="auto-complete" data-reset-placeholder="Code postal ou ville"><input data-coordinates="" id="coordinates" name="coordinates" type="hidden" value="43.3189445,-0.3838388"><div class="form-group" data-field-group="">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mb-2">
+                                                            <label class="col-form-label pb-0" for="city">Lieu de prise en charge</label>
+                                                            <span class="text-muted">(ne sera pas publié dans votre annonce)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6"><input autocomplete="off" class="form-control dark-placeholder" data-address="" data-field-type="autocomplete" data-provide="typeahead" data-summary-field="" data-target="[data-field=&quot;address_name&quot;]" data-validation-type="required-if" data-value="" id="city" name="city" placeholder="21 Rue Laffitte, 64140 Billère, France" size="30" type="text"><div class="typeahead dropdown-menu dropdown-menu-right dropdown-typedhead" style="top: 38px; left: 10px; display: none;">
+                                                                <li class="">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffitte</strong>, Paris, France</a>
+                                                                </li>
+                                                                <li class="active">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffitte</strong>, Billère, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffitte</strong>, Maisons-Laffitte, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffitte</strong>, Chablis, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">21 Rue Jacques Laffitte, Toulouse, France</a>
+                                                                </li>
+                                                            </div><input data-component="field-validator" data-field="place_id" data-target="[data-field=&quot;address_name&quot;]" data-validation-type="required-if" data-value="" id="place_id" name="place_id" type="hidden" value="ChIJ459d_E9PVg0Rdu1slYc7Wpg"><div class="hide-js text-danger" data-address-not-found-error="" style="display: none;">Votre adresse n'a pas été trouvée, veuillez vérifier votre saisie ou
+                                                                <a data-show-address-fields-link="" href="#">cliquez ici pour l'ajouter manuellement</a>
+                                                            </div>
+                                                            <div class="hide-js text-danger" data-address-selected-incomplete-error="" style="display: none;">L'adresse sélectionnée n'est pas complète. Veuillez en sélectionner une nouvelle ou
+                                                                <a data-show-address-fields-link="" href="#">cliquez ici pour l'ajouter manuellement</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide-js" data-address-not-found-form="" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-field-group=""><input class="form-control" data-component="field-validator" data-field="address_name" data-target="[data-field=&quot;place_id&quot;]" data-validation-type="required-if" data-value="" id="address_name" name="address_name" placeholder="Numéro et nom de rue" type="text"></div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-field-group=""><input class="city_id" data-city-id="" data-component="field-validator" data-target="[data-field=&quot;place_id&quot;]" data-validation-type="required-if" data-value="" id="city_id" name="city_id" type="hidden" value=""><input autocomplete="off" class="form-control" data-city-placeholder="" data-city="" data-field-type="autocomplete" data-provide="typeahead" data-summary-field="" id="city" name="city" placeholder="Code postal ou ville" size="30" type="text"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-destination-city="">
+                                        <div data-component="address-auto-complete" data-prefix="destination" data-session-token="6ffbfd79-d578-40d3-a676-0010e4d8da63">
+                                            <div data-component="auto-complete" data-reset-placeholder="Code postal ou ville"><input data-coordinates="" id="coordinates" name="coordinates" type="hidden" value="43.3189445,-0.3838388"><div class="form-group" data-field-group="">
+                                                    <div class="row">
+                                                        <div class="col-md-12 mb-2">
+                                                            <label class="col-form-label pb-0" for="destination_address">Lieu de destination</label>
+                                                            <span class="text-muted">(ne sera pas publié dans votre annonce)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6"><input autocomplete="off" class="form-control dark-placeholder" data-address="" data-field-type="autocomplete" data-provide="typeahead" data-summary-field="" data-target="[data-field=&quot;destination_address_name&quot;]" data-validation-type="required-if" data-value="" id="destination_address" name="destination_address" placeholder="21 Rue Laffitte, 64140 Billère, France" size="30" type="text"><div class="typeahead dropdown-menu dropdown-menu-right dropdown-typedhead" style="top: 38px; left: 10px; display: none;">
+                                                                <li class="">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffi</strong>tte, Paris, France</a>
+                                                                </li>
+                                                                <li class="active">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffi</strong>tte, Billère, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <strong>21 Rue Laffi</strong>tte, Maisons-Laffitte, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">21 Rue Jacques Laffitte, Toulouse, France</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item" href="#">21 Rue Lafiteau, Bordeaux, France</a>
+                                                                </li>
+                                                            </div><input data-component="field-validator" data-field="destination_place_id" data-target="[data-field=&quot;destination_address_name&quot;]" data-validation-type="required-if" data-value="" id="destination_place_id" name="destination_place_id" type="hidden" value="ChIJ459d_E9PVg0Rdu1slYc7Wpg"><div class="hide-js text-danger" data-address-not-found-error="" style="display: none;">Votre adresse n'a pas été trouvée, veuillez vérifier votre saisie ou
+                                                                <a data-show-address-fields-link="" href="#">cliquez ici pour l'ajouter manuellement</a>
+                                                            </div>
+                                                            <div class="hide-js text-danger" data-address-selected-incomplete-error="" style="display: none;">L'adresse sélectionnée n'est pas complète. Veuillez en sélectionner une nouvelle ou
+                                                                <a data-show-address-fields-link="" href="#">cliquez ici pour l'ajouter manuellement</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="hide-js" data-address-not-found-form="" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-field-group=""><input class="form-control" data-component="field-validator" data-field="destination_address_name" data-target="[data-field=&quot;destination_place_id&quot;]" data-validation-type="required-if" data-value="" id="destination_address_name" name="destination_address_name" placeholder="Numéro et nom de rue" type="text"></div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group" data-field-group=""><input class="city_id" data-city-id="" data-component="field-validator" data-target="[data-field=&quot;destination_place_id&quot;]" data-validation-type="required-if" data-value="" id="destination_city_id" name="destination_city_id" type="hidden" value=""><input autocomplete="off" class="form-control" data-city-placeholder="" data-city="" data-field-type="autocomplete" data-provide="typeahead" data-summary-field="" id="city" name="city" placeholder="Code postal ou ville" size="30" type="text"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group" data-field-group="">
+                                                <label class="col-form-label" for="job_nh_specific">Surface à déménager :</label>
+                                                <select class="form-control" data-component="field-validator" data-field="" data-options-select="" data-summary-field="" id="job_nh_specific" name="job[nh_specific]">
+                                                    <option value="">Sélectionnez la surface</option>
+                                                    <option selected="selected" value="3.0">25m²</option>
+                                                    <option value="4.5">35m²</option>
+                                                    <option value="6.0">45m²</option>
+                                                    <option value="7.5">55m²</option>
+                                                    <option value="9.0">65m²</option>
+                                                    <option value="10.5">75m²</option>
+                                                    <option value="12.0">85m²</option>
+                                                    <option value="13.5">95m²</option>
+                                                    <option value="15.0">105m²</option>
+                                                    <option value="16.5">115m²</option>
+                                                    <option value="18.0">125m²</option>
+                                                    <option value="19.5">135m²</option>
+                                                    <option value="21.0">145m²</option>
+                                                    <option value="22.5">155m²</option>
+                                                    <option value="24.0">165m²</option>
+                                                    <option value="25.5">175m²</option>
+                                                    <option value="27.0">185m²</option>
+                                                    <option value="28.5">195m²</option>
+                                                    <option value="30.0">205m²</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group" data-field-group="">
+                                                <label class="col-form-label" for="job_nb_jobbers">Nombre de jobeurs nécessaires</label>
+                                                <select class="form-control" data-component="field-validator" data-nb-jobbers-select="" data-summary-field="" id="job_nb_jobbers" name="job[nb_jobbers]">
+                                                    <option selected="selected" value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4 order-md-2 offset-md-4">
+                                            <a aria-expanded="true" class="btn btn-green btn-block" data-next-btn="" data-toggle="collapse" href="#datetime">Suivant</a>
+                                        </div>
+                                        <div class="col-md-4 order-md-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-component="fields-group">
+                            <div class="card-header h6" id="headingTwo" role="tab">
+                                <p class="float-right">
+                                    <a aria-expanded="true" class="hide-js" data-edit-link="" data-toggle="collapse" href="#datetime" style="display: none;">
+                                        <i class="far fa-edit"></i>
+                                        Modifier</a>
+                                </p>Date et heure<div class="mt-3 hide-js clearfix" data-summary="" style="display: none;">
+                                    <p class="item-job-digest">
+                                        <i class="far fa-calendar-day"></i>
+                                        <span>01/08/2019</span>
+                                    </p>
+                                    <p class="item-job-digest">
+                                        <i class="far fa-clock"></i>
+                                        <span>09:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-labelledby="headingTwo" class="collapse show" data-collapse="" data-parent="#accordion" id="datetime" style="">
+                                <div class="card-body">
+                                    <div data-component="datepicker-job" data-current-hour="17" data-language="fr" data-start-date="13/07/2019">
+                                        <div class="form-group" data-field-group="">
+                                            <label class="col-form-label" for="job_date">A quelle date souhaitez vous que le job soit effectué ?</label><input data-component="field-validator" data-datepicker-field="" data-in-summary="forced" data-summary-date="" data-summary-field="" id="job_date" name="job[date]" type="hidden" value="01/08/2019"><div data-datepicker="">
+                                                <div class="datepicker datepicker-inline">
+                                                    <div class="datepicker-days" style="display: block;">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="datepicker-title" colspan="7" style="display: none;"></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="prev" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-left"></i>
+                                                                    </th>
+                                                                    <th class="datepicker-switch" colspan="5">Août 2019</th>
+                                                                    <th class="next" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-right"></i>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="dow">lu</th>
+                                                                    <th class="dow">ma</th>
+                                                                    <th class="dow">me</th>
+                                                                    <th class="dow">je</th>
+                                                                    <th class="dow">ve</th>
+                                                                    <th class="dow">sa</th>
+                                                                    <th class="dow">di</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="old day">29</td>
+                                                                    <td class="old day">30</td>
+                                                                    <td class="old day">31</td>
+                                                                    <td class="active day">1</td>
+                                                                    <td class="day">2</td>
+                                                                    <td class="day">3</td>
+                                                                    <td class="day">4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="day">5</td>
+                                                                    <td class="day">6</td>
+                                                                    <td class="day">7</td>
+                                                                    <td class="day">8</td>
+                                                                    <td class="day">9</td>
+                                                                    <td class="day">10</td>
+                                                                    <td class="day">11</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="day">12</td>
+                                                                    <td class="day">13</td>
+                                                                    <td class="day">14</td>
+                                                                    <td class="day">15</td>
+                                                                    <td class="day">16</td>
+                                                                    <td class="day">17</td>
+                                                                    <td class="day">18</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="day">19</td>
+                                                                    <td class="day">20</td>
+                                                                    <td class="day">21</td>
+                                                                    <td class="day">22</td>
+                                                                    <td class="day">23</td>
+                                                                    <td class="day">24</td>
+                                                                    <td class="day">25</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="day">26</td>
+                                                                    <td class="day">27</td>
+                                                                    <td class="day">28</td>
+                                                                    <td class="day">29</td>
+                                                                    <td class="day">30</td>
+                                                                    <td class="day">31</td>
+                                                                    <td class="new day">1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="new day">2</td>
+                                                                    <td class="new day">3</td>
+                                                                    <td class="new day">4</td>
+                                                                    <td class="new day">5</td>
+                                                                    <td class="new day">6</td>
+                                                                    <td class="new day">7</td>
+                                                                    <td class="new day">8</td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="today" colspan="7" style="display: none;">Aujourd'hui</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="clear" colspan="7" style="display: none;">Effacer</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <div class="datepicker-months" style="display: none;">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="datepicker-title" colspan="7" style="display: none;"></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="prev" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-left"></i>
+                                                                    </th>
+                                                                    <th class="datepicker-switch" colspan="5">Months</th>
+                                                                    <th class="next" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-right"></i>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <span class="month disabled">Janv.</span>
+                                                                        <span class="month disabled">Févr.</span>
+                                                                        <span class="month disabled">Mars</span>
+                                                                        <span class="month disabled">Avril</span>
+                                                                        <span class="month disabled">Mai</span>
+                                                                        <span class="month disabled">Juin</span>
+                                                                        <span class="month">Juil.</span>
+                                                                        <span class="month active">Août</span>
+                                                                        <span class="month">Sept.</span>
+                                                                        <span class="month">Oct.</span>
+                                                                        <span class="month">Nov.</span>
+                                                                        <span class="month">Déc.</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="today" colspan="7" style="display: none;">Aujourd'hui</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="clear" colspan="7" style="display: none;">Effacer</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <div class="datepicker-years" style="display: none;">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="datepicker-title" colspan="7" style="display: none;"></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="prev" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-left"></i>
+                                                                    </th>
+                                                                    <th class="datepicker-switch" colspan="5">2010-2019</th>
+                                                                    <th class="next" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-right"></i>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <span class="year old disabled">2009</span>
+                                                                        <span class="year disabled">2010</span>
+                                                                        <span class="year disabled">2011</span>
+                                                                        <span class="year disabled">2012</span>
+                                                                        <span class="year disabled">2013</span>
+                                                                        <span class="year disabled">2014</span>
+                                                                        <span class="year disabled">2015</span>
+                                                                        <span class="year disabled">2016</span>
+                                                                        <span class="year disabled">2017</span>
+                                                                        <span class="year disabled">2018</span>
+                                                                        <span class="year active">2019</span>
+                                                                        <span class="year new">2020</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="today" colspan="7" style="display: none;">Aujourd'hui</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="clear" colspan="7" style="display: none;">Effacer</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <div class="datepicker-decades" style="display: none;">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="datepicker-title" colspan="7" style="display: none;"></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="prev" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-left"></i>
+                                                                    </th>
+                                                                    <th class="datepicker-switch" colspan="5">2000-2090</th>
+                                                                    <th class="next" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-right"></i>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <span class="decade old disabled">1990</span>
+                                                                        <span class="decade disabled">2000</span>
+                                                                        <span class="decade active">2010</span>
+                                                                        <span class="decade">2020</span>
+                                                                        <span class="decade">2030</span>
+                                                                        <span class="decade">2040</span>
+                                                                        <span class="decade">2050</span>
+                                                                        <span class="decade">2060</span>
+                                                                        <span class="decade">2070</span>
+                                                                        <span class="decade">2080</span>
+                                                                        <span class="decade">2090</span>
+                                                                        <span class="decade new">2100</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="today" colspan="7" style="display: none;">Aujourd'hui</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="clear" colspan="7" style="display: none;">Effacer</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <div class="datepicker-centuries" style="display: none;">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="datepicker-title" colspan="7" style="display: none;"></th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="prev" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-left"></i>
+                                                                    </th>
+                                                                    <th class="datepicker-switch" colspan="5">2000-2900</th>
+                                                                    <th class="next" style="visibility: visible;">
+                                                                        <i class="fa fa-chevron-right"></i>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="7">
+                                                                        <span class="century old disabled">1900</span>
+                                                                        <span class="century active">2000</span>
+                                                                        <span class="century">2100</span>
+                                                                        <span class="century">2200</span>
+                                                                        <span class="century">2300</span>
+                                                                        <span class="century">2400</span>
+                                                                        <span class="century">2500</span>
+                                                                        <span class="century">2600</span>
+                                                                        <span class="century">2700</span>
+                                                                        <span class="century">2800</span>
+                                                                        <span class="century">2900</span>
+                                                                        <span class="century new">3000</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th class="today" colspan="7" style="display: none;">Aujourd'hui</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="clear" colspan="7" style="display: none;">Effacer</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="hide-js" data-summary-date-block="">
+                                                <p class="mt-2 mb-3 font-size-3">L'annonce du job sera clôturée le
+                                                    <strong class="text-success" data-summary-date-learning=""></strong>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" data-field-group="">
+                                            <label class="col-form-label" for="job_start_hour">Heure de début</label>
+                                            <select class="form-control" data-component="field-validator" data-datepicker-field="" data-start-hour-select="" data-summary-field="" id="job_start_hour" name="job[start_hour]">
+                                                <option value="">Veuillez sélectionner l'heure de début</option>
+
+
+                                                <option value="7">07:00</option>
+                                                <option value="7.5">07:30</option>
+                                                <option value="8">08:00</option>
+                                                <option value="8.5">08:30</option>
+                                                <option selected="selected" value="9">09:00</option>
+                                                <option value="9.5">09:30</option>
+                                                <option value="10">10:00</option>
+                                                <option value="10.5">10:30</option>
+                                                <option value="11">11:00</option>
+                                                <option value="11.5">11:30</option>
+                                                <option value="12">12:00</option>
+                                                <option value="12.5">12:30</option>
+                                                <option value="13">13:00</option>
+                                                <option value="13.5">13:30</option>
+                                                <option value="14">14:00</option>
+                                                <option value="14.5">14:30</option>
+                                                <option value="15">15:00</option>
+                                                <option value="15.5">15:30</option>
+                                                <option value="16">16:00</option>
+                                                <option value="16.5">16:30</option>
+                                                <option value="17">17:00</option>
+                                                <option value="17.5">17:30</option>
+                                                <option value="18">18:00</option>
+                                                <option value="18.5">18:30</option>
+                                                <option value="19">19:00</option>
+                                                <option value="19.5">19:30</option>
+                                                <option value="20">20:00</option>
+                                                <option value="20.5">20:30</option>
+                                                <option value="21">21:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-4 order-md-2 offset-md-4">
+                                            <a aria-expanded="false" class="btn btn-green btn-block collapsed" data-next-btn="" data-toggle="collapse" href="#price">Suivant</a>
+                                        </div>
+                                        <div class="col-md-4 order-md-1">
+                                            <a aria-expanded="false" class="btn btn-light mt-3 mt-md-0 collapsed" data-toggle="collapse" href="#details">Précédent</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-component="fields-group">
+                            <div class="card-header h6" id="headingThree" role="tab">
+                                <p class="float-right">
+                                    <a aria-expanded="false" class="hide-js collapsed" data-edit-link="" data-toggle="collapse" href="#price" style="display: inline;">
+                                        <i class="far fa-edit"></i>
+                                        Modifier</a>
+                                </p>Durée et Prix<div class="mt-3 hide-js clearfix" data-summary="" style="display: block;">
+                                    <p class="item-job-digest">
+                                        <i class="far fa-stopwatch"></i>
+                                        <span>3 h 30
+                                        </span>
+                                    </p>
+                                    <p class="item-job-digest">
+                                        <i class="far fa-money-bill-alt"></i>
+                                        <span>59.5</span>
+                                        €</p>
+                                </div>
+                            </div>
+                            <div aria-labelledby="headingThree" class="collapse" data-collapse="" data-parent="#accordion" id="price" style="">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="col-form-label">Nombre d'heures estimées :</label>
+                                                <div class="mt-2 clearfix" data-component="increment" data-locale="fr" data-max-value="105" data-min-value="1" data-step="0.5" data-type="hour">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div>
+                                                            <button class="btn btn-light btn-rounded" data-decrement-btn="">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="price-bid-number mx-2 mx-md-4 u-width-200px"><input data-component="field-validator" data-field="" data-nb-hours="" id="job_nb_hours" name="job[nb_hours]" type="hidden" value="3.5"><span data-label="" data-summary-field="">3 h 30
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <button class="btn btn-light btn-rounded" data-increment-btn="">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-4 text-center">Pour ce job, nous vous recommandons
+                                                    <strong class="text-success d-inline-block" data-nb-hours-recommended="">3 h 30
+                                                    </strong>
+                                                </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-form-label">Rémunération horaire par Jobeur :</label>
+                                                <div class="mt-2 clearfix" data-component="increment" data-locale="fr" data-max-value="60" data-min-value="8" data-step="1">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div>
+                                                            <button class="btn btn-light btn-rounded" data-decrement-btn="">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="price-bid-number mx-2 mx-md-4 u-width-200px"><input data-component="field-validator" data-field="" data-price-per-hour="" id="job_price_per_hour" name="job[price_per_hour]" type="hidden" value="17"><span data-label="">17</span>
+                                                            € / h</div>
+                                                        <div>
+                                                            <button class="btn btn-light btn-rounded" data-increment-btn="">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-3 text-center">Montant moyen constaté sur le site :
+                                                    <strong class="text-success d-inline-block">17 € / h</strong>
+                                                </p><input data-in-summary="forced" data-summary-field="" data-total-price="" id="price_total" name="price_total" readonly="readonly" type="hidden" value="59.5"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="payment-summary hide-js" data-multiple-jobbers="" style="display: none;">
+                                                <div class="ps-items">
+                                                    <div class="ps-item main-item">
+                                                        <div class="ps-item-content">
+                                                            <div class="ps-title">
+                                                                <div class="ps-title-icon">
+                                                                    <i class="far fa-user"></i>
+                                                                </div>
+                                                                <div class="ps-title-text">
+                                                                    <span>Rémunération Jobeur</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ps-price main-price">
+                                                                <div class="price-content">
+                                                                    <div class="jobber-multiplier">
+                                                                        <span data-nb-jobbers=""></span>
+                                                                        <span>x</span>
+                                                                    </div>
+                                                                    <div class="price">
+                                                                        <span data-jobber-price="">59,50</span>
+                                                                        <span>€</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-fees">
+                                                            <div class="ps-row">
+                                                                <div class="ps-col">
+                                                                    <a class="ps-fees-title fees-link-style remove-link-style cursor-pointer" data-content="Ces frais participent au fonctionnement de Youpijob et vous permettent de vivre une expérience de qualité en faisant appel à des profils vérifiés par nos soins. Vous bénéficiez de nos services comme l’assurance AXA et l’assistance téléphonique" data-original-title="" data-placement="top" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                                                                        <span>Frais de service</span>
+                                                                        <i class="far fa-info-circle"></i>
+                                                                    </a>
+                                                                    <div class="ps-fees-details">
+                                                                        <p>calculés selon la rémunération</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ps-col">
+                                                                    <div class="ps-fees-price">
+                                                                        <div class="price-content">
+                                                                            <div class="jobber-multiplier">
+                                                                                <span data-nb-jobbers=""></span>
+                                                                                <span>x</span>
+                                                                            </div>
+                                                                            <div class="price">
+                                                                                <span data-fees-label="">11,90</span>
+                                                                                <span>€</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ps-total">
+                                                    <div class="ps-row">
+                                                        <div class="ps-col">
+                                                            <div class="ps-total-title">
+                                                                <span>Montant de votre offre</span>
+                                                            </div>
+                                                            <div class="ps-total-details">
+                                                                <p>Les jobeurs sont susceptibles de faire d'autres propositions</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-col">
+                                                            <div class="ps-total-price">
+                                                                <div class="price-content">
+                                                                    <div class="price-total-multiplier">
+                                                                        <div class="jobber-multiplier">
+                                                                            <span data-nb-jobbers=""></span>
+                                                                            <span>x</span>
+                                                                        </div>
+                                                                        <div class="price">
+                                                                            <span data-poster-price-label="">71,40</span>
+                                                                            <span>€</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="price-total-main">
+                                                                        <div class="price">
+                                                                            <span data-total-price-label="">71,40</span>
+                                                                            <span>€</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="payment-summary hide-js" data-one-jobber="">
+                                                <div class="ps-items">
+                                                    <div class="ps-item">
+                                                        <div class="ps-item-content">
+                                                            <div class="ps-title">
+                                                                <div class="ps-title-icon">
+                                                                    <i class="far fa-user"></i>
+                                                                </div>
+                                                                <div class="ps-title-text">
+                                                                    <span>Rémunération Jobeur</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ps-price main-price">
+                                                                <div class="price-content">
+                                                                    <div class="price">
+                                                                        <span data-jobber-price="">59,50</span>
+                                                                        <span>€</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-fees">
+                                                            <div class="ps-row">
+                                                                <div class="ps-col">
+                                                                    <a class="ps-fees-title fees-link-style remove-link-style cursor-pointer" data-content="Ces frais participent au fonctionnement de Youpijob et vous permettent de vivre une expérience de qualité en faisant appel à des profils vérifiés par nos soins. Vous bénéficiez de nos services comme l’assurance AXA et l’assistance téléphonique" data-original-title="" data-placement="top" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                                                                        <span>Frais de service</span>
+                                                                        <i class="far fa-info-circle"></i>
+                                                                    </a>
+                                                                    <div class="ps-fees-details">
+                                                                        <p>calculés selon la rémunération</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ps-col">
+                                                                    <div class="ps-fees-price">
+                                                                        <div class="price-content">
+                                                                            <div class="price">
+                                                                                <span data-fees-label="">11,90</span>
+                                                                                <span>€</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ps-total">
+                                                    <div class="ps-row">
+                                                        <div class="ps-col">
+                                                            <div class="ps-total-title">
+                                                                <span>Montant de votre offre</span>
+                                                            </div>
+                                                            <div class="ps-total-details">
+                                                                <p>Les jobeurs sont susceptibles de faire d'autres propositions</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ps-col">
+                                                            <div class="ps-total-price">
+                                                                <div class="price-content">
+                                                                    <div class="price-total-main">
+                                                                        <div class="price">
+                                                                            <span data-total-price-label="">71,40</span>
+                                                                            <span>€</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="default-list font-size-3 text-muted text-left">
+                                                <li class="my-2">
+                                                    <i class="fas fa-check text-secondary"></i>
+                                                    Les profils sont vérifiés et disponibles</li>
+                                                <li class="my-2">
+                                                    <i class="fas fa-check text-secondary"></i>
+                                                    Votre service est assuré par
+                                                    <svg aria-hidden="true" aria-label="AXA réinventons notre métier" class="d-inline-block align-top" height="20" role="img" version="1.1" viewbox="0 0 60 60" width="20">
+                                                        <path d="M0 0h60v60H0z" fill="#103184"></path>
+                                                        <path d="M37.137 29.474L60 0h-3.376l-22.94 29.474h3.453z" fill="#FF1821"></path>
+                                                        <path d="M45.452 42.643c1.036 2.898 3.173 10.44 4.022 11.04h-5.61s-.02-1.113-.262-1.977c-.24-.862-2.27-7.384-2.27-7.384h-8.91l-1.4 1.985s1.683 5.262 1.787 5.52c.18.465.983 1.857.983 1.857h-5.375s-.14-.804-.192-1.14c-.042-.27-.51-1.75-.51-1.75s-1.217 1.334-1.55 1.953c-.334.617-.483.937-.483.937h-4.206s-.14-.804-.193-1.14c-.04-.27-.555-1.868-.555-1.868s-1.178 1.428-1.513 2.046c-.332.618-.476.962-.476.962h-4.158s1.175-1.118 1.586-1.598c.693-.813 3.274-4.184 3.274-4.184l-1.035-3.58h-8.84s-5.043 6.62-5.24 6.825c-.202.2-1.67 2.308-1.704 2.538H0v-1.667c.05-.05.086-.088.104-.1.08-.06 3.822-4.7 7.258-9.275 3.088-3.99 5.986-7.87 6.24-8.24.616-.894 1.503-2.823 1.503-2.823h4.57s.142 1.775.276 2.206c.12.38 2.905 9.51 2.97 9.61l1.54-1.968-2.632-8.097s-.617-1.522-.818-1.75h5.34s-.042.783.174 1.45c.217.668 1.362 4.794 1.362 4.794s3.642-4.56 3.855-4.888c.4-.55.45-1.357.45-1.357h4.45s-.815.594-2.243 2.398c-.48.607-5.178 6.573-5.178 6.573s.41 1.398.61 2.093c.054.2.09.334.09.35 0 .005.105-.122.284-.35 1.21-1.535 6.725-8.758 7.06-9.377.27-.5.666-1.068.898-1.686h4.34s.1 1.295.233 1.654l2.717 9.41zm-6.05-6.775c-.676 1.44-4.665 6.238-4.665 6.238h6.316s-1.225-3.726-1.438-4.566c-.17-.668-.123-1.53-.123-1.632 0-.076-.015-.2-.09-.04zm-23.157 0c-.677 1.44-4.666 6.238-4.666 6.238h6.315s-1.224-3.726-1.437-4.566c-.17-.668-.124-1.53-.124-1.632 0-.076-.015-.2-.09-.04zm9.176 13.606l1.95-2.273c-.18-.162-1.277-2.99-1.277-2.99l-1.882 2.077 1.21 3.187z" fill="#FFF"></path>
+                                                    </svg>
+                                                </li>
+                                                <li class="my-2">
+                                                    <i class="fas fa-check text-secondary"></i>
+                                                    Service Client 7/7 de 08h à 22h</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4 order-md-2 offset-md-4">
+                                            <a class="btn btn-green btn-block" data-next-btn="" data-toggle="collapse" href="#informations">Suivant</a>
+                                        </div>
+                                        <div class="col-md-4 order-md-1">
+                                            <a aria-expanded="true" class="btn btn-light mt-3 mt-md-0" data-toggle="collapse" href="#datetime">Précédent</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-component="fields-group">
+                            <div class="card-header h6" id="headingFour" role="tab">
+                                <p class="float-right">
+                                    <a class="hide-js" data-edit-link="" data-toggle="collapse" href="#informations">
+                                        <i class="far fa-edit"></i>
+                                        Modifier</a>
+                                </p>Informations complémentaires<div class="mt-3 hide-js clearfix" data-summary="">
+                                    <p class="item-job-digest">
+                                        <i class="far fa-phone"></i>
+                                        <span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-labelledby="headingFour" class="collapse" data-collapse="" data-parent="#accordion" id="informations">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <div data-component="phone-mask" data-country="fr">
+                                                <div class="form-group" data-field-group="">
+                                                    <label class="col-form-label" for="user_phone">Numéro de téléphone</label><input autocomplete="off" class="form-control phone_mask" data-component="field-validator" data-phone-mask="" data-summary-field="" id="user_phone" maxlength="14" name="user[phone]" placeholder="0X XX XX XX XX" type="tel"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="text-muted my-3">Votre numéro ne sera pas visible sur le site. Nous le communiquerons au Jobeur que vous aurez sélectionné</div>
+                                        </div>
+                                    </div>
+                                    <div class="my-2">
+                                        <p class="mb-1">
+                                            <strong>Ajouter des photos</strong>
+                                            <span class="text-muted pl-3">Optionnel</span>
+                                        </p>
+                                        <p class="text-muted">Les photos permettent aux jobeurs de mieux identifier la mission à réaliser<br>Vous pouvez ajouter jusqu'à 3 photos</p>
+                                        <div class="d-flex flex-wrap">
+                                            <div class="mr-1 mr-md-2 mb-1 mb-md-2 position-relative" data-component="photo-uploader" data-file-size-too-big-message="Erreur : la photo est trop lourde ({#filesize#}Mo). Le maximum autorisé est de : {#maxFilesize#}Mo." data-max-file-size="10" data-preview-selector="#preview1" data-selector="#photo1" data-template-selector="#template1">
+                                                <div class="dz-clickable" id="photo1">
+                                                    <div class="d-flex align-items-center justify-content-center cursor-pointer border rounded job-photo-size dz-clickable">
+                                                        <div data-add-photo="">
+                                                            <div class="text-center text-muted">
+                                                                <div class="mb-1">
+                                                                    <i class="far fa-image fa-2x"></i>
+                                                                </div>
+                                                                <div class="font-size-2">
+                                                                    <i class="far fa-plus"></i>
+                                                                    Ajouter</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-absolute position-top" id="preview1"></div><input id="photo1_field" name="photo1_field" type="hidden" value=""></div>
+                                            <div class="mr-1 mr-md-2 mb-1 mb-md-2 position-relative" data-component="photo-uploader" data-file-size-too-big-message="Erreur : la photo est trop lourde ({#filesize#
+                                        }Mo). Le maximum autorisé est de : {#maxFilesize#}Mo." data-max-file-size="10" data-preview-selector="#preview2" data-selector="#photo2" data-template-selector="#template2">
+                                                <div class="dz-clickable" id="photo2">
+                                                    <div class="d-flex align-items-center justify-content-center cursor-pointer border rounded job-photo-size dz-clickable">
+                                                        <div data-add-photo="">
+                                                            <div class="text-center text-muted">
+                                                                <div class="mb-1">
+                                                                    <i class="far fa-image fa-2x"></i>
+                                                                </div>
+                                                                <div class="font-size-2">
+                                                                    <i class="far fa-plus"></i>
+                                                                    Ajouter</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-absolute position-top" id="preview2"></div><input id="photo2_field" name="photo2_field" type="hidden" value=""></div>
+                                            <div class="mr-1 mr-md-2 mb-1 mb-md-2 position-relative" data-component="photo-uploader" data-file-size-too-big-message="Erreur : la photo est trop lourde ({#filesize#}Mo). Le maximum autorisé est de : {#maxFilesize#}Mo." data-max-file-size="10" data-preview-selector="#preview3" data-selector="#photo3" data-template-selector="#template3">
+                                                <div class="dz-clickable" id="photo3">
+                                                    <div class="d-flex align-items-center justify-content-center cursor-pointer border rounded job-photo-size dz-clickable">
+                                                        <div data-add-photo="">
+                                                            <div class="text-center text-muted">
+                                                                <div class="mb-1">
+                                                                    <i class="far fa-image fa-2x"></i>
+                                                                </div>
+                                                                <div class="font-size-2">
+                                                                    <i class="far fa-plus"></i>
+                                                                    Ajouter</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-absolute position-top" id="preview3"></div><input id="photo3_field" name="photo3_field" type="hidden" value=""></div>
+                                        </div>
+                                        <p class="text-danger hide-js" id="job-photo-error"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="job_description">Description</label>
+                                        <textarea class="form-control" id="job_description" name="job[description]" placeholder="Détaillez ici des informations complémentaires à votre besoin" rows="5"></textarea>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4 order-md-2 offset-md-4"><input class="btn btn-green btn-block" data-disable-with="Veuillez patienter" data-next-btn="" name="commit" type="submit" value="Continuer"></div>
+                                        <div class="col-md-4 order-md-1">
+                                            <a aria-expanded="false" class="btn btn-light mt-3 mt-md-0 collapsed" data-toggle="collapse" href="#price">Précédent</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

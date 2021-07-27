@@ -1,0 +1,590 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Service de ménage à domicile - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="py-2 border-bottom d-flex align-items-center justify-content-center">
+        <div class="promises-items-wrapper d-none d-lg-block">
+            <div class="promises-items">
+                <div class="ypj-fluid-container d-flex justify-content-between">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text1}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle1}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text2}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img2 | raw}} {{section4.subtitle2}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text3}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img3 | raw}} {{section4.subtitle3}}
+                        {%endif%}
+                    </a>
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center my-2 mr-3 pl-1 font-size-2 font-size-lg-3" data-content="{%if section4 is not null%}{{section4.text4}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img4 | raw}} {{section4.subtitle4}}
+                        {%endif%}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel slide d-block d-lg-none u-width-100 mx-2" data-interval="3000" data-ride="carousel" id="promisesCaroussel">
+            <div class="carousel-inner caroussel-promises">
+                <div class="carousel-item active">
+                    <a class="ps-title text-dark remove-link-style cursor-pointe d-flex align-items-center justify-content-center my-2 pl-1 font-size-3r" data-content="{%if section4 is not null%}{{section4.text1}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img1 | raw}} {{section4.subtitle1}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text2}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img2 | raw}} {{section4.subtitle2}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text3}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img3 | raw}} {{section4.subtitle3}}
+                        {%endif%}
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a class="ps-title text-dark remove-link-style cursor-pointer d-flex align-items-center justify-content-center my-2 pl-1 font-size-3" data-content="{%if section4 is not null%}{{section4.text4}}{%endif%}" data-original-title="" data-placement="bottom" data-toggle="popover" data-trigger="click" tabindex="0" title="">
+                        {%if section4 is not null%}
+                        {{section4.img4 | raw}} {{section4.subtitle4}}
+                        {%endif%}
+                    </a>
+                </div>
+            </div>
+            <a class="u-button-icon carousel-control-prev" data-slide="prev" href="#promisesCaroussel">
+                <i class="fa fa-chevron-left"></i>
+            </a>
+            <a class="u-button-icon carousel-control-next" data-slide="next" href="#promisesCaroussel">
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="my-2">
+            <ol class="breadcrumb mb-3 pl-0" itemscope="" itemtype="">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_menage')}}" itemprop="item">
+                        <span itemprop="name">Accueil</span>
+                    </a>
+                    <meta content="1" itemprop="position">
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="{{path('alloservice_site_service_list')}}" itemprop="item">
+                        <span itemprop="name">Service à domicile</span>
+                    </a>
+                    <meta content="2" itemprop="position">
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Ménage</span>
+                    </a>
+                    <meta content="3" itemprop="position">
+                </li>
+                <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Ménage</span>
+                    </a>
+                    <meta content="4" itemprop="position">
+                </li>
+            </ol>
+        </div>
+        <div class="mt-3 text-justify">
+            <div class="content-intro">
+                <div class="d-flex align-items-bottom flex-wrap">
+                    <h1 class="mr-3">Ménage</h1>
+                </div>
+                <div data-component="toggle" data-handle-outside="false" data-toggle-classname="show-more-intro-wrapper--full">
+                    <div class="show-more-intro-wrapper" data-toggelable="">
+                        <p class="font-size-2 font-size-sm-3 text-muted">
+                            Quel plaisir de rentrer chez soi et de retrouver son appartement propre ! Nos jobeurs, proches de chez vous, prendront soin de votre maison et vous aurez tout le loisir d’occuper votre temps à des activités plus agréables que la corvée de ménage. Des femmes de ménage compétentes, sérieuses et triées sur le volet par nos équipes. Sur Alloservice, chaque prestation est évaluée grâce aux avis clients. Gagnez du temps, dans un cadre sécurisé, en confiant votre ménage à domicile à nos jobeurs. Avec Alloservice, c’est facile, rapide et à petit prix.</p>
+                        <button class="btn btn-show-more btn-blue-only-text font-size-2 font-size-sm-3 font-weight-bold" data-clickable="">Lire plus...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mb-5">
+            <a class="btn btn-secondary font-weight-bold btn-lg btn-break btn-service-cta" href="">
+                Demander un service de ménage à domicile
+            </a>
+        </div>
+        <div class="my-5">
+            <h2>Nos femmes de ménage sont à votre service</h2>
+            <div class="row mt-3">
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Nathalie" src="{{ asset('images/medium_e69441e3.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Nathalie</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(46)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>58 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Olivier</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Très bon travail, souriante, ponctuelle, gentille, appliquée : un grand merci ;-)"</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Amandine" src="{{ asset('images/medium_f337a469.jpeg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Amandine</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(55)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>63 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Celine</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Parfaite ponctuelle travail soigné "</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Jibril" src="{{ asset('images/medium_5ee278eb.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Jibril</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(124)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>132 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Marie Therese</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Sérieux 
+                                Discret"</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 pt-2">
+                    <a class="d-flex align-items-center mb-2 text-decoration-none" href="">
+                        <div>
+                            <div class="avatar-border">
+                                <div class="img-user img-80"><img alt="Profil de Théodorina" src="{{ asset('images/medium_7488e074.jpg') }}"></div>
+                            </div>
+                        </div>
+                        <div class="ml-2">
+                            <p class="text-dark font-size-3 font-weight-medium u-link-text-decoration mb-2">Théodorina</p>
+                            <p class="user-star-active font-weight-black text d-flex align-items-center">
+                                <span class="rate-small">
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                    <i class="fas fa-star user-star user-star-active"></i>
+                                </span>
+                                <span class="font-size-2 ml-1">(93)</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mb-1 font-weight-medium pl-2">
+                        <i class="fa fa-briefcase mr-2 fa-fw"></i>117 jobs faits</div>
+                    <p></p>
+                    <div class="border rounded p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <strong class="text-truncate">Sharron</strong>
+                            <div class="rate-small text-nowrap">
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                                <i class="fas fa-star user-star user-star-active"></i>
+                            </div>
+                        </div>
+                        <p class="text-muted u-text-md-max-line-3 font-size-2 mt-2 mb-0">"Super travail et très rapide! "</p>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-bold d-block" href="">Voir toutes les femmes de ménage (38540)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <h2>Dernières annonces de ménage</h2>
+            <div class="row mt-3 d-flex align-items-stretch flex-wrap">
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Ménage à Laxou (54520)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">L appartement sera vide il faut le nettoyer à fond pour l état dès lieu.
+                                            Ça peut être le 13 ou 14
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    5 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>50,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Ménage à Saint-Denis (93200)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Il s'agit d'une colocation étudiante dans une grande maison, il faudra nétoyer les 2 salles de douche, la cuisine, le...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    4 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>40,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Ménage à Mulhouse (68100)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">L'appartement n'est pas trés sale c'est juste pour passer un coup dans les sanitaires, faire les sols et s'il reste d...</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    3 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>30,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <div class="py-2 h-100">
+                        <div class="d-flex flex-column justify-content-between border rounded p-3 service-job">
+                            <div class="mr-1">
+                                <strong>
+                                    <a class="font-size-3 text-dark" href="">Ménage à Vincennes (94300)</a>
+                                </strong>
+                                <div class="mt-2">
+                                    <div class="mb-1 text-muted service-job-description font-size-2">Mis en l'état d'un appartement suite à déménagement</div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-baseline justify-content-between mt-3 font-weight-medium">
+                                <span class="pr-2 font-size-2">
+                                    <i class="fa fa-stopwatch fa-lg"></i>
+                                    2 h de service</span>
+                                <div class="font-size-4 font-weight-black text-primary">
+                                    <div class="price-content">
+                                        <div class="price">
+                                            <span>20,00</span>
+                                            <span>€</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="font-size-3 font-weight-bold d-block" href="">Voir toutes les annonces de ménage (29166)<i class="fas fa-chevron-right pl-1 font-size-1"></i>
+            </a>
+        </div>
+        <div class="my-5">
+            <div class="mt-5">
+                <h2 class="mt-0 mb-1">{%if section6 is not null%} {{section6.title}} {%endif%}</h2>
+                <div class="row mt-4">
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                            {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle1}}" src="{{asset(section6.img1)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle1}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text1}} {%endif%}
+                        </p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                            {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle2}}" src="{{asset(section6.img2)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle2}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text2}} {%endif%}
+                        </p>
+                    </div>
+                    <div class="col-sm-4 text-center col-hiw p-3 mb-3 mb-sm-0">
+                            {%if section6 is not null%}<img width="200" height="200" alt="{{section6.subtitle3}}" src="{{asset(section6.img3)}}"> {%endif%}
+                        <p class="h5 font-weight-medium mt-2">{%if section6 is not null%} {{section6.subtitle3}} {%endif%}</p>
+                        <p class="font-size-3 font-weight-normal text-muted hiw-text-size">
+                            {%if section6 is not null%} {{section6.text3}} {%endif%}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="my-5">
+            <h2>Le service de ménage à domicile près de chez vous</h2>
+            <div class="d-flex flex-row flex-wrap">
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Paris" src="{{ asset('images/paris-367832f28b827571fe90b150ac396a3392919f18d570a91f43492cca752e446a.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Paris</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Marseille" src="{{ asset('images/marseille-4f993557dbddfe67377f17a68fa627621e50e12d6ccf9b6b7b172bbaa076d401.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Marseille</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Lyon" src="{{ asset('images/lyon-e9442d3d640b16f1923da05b9b225f10153319c9feec656b5ea8b57d939402a0.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Lyon</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Toulouse" src="{{ asset('images/toulouse-cc0231a4d8334fd15ba29fd87fe41bf19a0506ad1f3ecf166b8c0d1db23e75dc.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Toulouse</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Nice" src="{{ asset('images/nice-e298de323bb5eeddd5779065e59d840af6b6966d06bf086dc5b0549f326ae4c7.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Nice</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Nantes" src="{{ asset('images/nantes-f82768b5fa34f23478c90782ad88ccb8e6b8d48bc3fa2c742bb6d8dcea2fad93.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Nantes</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Montpellier" src="{{ asset('images/montpellier-010274dde053a79371baf347c73025a95a9f0bdd2468d3f84a725bbd3aa67943.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Montpellier</p>
+                        </h3>
+                    </a>
+                </div>
+                <div class="col-1dot5">
+                    <a class="text-decoration-none d-block frosted-glass-hover" href="">
+                        <div class="frosted-glass-shadow mb-1">
+                            <div class="picture rounded" style="height:100px"><img alt="Ménage à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                            <div class="shadow"><img alt="Ménage à Bordeaux" src="{{ asset('images/bordeaux-14f12cce4859e273c99eb61ffe1c8efe79c04bda5e815c9fb4734289e88e66fe.jpg') }}"></div>
+                        </div>
+                        <h3 class="font-size-4 mt-3">
+                            <p class="text-dark font-weight-medium mb-0">Bordeaux</p>
+                        </h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ypj-fluid-container">
+        <div class="mb-4">
+            <div class="row mt-3">
+                {%for article in lastArticles%}
+                <div class="col-md-4">
+                    <a class="frosted-glass-hover text-dark text-decoration-none" href="{{ path('alloservice_blog_readblog', {'cat_slug':article.category.slug, 'slug':article.slug}) }}">
+                        <div class="frosted-glass-shadow mb-3">
+                            <div class="picture rounded blog-picture"><img alt="{{article.title}}" class="" height="300" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450"></div>
+                            <div class="shadow"><img alt="{{article.title}}" height="300" class="" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('300x200')}}" width="450"></div>
+                        </div>
+                        <h3 class="font-size-4 mb-0">
+                            <span class="font-weight-normal mt-2">
+                                <strong>{{article.title}}</strong>
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="clearfix mb-2 mt-2">
+                        <div class="float-left text-muted font-size-2">
+                            <span>{{article.date | localizeddate('medium','none')}}</span>
+                        </div>
+                        <div class="float-right font-size-2">
+                            <span>
+                                <a class="text-muted" href="">{{article.category.name}}</a>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4 font-size-2">
+                        {{article.subtitle}}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="d-block">
+                <a href="{{ path('alloservice_site_homepage') }}" class="font-size-3 font-weight-medium">Voir tous les articles <i class="fas fa-chevron-right pl-1 font-size-1"></i></a>
+            </div>
+        </div>
+    </div>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') == 0 %}
+    <hr>
+    <div class="ypj-fluid-container text-justify">
+        <div class="my-5">
+            <div class="bottom-long-text">
+                <h2>Bien faire le ménage, un art à part entière</h2>
+                <p>Parce qu'il demande de maîtriser maintes techniques et nombre d'astuces, le ménage est devenu chez certain une sorte d'art, mêlant maniement de l'aspirateur et danse de la serpillère dans un ballet effréné. C'est qu'effectuer la pyrolyse d'un four ou nettoyer un canapé en cuir n'est pas donné à tout le monde, mais nécessite de faire appel aux astuces de ménage des aides ménagères les plus expérimentées.
+                </p>
+                <h2 class="mt-4">Confier son ménage à domicile à un prix attractif sur Alloservice</h2>
+                <p>Entre les courses, les repas à préparer, les devoirs à surveiller et le travail qui nous accapare, quand arrive le moment de faire le ménage il peut sembler que la semaine ne nous a pas autorisé un seul moment de répit. Or, pour maintenir son intérieur sain et propre, on ne peut malheureusement pas s'épargner ni de passer la serpillère ni de s'attaquer à la pile de repassage.
+                    <strong>Pourtant, sur Alloservice, rien n'est plus simple que de trouver une femme de ménage à domicile à qui déléguer toutes vos corvées.</strong>
+                    En plus, comme Alloservice demande une transparence totale à ses membres sur leur identité comme sur leurs prestations, vous êtes assuré d'un travail d'une qualité professionnelle et gardez l'esprit serein pour vous recentrer sur les activités qui comptent vraiment. Que vous souhaitiez déléguer votre grand ménage de printemps ou
+                    <quelques>heures de repassage hebdomadaires, il vous suffit de cliquer sur la catégorie ménage/repassage, de cliquer sur la rubrique qui vous concerne, puis de définir votre besoin et c'est tout, le ménage est fait pour vous !</quelques>
+                </p>
+                <p>Ainsi, avec un tarif femme de ménage compris entre 10 et 15 euros de l'heure selon la tâche demandée, non seulement vous gagnez énormément de temps sur toutes vos corvées de nettoyage, mais en plus vous
+                    <strong>bénéficiez d'une aide ménagère à domicile disponible et fiable pour un prix bien inférieur à celui d'une entreprise de nettoyage.</strong>
+                    Vous n'avez plus à vous échiner sur des tâches dont vous ne voyez pas le bout, vous pouvez laisser travailler une fée de logis professionnelle dont c'est justement le métier que de connaître tous les trucs et astuces pour effectuer en quelques minutes les corvées qui vous prendraient des heures.
+                </p>
+                <p>En outre, Alloservice met à votre disposition des outils pour simplifier vos démarches et vous permettre de poster votre besoin en quelques minutes seulement. Grâce à nos formulaires, vous renseignez toutes vos exigences telles que la surface à nettoyer et le détail de la mission à effectuer bien sûr, mais surtout la date pour laquelle vous voulez que la corvée soit terminée, sa récurrence et même l'horaire que vous préférez. Ensuite, plus besoin de vous inquiéter pour déterminer la meilleure rémunération à attribuer à votre corvée, la plateforme calcule automatiquement le temps qui sera nécessaire pour la réaliser et le taux horaire le plus adapté à votre mission.
+                    <strong>Vous avez ainsi la garantie d'un service rapide, efficace et au meilleur prix.</strong>
+                </p>
+                <p>Vous pouvez en plus définir très facilement la récurrence de votre corvée. Que vous souhaitiez faire venir nos fées du logis une fois seulement, toutes les semaines ou toutes les deux semaines, vous définissez la fréquence de vos corvées en quelques clics et trouvez le jobeur prêt à vous rendre service selon vos besoins.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

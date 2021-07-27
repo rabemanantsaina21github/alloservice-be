@@ -1,0 +1,111 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Parainage - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="bg-sponsorship bg-cover u-margin-t-n-20">
+        <div class="index-public-hero">
+            <div class="container text-center">
+                <h1 class="hero-title">Partagez Alloservice et simplifiez la vie de vos amis</h1>
+                <h2 class="hero-subtitle">Créditez votre cagnotte pour vos prochains jobs lorsque vos amis font appel à un Jobeur !</h2>
+            </div>
+        </div>
+    </div>
+    <div class="pt-4 pb-5">
+        <div class="container">
+            <div class="row position-relative">
+                <div class="col-md-7">
+                    <h2 class="mb-4">Obtenez 10 € par ami que vous invitez</h2>
+                    <ul class="default-list pl-3 mb-4">
+                        <li class="mb-3">
+                            <p class="font-size-4">
+                                <i class="fa fa-chevron-right text-primary"></i>
+                                Connectez-vous depuis cette page
+                            </p>
+                        </li>
+                        <li class="mb-3">
+                            <p class="font-size-4">
+                                <i class="fa fa-chevron-right text-primary"></i>
+                                Partagez le bon plan à vos amis qui recevront 10 €
+                            </p>
+                        </li>
+                        <li class="mb-3">
+                            <p class="font-size-4">
+                                <i class="fa fa-chevron-right text-primary"></i>
+                                Recevez 10 € en échange
+                            </p>
+                        </li>
+                    </ul>
+                    <p class="text-center">
+                        <a class="text-primary" href="" target="_blank">Vous avez des questions sur le fonctionnement ?</a>
+                    </p>
+                </div>
+                <div class="col-sm-10 offset-sm-1 col-md-4 offset-md-0">
+                    <div class="well-panel well-panel-signup">
+                        <p class="h4 mt-0 mb-3 text-center">Connexion</p>
+                        <div class="facebook-content">
+                            <div class="mb-3" data-component="facebook-login">
+                                <a class="btn btn-block btn-lg btn-social btn-facebook" data-fb-login-btn="" href="">
+                                    <span class="fab fa-facebook" style="padding-top: 0.5px; margin-top: 0"></span>Connexion avec Facebook</a>
+                            </div>
+                            <div class="strike mb-3">
+                                <span>OU</span>
+                            </div>
+                            <form class="new_user" method="post" action="{{ path('alloservice_security_login_check') }}">
+                                <div class="form-group">
+                                    <input type="email" name="_username" placeholder="E-mail" autocomplete="off" maxlength="60" required="required"/>
+                                </div>
+                                <div class="form-group">
+                                    <input autocomplete="off" min="8" name="_password" placeholder="Mot de passe" required="required" type="password"/>
+                                </div>
+                                <div>
+                                    <input type="hidden" name="_csrf_token" value="{{csrf_token('authenticate')}}"/>
+                                </div>
+                                 <div class="d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <label>
+                                            <input class="form-check-input" id="remember_me" name="_remember_me" type="checkbox"/>
+                                            <div class="form-check-label font-weight-normal">
+                                                Se souvenir de moi
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <a class="float-right textblue" href="{{ path('alloservice_resetting_request') }}">
+                                        Mot de passe oublié ?
+                                    </a>
+                                </div>
+                                <input class="btn btn-block btn-lg btn-info" data-disable-with="Veuillez patienter" data-modal-submit="" name="commit" type="submit" value="Connexion">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jobbing-promises">
+        <div class="container-fluid">
+            <p class="h2 module-title mb-5 pt-5">Le service entre particuliers en toute sérénité</p>
+            <ul class="list-inline list-promises">
+                <li class="list-inline-item h4 font-weight-normal">
+                    <i class="fas fa-check"></i>
+                    Efficace et moins cher</li>
+                <li class="list-inline-item h4 font-weight-normal">
+                    <i class="fas fa-check"></i>
+                    Satisfaction garantie</li>
+                <li class="list-inline-item h4 font-weight-normal">
+                    <i class="fas fa-check"></i>
+                    Confiance et sécurité garanties</li>
+            </ul>
+            <div class="mt-3">
+                <span class="d-inline-block align-middle font-size-4 m-2">Les services sont assurés par</span>
+                <a href="https://alloservice.fr/assurance">
+                    <svg aria-hidden="true" aria-label="AXA réinventons notre métier" class="d-inline-block align-middle" height="40" role="img" version="1.1" viewbox="0 0 60 60" width="40">
+                        <path d="M0 0h60v60H0z" fill="#103184"></path>
+                        <path d="M37.137 29.474L60 0h-3.376l-22.94 29.474h3.453z" fill="#FF1821"></path>
+                        <path d="M45.452 42.643c1.036 2.898 3.173 10.44 4.022 11.04h-5.61s-.02-1.113-.262-1.977c-.24-.862-2.27-7.384-2.27-7.384h-8.91l-1.4 1.985s1.683 5.262 1.787 5.52c.18.465.983 1.857.983 1.857h-5.375s-.14-.804-.192-1.14c-.042-.27-.51-1.75-.51-1.75s-1.217 1.334-1.55 1.953c-.334.617-.483.937-.483.937h-4.206s-.14-.804-.193-1.14c-.04-.27-.555-1.868-.555-1.868s-1.178 1.428-1.513 2.046c-.332.618-.476.962-.476.962h-4.158s1.175-1.118 1.586-1.598c.693-.813 3.274-4.184 3.274-4.184l-1.035-3.58h-8.84s-5.043 6.62-5.24 6.825c-.202.2-1.67 2.308-1.704 2.538H0v-1.667c.05-.05.086-.088.104-.1.08-.06 3.822-4.7 7.258-9.275 3.088-3.99 5.986-7.87 6.24-8.24.616-.894 1.503-2.823 1.503-2.823h4.57s.142 1.775.276 2.206c.12.38 2.905 9.51 2.97 9.61l1.54-1.968-2.632-8.097s-.617-1.522-.818-1.75h5.34s-.042.783.174 1.45c.217.668 1.362 4.794 1.362 4.794s3.642-4.56 3.855-4.888c.4-.55.45-1.357.45-1.357h4.45s-.815.594-2.243 2.398c-.48.607-5.178 6.573-5.178 6.573s.41 1.398.61 2.093c.054.2.09.334.09.35 0 .005.105-.122.284-.35 1.21-1.535 6.725-8.758 7.06-9.377.27-.5.666-1.068.898-1.686h4.34s.1 1.295.233 1.654l2.717 9.41zm-6.05-6.775c-.676 1.44-4.665 6.238-4.665 6.238h6.316s-1.225-3.726-1.438-4.566c-.17-.668-.123-1.53-.123-1.632 0-.076-.015-.2-.09-.04zm-23.157 0c-.677 1.44-4.666 6.238-4.666 6.238h6.315s-1.224-3.726-1.437-4.566c-.17-.668-.124-1.53-.124-1.632 0-.076-.015-.2-.09-.04zm9.176 13.606l1.95-2.273c-.18-.162-1.277-2.99-1.277-2.99l-1.882 2.077 1.21 3.187z" fill="#FFF"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

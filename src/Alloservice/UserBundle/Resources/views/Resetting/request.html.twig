@@ -1,0 +1,39 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Mot de passe oublié ? {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div style="background-color: ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 my-5">
+                    <div class="card my-5">
+                        <div class="card-header h6">
+                            Mot de passe perdu
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ path('alloservice_resetting_send_email') }}" method="POST" class="new_password_reset">
+                                {% if email is defined %}
+                                    <div class="error_message">
+                                        L'adresse e-mail "{{email}}" que vous avez entrée n'existe pas dans nos fichiers!
+                                    </div>
+                                {% endif %}
+                                <p>
+                                    Veuillez saisir votre adresse e-mail ci-dessous. Nous vous enverrons un e-mail contenant le lien de réinitialisation de mot de passe
+                                </p>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input autocapitalize="off" autocomplete="off" class="form-control" id="email" name="email" required="required" type="text"/>
+                                        <span class="input-group-append">
+                                            <input class="btn btn-light" data-disable-with="Veuillez patienter" data-modal-submit="" name="commit" type="submit" value="Confirmer"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

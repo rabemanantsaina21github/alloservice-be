@@ -1,0 +1,119 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Auto-entrepreneurs : trouvez des clients en devenant jobeur PRO - {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="bg-cover bg-jobber-pro">
+    <!--navbar-->
+    {% include "inc/nav.html.twig" %}
+    <div class="index-public-hero">
+        <div class="container text-center">
+            <h1 class="hero-title">Qu’est ce qu’un jobeur PRO ?</h1>
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="bg-gray-200">
+    <div class="container">
+        <ul class="breadcrumb mb-0 pl-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb-item active">Qu’est ce qu’un jobeur PRO ?</li>
+        </ul>
+    </div>
+</div>
+<div class="py-5 bg-white">
+    <div class="container text-center">
+        <div class="mb-5">
+            <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="64" role="img" version="1.1" viewbox="0 0 200 200" width="64">
+                <defs>
+                    <lineargradient id="linear-pro-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#2B7DE8"></stop>
+                        <stop offset="100%" stop-color="#1664CA"></stop>
+                    </lineargradient>
+                </defs>
+                <g fill-rule="evenodd" fill="none">
+                    <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-a)" transform="translate(5)"></path>
+                    <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold">
+                        <tspan x="30" y="94">PRO</tspan>
+                    </text>
+                </g>
+            </svg>
+        </div>
+        <h2>Des profils de créateurs émergent chaque jour donnant naissance à des créations d’entreprises.</h2>
+        <p class="lead">Plus de la moitié se créaient sous le régime de l’Auto-Entrepreneur, désormais appelé « Micro-entreprise ». Les avantages sont nombreux :</p>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <ul class="lead text-left">
+                    <li>Un régime fiscal et des démarches administratives simplifiées</li>
+                    <li>Accessible à tous : Retraités, en recherches d’emplois, particuliers, étudiants etc.</li>
+                    <li>Un enregistrement simplifié et rapide, possible en ligne</li>
+                    <li>Vous êtes votre propre dirigeant</li>
+                    <li>Diverses activités sont compatibles avec ce régime</li>
+                </ul>
+            </div>
+        </div>
+        <p class="lead">Vous venez de vous lancer en tant qu’auto-entrepreneur ? Passez à la vitesse supérieure grâce aux jobbing. Issue de la consommation collaborative, cette pratique est aujourd’hui la solution la plus adaptée pour développer votre activité de service en tant qu’auto-entrepreneur. Créez votre profil en quelques clics, obtenez le badge
+            <span class="badge badge-pro">PRO</span>
+            et commencez à répondre aux jobs qui sont proposés autour de chez vous. Vous serez alors certifié comme l’un de nos jobeur Pro (un jobeur ayant une structure professionnelle).</p>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <a class="btn btn-lg btn-block btn-yellow" href="">Devenir jobeur PRO</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-3">Obtenir son badge PRO ?</h2>
+        <p class="font-size-3">Lors de l'inscription choisissez le statut « Entrepreneur », renseignez votre numéro de SIRET dans la partie badge de votre tableau de bord. Après vérification par nos équipes de modération votre badge sera validé et s'affichera sur votre profil.</p>
+        <p class="font-size-3">Devenez le nouveau prestataire de services et développez votre activité grâce au badge
+            <span class="badge badge-pro">PRO</span>
+        </p>
+        <svg aria-hidden="true" aria-label="Badge PRO" class="d-inline-block align-middle" height="100" role="img" version="1.1" viewbox="0 0 568 200" width="284">
+            <defs>
+                <lineargradient id="linear-pro-desc-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#2B7DE8"></stop>
+                    <stop offset="100%" stop-color="#1664CA"></stop>
+                </lineargradient>
+            </defs>
+            <g fill-rule="evenodd" fill="none">
+                <path d="M0 40c0-4.42 3.58-8 8-8h466v149H8c-4.42 0-8-3.57-8-8V40z" fill="#0C376E"></path>
+                <path d="M96.5 0C62.17 0 26.16 7.2.93 24.2c-.6.4-14.96 93.3 93.36 175.2 0 0 .3.2.7.6.4-.4.7-.6.7-.6 108.4-81.9 93.95-174.8 93.35-175.2C173.1 9.4 135.9 0 96.5 0z" fill="url(#linear-pro-desc-a)" transform="translate(378)"></path>
+                <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="68" font-weight="bold" transform="translate(378)">
+                    <tspan x="25" y="94">PRO</tspan>
+                </text>
+                <g fill="#FFF">
+                    <path d="M45.73 87.07l17.5-17.5c.95-.96 2.48-.95 3.43 0 .94.94.94 2.47 0 3.4L47.5 92.16c-.5.48-1.13.72-1.77.7-.64.02-1.28-.22-1.77-.7l-8.8-8.8c-.94-.95-.94-2.48 0-3.43.95-.94 2.48-.95 3.43 0l7.13 7.15zM45.73 144.07l17.5-17.5c.95-.96 2.48-.95 3.43 0 .94.94.94 2.47 0 3.4L47.5 149.16c-.5.48-1.13.72-1.77.7-.64.02-1.28-.22-1.77-.7l-8.8-8.8c-.94-.95-.94-2.48 0-3.43.95-.94 2.48-.95 3.43 0l7.13 7.15z"></path>
+                    <text font-family="Lato-Regular, Lato" font-size="42" font-weight="normal" transform="translate(34 53)">
+                        <tspan x="42.45" y="41">Entrepreneur</tspan>
+                    </text>
+                    <text font-family="Lato-Regular, Lato" font-size="42" font-weight="normal" transform="translate(34 53)">
+                        <tspan x="42.23" y="97">Identité vérifiée</tspan>
+                    </text>
+                </g>
+            </g>
+        </svg>
+        <h2 class="mb-3 pt-3">C’est le moment de remplir vos agendas !</h2>
+        <p class="font-size-3">Les auto-entrepreneurs sont les bienvenus. Une solution simple, efficace pour développer votre business a été créée grâce à ce badge
+            <span class="badge badge-pro">PRO</span>. En effet, il indiquera alors à la communauté que vous avez structuré votre activité, que vous êtes en mesure de produire une facture et que votre activité est couverte par une assurance. Tous ces éléments sont un plus qui viennent rassurer le client sur votre futur prestation. Bien évidemment, il n'en reste pas moins qu'il faut réaliser des jobs de qualité pour obtenir les meilleures évaluations !</p>
+        <h2 class="mb-3">Développer votre notoriété</h2>
+        <p class="font-size-3">Vous ne devez pas oublier que même si les formalités sont simplifiées, vous venez de créer une activité dont l’enjeu clé est de pérenniser votre entreprise sur le marché. Il est alors important de se faire connaître : vous et votre savoir-faire. Et pourtant ce n’est pas si facile quand on débute… Rassurez vous, être jobeurs PRO est un avantage non sans effet ici : Vous êtes énormément sollicité et apprécié des clients.</p>
+        <h2 class="mb-3">Le nouveau « Trip Advisor » des prestations de service</h2>
+        <p class="font-size-3">Un gros plus pour votre activité. Vous pourrez ainsi recevoir des avis / des témoignages de vos clients Alloservice et même de vos clients externes, ayant eu recours à vos services. Vous allez pouvoir construire votre réputation auprès de vos clients et futurs clients. Vos clients se sentent en confiance et vous confient toujours plus de mission.</p>
+        <h2 class="mb-3">Développer votre clientèle</h2>
+        <p class="font-size-3">Encore une fois, détenir un important portefeuille client, n’est pas une chose simple. Cependant nous mettons à votre disposition des outils efficaces pour y remédier.</p>
+        <p class="font-size-3">Un client potentiel ? Partagez lui votre profil Alloservice. Toutes vos évaluations, vos avis reçus y sont répertoriés. Ainsi, plus besoin de venter tous vos mérites, vos anciens clients s’en seront chargés pour vous.</p>
+        <p class="font-size-3">L’option « partager votre profil » via les réseaux sociaux est également disponible sur votre profil, alors n’hésitez pas.</p>
+        <p class="font-size-3">N’attendez plus, les clients n’attendent que vous</p>
+        <div class="row my-3">
+            <div class="col-md-4 offset-md-4">
+                <a class="btn btn-lg btn-block btn-secondary" href="">Devenir jobeur PRO</a>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Toutes les sections - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">Toutes les sections</h1>
+		<div class="admin-buttons">
+			<a href="{{path('alloservice_admin_section_add')}}" class="btn btn-yellow"><i class="fa fa-plus"></i> Ajouter</a>
+		</div>
+
+		<form method="POST">
+			<div class="admin-section-content">
+				<table class="tab">
+					<thead>
+						<th width="50px"></th>
+						<th>#ID</th>
+						<th>Titre</th>
+						<th>Description</th>
+						<th>Colonne 1</th>
+						<th>Colonne 2</th>
+						<th>Colonne 3</th>
+						<th>Colonne 4</th>
+						<th width="120px">Options</th>
+					</thead>
+					<tbody>
+					{%for entity in sections%}
+						<tr>
+							<td><input type="checkbox" name="del[]" value="{{entity.id}}"/></td>
+							<td>{{entity.id}}</td>
+							<td>{{entity.title}}</td>
+							<td>{{entity.description}}</td>
+							<td>
+								{%if entity.subtitle1 is not null%}
+								<h4>{{entity.subtitle1}}</h4>
+								{%endif%}
+								{%if entity.text1 is not null%}
+								<p>{{entity.text1 | truncate(75,'...')}}</p>
+								{%endif%}
+							</td>
+							<td>
+								{%if entity.subtitle2 is not null%}
+								<h4>{{entity.subtitle2}}</h4>
+								{%endif%}
+								{%if entity.text2 is not null%}
+								<p>{{entity.text2 | truncate(75,'...')}}</p>
+								{%endif%}
+							</td>
+							<td>
+								{%if entity.subtitle3 is not null%}
+								<h4>{{entity.subtitle3}}</h4>
+								{%endif%}
+								{%if entity.text3 is not null%}
+								<p>{{entity.text3 | truncate(75,'...')}}</p>
+								{%endif%}
+							</td>
+							<td>
+								{%if entity.subtitle4 is not null%}
+								<h4>{{entity.subtitle4}}</h4>
+								{%endif%}
+								{%if entity.text4 is not null%}
+								<p>{{entity.text4 | truncate(75,'...')}}</p>
+								{%endif%}
+							</td>
+							<td>
+								<a href="{{path('alloservice_admin_section_edit',{'id': entity.id})}}"><i class="fa fa-edit"></i> Modifier</a>
+							</td>
+						</tr>
+					{%endfor%}
+					</tbody>
+				</table>
+				<div class="admin-buttons">
+					<button type="submit" class="btn btn-yellow" onclick="return confirm('Voulez-vous supprimer la sélection ?');"><i class="fa fa-trash"></i> Supprimer la sélection</button>
+				</div>
+			</div>
+		</form>
+		<div class="navigation">
+		    {{ knp_pagination_render(sections) }}
+		</div>
+	</div>
+</section>
+{% endblock %}

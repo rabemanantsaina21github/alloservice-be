@@ -1,0 +1,48 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}{%if edit is defined and edit == 1%}Ville : {{entity.name}}{%else%}Ajouter une ville{%endif%} - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{%if edit is defined and edit == 1%}Ville : {{entity.name}}{%else%}Ajouter une ville{%endif%}</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.cp)}}
+					{{form_widget(form.cp)}}
+					{{form_errors(form.cp)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.name)}}
+					{{form_widget(form.name)}}
+					{{form_errors(form.name)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.country)}}
+					{{form_widget(form.country)}}
+					{{form_errors(form.country)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.file)}}<br>
+					{{form_widget(form.file)}}
+					{{form_errors(form.file)}}
+					{%if edit is defined and edit == 1%}
+					<div style="max-width:160px">
+						<img src="{{asset(entity.getWebPath())}}" alt="" class="img-thumbnail" />
+					</div>
+					{%endif%}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+<ul class="list-unstyled font-size-2">
+	{%for service in services%}
+	{%if service.supService.service is not null%}
+	<li class="mb-1"><a class="text-muted" href="{{path('alloservice_site_sousservice2',{'slug': service.slug, 's_slug1': service.supService.service.slug, 's_slug2': service.supService.slug})}}">{{service.title}}</a></li>
+	{%else%}
+	<li class="mb-1"><a class="text-muted" href="{{path('alloservice_site_sousservice',{'s_slug': service.supService.slug, 'slug': service.slug})}}">{{service.title}}</a></li>
+	{%endif%}
+	{%endfor%}
+</ul>

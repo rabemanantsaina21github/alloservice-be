@@ -1,0 +1,78 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Joblist - {{ parent() }} {% endblock %}
+
+{%block body%}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+{% include "inc/nav-1.html.twig" %}
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-header h6">
+            <div class="float-left">Ma JobList, trouvez des jobs proches de chez vous</div>
+            <div class="float-right">
+                <a href="{{path('alloservice_site_step1')}}">
+                    <i class="far fa-edit"></i>
+                    Modifier mes compétences
+                </a>
+            </div>
+        </div>
+        <div class="px-2">
+            <div data-component="joblist" data-price-max="500" data-price-min="0" data-price-step="10" data-radius-default="25" data-radius-max="100" data-radius-min="5" data-radius-step="5">
+                <div class="row row-no-gutter">
+                    <div class="col-md-8">
+                        <div class="p-3">
+                            <p>Veuillez configurer vos préférences JobList pour trouver des jobs qui vous intéressent</p>
+                            <p class="text-center">
+                                <a class="btn btn-secondary" href="{{path('alloservice_site_step1')}}">Configurer mes préférences JobList</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <h4 class="mb-3">Paramètres de recherche</h4>
+                            <form accept-charset="UTF-8" action="/jobs_search/joblist" data-form="" data-remote="true" method="get" onsubmit="return false;"><input name="utf8" type="hidden" value="✓"><div class="form-group clearfix">
+                                    <label>Jobs autour de</label>
+                                    <div class="mb-3" data-component="auto-complete" data-reset-placeholder="Code postal ou ville"><input data-city-id="" id="city_id" name="city_id" type="hidden" value=""><input autocomplete="off" class="form-control" data-city="false" data-provide="typeahead" id="city" name="city" placeholder="Code postal ou ville" size="30" type="text"></div>
+                                    <p>
+                                        <label>sur une distance de
+                                            <strong data-radius-current="">55</strong>
+                                            km</label>
+                                    </p>
+                                    <div class="data-label-cursor float-left">
+                                        <span data-slider-radius-min="">5</span>
+                                        km</div>
+                                    <div class="data-label-cursor float-right">
+                                        <span data-slider-radius-max="">100</span>
+                                        km</div>
+                                    <div class="ui-slider-jobber ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-slider="radius">
+                                        <span class="ui-slider-handle ui-corner-all ui-state-default" style="left: 52.6316%;" tabindex="0"></span>
+                                    </div><input data-radius-current-field="" id="radius" name="radius" type="hidden" value="55"></div><hr><div class="form-group clearfix">
+                                    <p>
+                                        <label>Prix du job entre
+                                        </label>
+                                    </p>
+                                    <div class="data-label-cursor float-left">
+                                        <span data-slider-price-min="">0</span>
+                                        €</div>
+                                    <div class="data-label-cursor float-right">
+                                        <span data-slider-price-max="">500+</span>
+                                        €</div>
+                                    <div class="ui-slider-jobber ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-slider="price">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div>
+                                        <span class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;" tabindex="0"></span>
+                                        <span class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;" tabindex="0"></span>
+                                    </div><input data-price-current-field-min="" id="min_price" name="min_price" type="hidden" value="0"><input data-price-current-field-max="" id="max_price" name="max_price" type="hidden" value="500"></div><hr><div class="form-group">
+                                    <label>Compétences</label>
+                                    <p>
+                                        <a href="https://alloservice.fr/devenez-jobeur/step_1">Modifier mes compétences</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

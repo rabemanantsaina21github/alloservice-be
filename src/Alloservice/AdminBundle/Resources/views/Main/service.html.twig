@@ -1,0 +1,69 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Services - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">
+			Services
+			{%if niv == 'niv-1'%}
+			niveau 1
+			{%elseif niv == 'niv-2'%}
+			niveau 2
+			{%elseif niv == 'niv-3'%}
+			niveau 3
+			{%endif%}
+		</h1>
+		<div class="admin-buttons">
+			<a href="{{path('alloservice_admin_service_add',{'niv': niv})}}" class="btn btn-yellow"><i class="fa fa-plus"></i> Ajouter</a>
+		</div>
+
+		<form method="POST">
+			<div class="admin-section-content">
+				<table class="tab">
+					<thead>
+						<th width="50px"></th>
+						<th>#ID</th>
+						<th>Titre</th>
+						{%if niv != 'niv-1'%}
+						<th class="text-center">Service parent</th>
+						{%endif%}
+						<th width="120px">Options</th>
+					</thead>
+					<tbody>
+					{%for entity in tab%}
+						<tr>
+							<td><input type="checkbox" name="del[]" value="{{entity.id}}" /></td>
+							<td>{{entity.id}}</td>
+							<td>{{entity.title}}</td>
+							{%if niv == 'niv-2'%}
+							<td class="text-center">
+								{{entity.service.title}}
+							</td>
+							{%elseif niv == 'niv-3'%}
+							<td class="text-center">
+								{%if entity.supService.service is not null%}
+								{{entity.supService.service.title}} > 
+								{%endif%}
+								{{entity.supService.title}}
+							</td>
+							{%endif%}
+							<td>
+								<a href="{{path('alloservice_admin_service_edit',{'id': entity.id, 'niv': niv})}}"><i class="fa fa-edit"></i> Modifier</a>
+							</td>
+						</tr>
+					{%endfor%}
+					</tbody>
+				</table>
+				<div class="admin-buttons">
+					<button type="submit" class="btn btn-yellow" onclick="return confirm('Voulez-vous supprimer la sélection ?');"><i class="fa fa-trash"></i> Supprimer la sélection</button>
+				</div>
+			</div>
+		</form>
+		<div class="navigation">
+		    {{ knp_pagination_render(tab) }}
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base-gray.html.twig" %}
+  
+{% block title %} {{article.title}} - Blog | {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="container">
+        <ul class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_blog_homepage') }}">Blog</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_blog_by_category',{'slug': article.category.slug}) }}">{{article.category.name}}</a>
+            </li>
+            <li class="breadcrumb-item active">{{article.title}}</li>
+        </ul>
+        <div class="row">
+            <div class="col-md-9" itemscope="" itemtype="">
+                <div class="card mb-3">
+                    <img alt="{{article.title}}" class="img-fluid" itemprop="image" src="{{asset(article.getThumbPath()) | imagine_filter('900x300')}}">
+                    <div class="px-3">
+                        <h1 class="mt-3" itemprop="name">{{article.title}}</h1>
+                        <h2 class="h4 text-slate font-weight-normal my-3">
+                          {{article.subtitle}}
+                        </h2>
+                        <p class="h5 text-slate font-weight-normal d-inline-block" itemprop="articleSection">{{article.category.name}}</p>
+                        <span class="text-muted">—</span>
+                        <span class="activity-time font-size-3 d-inline-block">
+                            {{ article.date | localizeddate('medium','none') }}
+                        </span>
+                        <div data-component="share" data-share-fb-callback="" data-share-tw-callback="" data-share-url="">
+                            <a class="btn btn-share btn-light" data-share="facebook-feed" href="#">
+                                <i class="fab fa-facebook fa-fw"></i>
+                                Partager
+                            </a>
+                            <a class="btn btn-share btn-light" data-share="" href="">
+                                <i class="fab fa-twitter fa-fw"></i>
+                                Tweeter
+                            </a>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="px-3">
+                        <div class="content-word fr-view" itemprop="articleBody">
+                            {{article.content | raw}}
+                        </div>
+                    </div>
+                </div>
+                <h3 class="my-3">Articles similaires</h3>
+                <div class="row">
+                    {%for entity in lastArticles%}
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <a href="{{ path('alloservice_blog_read', {'cat_slug':entity.category.slug, 'slug':entity.slug}) }}">
+                                <div style="background: url('{{asset(entity.getThumbPath()) | imagine_filter('300x200')}}') no-repeat;background-size: cover;background-position:center;position:relative;border-top-left-radius:4px;border-top-right-radius:4px;width:100%;height: 160px;">
+                                    <div class="blog-header-post-content" style="height: 100%;text-align: center;">
+                                        <div class="px-2" style="line-height: 160px;">
+                                            <h4 class="h4 text-white font-size-3" style="display: inline-block;vertical-align: middle;line-height: 22px;">{{entity.title}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-3">{{entity.subtitle | truncate(75,'...')}}</div>
+                            <div class="clearfix p-3">
+                                <div class="float-left">
+                                    <time class="activity-time" content="2018-12-23" datetime="2018-12-23" itemprop="datePublished">{{entity.date | localizeddate('medium', 'none')}}</time>
+                                </div>
+                                <div class="float-right" style="padding-top:2px">
+                                    <a href="{{ path('alloservice_blog_read', {'cat_slug':entity.category.slug, 'slug':entity.slug}) }}">Lire la suite &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+                <div class="my-3 text-center">
+                    <a class="btn btn-light btn-lg" href="{{ path('alloservice_blog_homepage') }}">Voir tous les articles</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 text-center">
+                    <div class="card-body">
+                        <p class="h5 font-weight-normal mb-3 text-secondary">Besoin d'aide ? Trouvez quelqu'un pour vous aider</p>
+                        <a class="btn btn-secondary btn-break" href="{{ path('alloservice_site_service_list') }}">Demander un service</a>
+                    </div>
+                </div>
+                <div class="card mb-3 text-center">
+                    <div class="card-body">
+                        <p class="h5 font-weight-normal mb-3 text-primary">Réalisez des jobs et augmentez vos revenus</p>
+                        <a class="btn btn-yellow btn-break" href="{{ path('alloservice_site_devenir-jobeur') }}">Devenir jobeur</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modalBlogImg">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Fermer" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center"><img alt="Image agrandie" class="img-fluid" src=""></div>
+                </div>
+            </div>
+        </div>
+        <!--Fin de modif Antonio-->
+    </div>
+{% endblock %}

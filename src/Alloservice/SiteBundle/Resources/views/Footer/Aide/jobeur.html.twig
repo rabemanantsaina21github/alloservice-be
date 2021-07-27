@@ -1,0 +1,140 @@
+{% extends "header.html.twig" %}
+
+{% block title %} Jobeur - {{ parent() }} {% endblock %}
+
+{% block body %}
+    <main role="main">
+        <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+                    <li title="Alloservice">
+                        <a class="text-primary font-weight-bold" href="{{ path('alloservice_site_centre_d_aide') }}">Alloservice</a>
+                    </li>
+                    <li title="Jobeur ">
+                        Jobeur
+                    </li>
+                </ol>
+                <form accept-charset="UTF-8" action="/hc/fr/search" class="search" data-search="" method="get" role="search"><input name="utf8" type="hidden" value="✓"><input aria-label="Recherche" id="query" name="query" placeholder="Recherche" type="search"></form>
+            </nav>
+            <div class="category-container">
+                <div class="category-content">
+                    <header class="page-header">
+                        <h1>Jobeur
+                        </h1>
+                        <p class="page-header-description">Prestataire</p>
+                    </header>
+                    <div class="section-tree">
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001586649-Mon-compte">Mon compte</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360002481599-Inscription">Inscription</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005690385-Documents-d-identit%C3%A9s">Documents d'identités</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407969-Pourquoi-dois-je-fournir-mes-informations-personnelles-">Pourquoi dois-je fournir mes informations personnelles ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005678309-Compl%C3%A9ter-mon-profil">Compléter mon profil</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005678269-Activer-mon-compte-jobeur">Activer mon compte jobeur</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360001812980-Activer-mon-badge-pro">Activer mon badge pro</a>
+                                </li>
+                            </ul>
+                            <a class="see-all-articles" href="https://help.alloservice.com/hc/fr/sections/115001586649-Mon-compte">
+                                Afficher les 8&nbsp;articles
+                            </a>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606065-Ma-joblist">Ma joblist</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003576225-Je-souhaite-modifier-ma-JobList">Je souhaite modifier ma JobList</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407769-Qu-est-ce-qu-un-job-priv%C3%A9-">Qu'est ce qu'un job privé ?
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606085-Postuler-aux-offres">Postuler aux offres</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005800245-Comment-remporter-plus-de-jobs-">Comment remporter plus de jobs ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412885-Puis-je-proposer-une-r%C3%A9mun%C3%A9ration-plus-%C3%A9lev%C3%A9e-">Puis-je proposer une rémunération plus élevée ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407749-Comment-proposer-mes-services-">Comment proposer mes services ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003407429-Comment-discuter-avec-le-client-">Comment discuter avec le client ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001586429-Cagnotte-Paiement">Cagnotte &amp; Paiement</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005679989-Comment-transf%C3%A9rer-ma-cagnotte-sur-mon-compte-bancaire-">Comment transférer ma cagnotte sur mon compte bancaire ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003870389-Comment-ajouter-ou-modifier-mon-compte-en-banque-">Comment ajouter ou modifier mon compte en banque ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005985429-Je-n-ai-pas-re%C3%A7u-le-paiement-d-un-service">Je n'ai pas reçu le paiement d'un service</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115005742649-J-ai-effectu%C3%A9-des-heures-suppl%C3%A9mentaires">J'ai effectué des heures supplémentaires</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115004735545-Frais-de-service-jobeur-">Frais de service jobeur
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/360001223399-Modification-et-Annulation">Modification et Annulation</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003709700-Que-faire-si-je-ne-suis-plus-disponible-">Que faire si je ne suis plus disponible ?</a>
+                                </li>
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/360003711240-Quelles-sont-les-p%C3%A9nalit%C3%A9s-en-cas-d-annulation-">Quelles sont les pénalités en cas d'annulation ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section">
+                            <h3 class="section-tree-title">
+                                <a href="https://help.alloservice.com/hc/fr/sections/115001606105-D%C3%A9clarer-mes-revenus">Déclarer mes revenus</a>
+                            </h3>
+                            <ul class="article-list">
+                                <li class="article-list-item">
+                                    <a class="article-list-link" href="https://help.alloservice.com/hc/fr/articles/115003412605-Faut-il-d%C3%A9clarer-mes-revenus-">Faut-il déclarer mes revenus ?</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "base-gray.html.twig" %}
+
+{%block title%} Utiliser une carte cadeau - {{parent()}} {%endblock%}
+
+{%block body%}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+{%include "inc/nav-1.html.twig"%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-dashboard">
+                <li>
+                    <a href="{{path('alloservice_site_cartescadeaux_new')}}">Offrir une carte cadeau</a>
+                </li>
+                <li class="active">
+                    <a href="{{path('alloservice_site_cartescadeaux_add')}}">Utiliser une carte cadeau</a>
+                </li>
+                <li>
+                    <a href="{{path('alloservice_site_cartescadeaux_historic')}}">Mes cartes cadeaux</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center ml-2 mb-3">
+                <a class="text-muted text-decoration-none" href="{{path('alloservice_site_cartescadeaux')}}">
+                    <i class="far fa-question-circle mr-2"></i>Comment ça marche ?</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card mb-3 text-center py-5">
+                <div class="u-container-600">
+                    <h2 class="mb-5 font-size-5">Créditez votre cagnotte et demandez des services</h2>
+                    <script id="js-react-on-rails-context" type="application/json">{"railsEnv":"production","inMailer":false,"i18nLocale":"fr","i18nDefaultLocale":"fr","rorVersion":"11.2.2","rorPro":false,"href":"https://alloservice.fr/gift_cards/add","location":"/gift_cards/add","scheme":"https","host":"alloservice.fr","port":null,"pathname":"/gift_cards/add","search":null,"httpAcceptLanguage":"en-GB,en;q=0.5","serverSide":false}</script>
+                    <div id="GiftCardAdd-react-component-233ae936-009c-4215-af1c-eaaf3c82f056">
+                        <div>
+                            <div style="position: relative;">
+                                <div class="gift-card-wrapper">
+                                    <div class="gift-card gift-card-size-medium ">
+                                        <div class="gift-card-blue-side">
+                                            <div class="gift-card-text demo-card">
+                                                <img src="{{ asset('images/alloservice-logowhite-321105114a7417bbf7e3e299873be0c9.svg') }}"></div>
+                                            <div class="gift-card-bg-icons">
+                                                <div class="icon-gift icon-gift--small">
+                                                    <svg height="115" viewbox="0 0 123 115" width="123" xmlns="http://www.w3.org/2000/svg">
+                                                        <g fill-rule="evenodd" fill="none">
+                                                            <g fill="#2c7de8">
+                                                                <path d="m9 36h37c2.7614237 0 5 2.2385763 5 5v43c0 1.6568542-1.3431458 3-3 3h-39c-1.65685425 0-3-1.3431458-3-3v-45c0-1.6568542 1.34314575-3 3-3z" transform="translate(5 26)"></path>
+                                                                <path d="m49 0h15v4h-15z" transform="translate(5 26)"></path>
+                                                                <path d="m65 36h37c2.761424 0 5 2.2385763 5 5v43c0 1.6568542-1.343146 3-3 3h-39c-1.6568542 0-3-1.3431458-3-3v-45c0-1.6568542 1.3431458-3 3-3z" transform="matrix(-1 0 0 1 174 26)"></path>
+                                                                <path d="m62 3h46c2.761424 0 5 2.23857625 5 5v14c0 1.6568542-1.343146 3-3 3h-45c-1.6568542 0-3-1.3431458-3-3z" transform="translate(5 26)"></path>
+                                                                <path d="m0 3h46c2.7614237 0 5 2.23857625 5 5v14c0 1.6568542-1.3431458 3-3 3h-45c-1.65685425 0-3-1.3431458-3-3z" transform="matrix(-1 0 0 1 56 26)"></path>
+                                                            </g>
+                                                            <g stroke-width="9" stroke="#2c7de8">
+                                                                <path d="m34.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.65089919 0-19.57680089-14.54159134-2.94357056-20.14279689 6.96103206-.81537363 15.15297046 3.41588672 24.57581526 12.69378099z" transform="translate(27 6)"></path>
+                                                                <path d="m69.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.6508992 0-19.5768009-14.54159134-2.9435706-20.14279689 6.9610321-.81537363 15.1529705 3.41588672 24.5758153 12.69378099z" transform="matrix(-1 0 0 1 131.085 6)"></path>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="condition-text">La carte cadeau Alloservice est valable pour tous les services sur notre site internet et un an à partir de la date d'achat</p>
+                                    </div>
+                                </div>
+                                <div class="gift-card-use-form bg-white border-top pt-3">
+                                    <div class="">
+                                        <form class="my-3">
+                                            <div class="wizard-input undefined">
+                                                <label class="wizard-input-label " for="code">Vous avez reçu une carte cadeau ?</label>
+                                                <div class="wizard-input-wrapper "><input class="uppercase digit-input" id="code" name="code" placeholder="Renseignez le code de 8 caractères"></div>
+                                                <div class="input-error"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script class="js-react-on-rails-component" data-component-name="GiftCardAdd" data-dom-id="GiftCardAdd-react-component-233ae936-009c-4215-af1c-eaaf3c82f056" type="application/json">{"config":{"submitPath":"/gift_cards/use"},"walletAmount":"0.0"}</script>
+
+                    <div class="d-flex flex-column mt-5">
+                        <h5 class="mb-3">Comment ça marche ?</h5>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="u-circle-border mr-2 border-primary text-primary">
+                                <i class="far fa-keyboard"></i>
+                            </div>
+                            <p class="text-muted mb-0">Saisissez le code indiqué sur votre carte cadeau</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="u-circle-border mr-2 border-primary text-primary">
+                                <i>€</i>
+                            </div>
+                            <p class="text-muted mb-0">Votre cagnotte se crédite du montant de la carte</p>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="u-circle-border mr-2 border-primary text-primary">
+                                <i class="far fa-thumbs-up"></i>
+                            </div>
+                            <p class="text-muted mb-0">Votre cagnotte est ensuite utilisée pour réduire le montant de vos services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

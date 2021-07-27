@@ -1,0 +1,43 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}{%if edit is defined and edit == 1%}Partenaire : {{entity.name}}{%else%}Ajouter un partenaire{%endif%} - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{%if edit is defined and edit == 1%}Partenaire : {{entity.title}}{%else%}Ajouter un partenaire{%endif%}</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.name)}}
+					{{form_widget(form.name)}}
+					{{form_errors(form.name)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.description)}}
+					{{form_widget(form.description)}}
+					{{form_errors(form.description)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.svg)}}
+					{{form_widget(form.svg)}}
+					{{form_errors(form.svg)}}
+				</div>
+				<div class="form-ctrl">
+					{{form_label(form.file)}}<br/>
+					{{form_widget(form.file)}}
+					{{form_errors(form.file)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,239 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Confiance et sécurité - {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+{% include "inc/nav-1.html.twig" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-dashboard">
+                <li>
+                    <a href="{{path('alloservice_security_profile_infoperso')}}">Informations personnelles</a>
+                </li>
+                <li>
+                    <a href="{{path('alloservice_security_profile_infopro')}}">Informations professionnelles</a>
+                </li>
+                <li class="active">
+                    <a href="{{path('alloservice_security_profile_trustsecurity')}}">Confiance et sécurité</a>
+                </li>
+                <li>
+                    <a href="{{path('alloservice_security_profile_status')}}">Statut de mon profil</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <div data-component="form">
+                <div class="card mb-3">
+                    <div class="anchor">
+                        <a name="id_document">&nbsp;</a>
+                    </div>
+                    <div class="card-header h6">
+                        <div class="float-right">
+                            <span class="edit-heading-link hide-js" data-cancel-button="">
+                                <i class="fas fa-undo"></i>
+                                <span>Annuler</span>
+                            </span>
+                            <span class="edit-heading-link hide-js" data-edit-button="">
+                                <i class="fa fa-edit"></i>
+                                <span>Modifier</span>
+                            </span>
+                        </div>
+                        <svg aria-hidden="true" aria-label="Identité vérifiée" class="d-inline-block align-bottom mr-1" height="16" role="img" version="1.1" viewbox="0 0 200 200" width="16">
+                            <defs>
+                                <linearGradient id="linear-security-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#41E8B0"></stop>
+                                    <stop offset="100%" stop-color="#3DDCA7"></stop>
+                                </linearGradient>
+                                <path d="M.94 24.2c-.598.4-14.96 93.3 93.356 175.2 0 0 .3.2.698.6.4-.4.698-.6.698-.6 108.416-81.9 93.954-174.8 93.356-175.2C173.09 9.4 135.888 0 96.49 0 62.18 0 26.175 7.2.94 24.2z" id="path-security-b"></path>
+                                <path d="M123.39 54.972c-5.7 5.3-24.5 24.3-36.1 36-5.7-4.5-12.2-9.4-15.7-11.9-7.2-5.3-18.313-10.52-23.2-4.6-4.885 5.92-.1 13.1 6.9 21.9 6.9 8.8 17.485 20.34 22.4 24.5 3.267 2.764 4.9 3.5 7.7 4 .4.1.8.1 1.1.2 4.3.5 7.51 0 11.9-4.2 7.75-7.41 30.5-38 39.1-49.9 8.6-11.9 22-29.2 15.2-33.3-6.3-3.8-20.9 9.4-29.3 17.3z" id="path-security-c"></path>
+                            </defs>
+                            <g fill-rule="evenodd" fill="none">
+                                <g transform="translate(5)">
+                                    <use fill="url(#linear-security-a)" xlink:href="#path-security-b"></use>
+                                    <use xlink:href="#path-security-b"></use>
+                                </g>
+                                <g transform="translate(5)">
+                                    <use fill="#1E6B51" xlink:href="#path-security-c"></use>
+                                    <use xlink:href="#path-security-c"></use>
+                                </g>
+                            </g>
+                        </svg>
+                        Document d'identité</div>
+                    <div class="alert alert-info rounded-0">
+                        <p>La vérification de votre identité permet aux autres membres de vous choisir en toute sécurité.</p>
+                        <p>Pièces acceptées en recto verso :</p>
+                        <ul>
+                            <li>Carte d'identité ou Carte de séjour ou permis de conduire</li>
+                        </ul>
+                        <p>Pièces acceptées en recto :</p>
+                        <ul>
+                            <li>Passeport UE ou Récépissé de demande de titre de séjour ou Visa avec autorisation de travail</li>
+                        </ul>
+                        <p>
+                            <i class="fa fa-camera fa-lg"></i>
+                            <strong>Conseils pratiques</strong>
+                        </p>
+                        <ul class="mt-2">
+                            <li>Vous pouvez prendre en photo les documents demandés avec votre smartphone</li>
+                            <li>Vos documents ne doivent être ni flous, ni tronqués</li>
+                        </ul>
+                    </div>
+                    <form accept-charset="UTF-8" action="/profile/trust_and_security/update_badge_security#id_document" class="new_profile_badges_security_form" enctype="multipart/form-data" id="new_profile_badges_security_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="9xU56JXAui3uaWp70veUG43DkZFSRkrRWMJjfsXuzUDUJbHrIVDi8D3F8umAeo/8pnaONtC++vr210uV9NxFNg=="><div class="card-body">
+                            <div data-component="id-card">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" data-field="" id="id_card_kind" name="id_card[kind]" required="required">
+                                                <option selected="selected" value="">Sélectionnez votre type de document d'identité</option>
+                                                <option value="id_card">Carte d'identité (CNI)</option>
+                                                <option value="passport">Passeport</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-js" data-value="id_card" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label class="col-form-label" for="id_card_file_1">Photo ou scan du recto de votre carte d'identité</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i fa fa-folder-open" id="id_card_file_1" name="id_card[file_1]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                                    <span class="group-span-filestyle input-group-append" tabindex="0">
+                                                        <label class="btn btn-light " for="id_card_file_1">
+                                                            <span class="glyphicon i fa fa-folder-open"></span>
+                                                            Sélectionner un fichier</label>
+                                                    </span>
+                                                </div>
+                                                <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                            <div class="well-panel">
+                                                <p class="text-muted">Exemple</p>
+                                                <img alt="Payment id recto example" class="img-fluid" height="240" src="{{ asset('images/payment-id-recto-example-cbcfb8002d52f428425f6e9c174548f7411.png') }}" width="340">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label class="col-form-label" for="id_card_file_2">Photo ou scan du verso de votre carte d'identité</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i fa fa-folder-open" id="id_card_file_2" name="id_card[file_2]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                                    <span class="group-span-filestyle input-group-append" tabindex="0">
+                                                        <label class="btn btn-light " for="id_card_file_2">
+                                                            <span class="glyphicon i fa fa-folder-open"></span>
+                                                            Sélectionner un fichier</label>
+                                                    </span>
+                                                </div>
+                                                <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                            <div class="well-panel">
+                                                <p class="text-muted">Exemple</p><img alt="Payment id verso example" class="img-fluid" height="240" src="{{ asset('images/payment-id-verso-example-1a547fba557146d8f96c2d5dbf7f1fb1f24.png') }}" width="340"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-js" data-value="passport" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label class="col-form-label" for="passport_file_1">Photo ou scan de votre passeport</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i fa fa-folder-open" data-input="true" id="passport_file_1" name="id_card[file_1]" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                                    <span class="group-span-filestyle input-group-append" tabindex="0">
+                                                        <label class="btn btn-light " for="passport_file_1">
+                                                            <span class="glyphicon i fa fa-folder-open"></span>
+                                                            Sélectionner un fichier</label>
+                                                    </span>
+                                                </div>
+                                                <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                            <div class="well-panel">
+                                                <p class="text-muted">Exemple</p><img alt="Payment passport open example" class="img-fluid" height="340" src="{{ asset('images/payment-passport-open-example-61664e16cb15df493b1eb70ff2974c.png') }}" width="340"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Valider mon identité</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div data-component="form">
+                <div class="card mb-3">
+                    <div class="anchor">
+                        <a name="vital_card">&nbsp;</a>
+                    </div>
+                    <div class="card-header h6">
+                        <div class="float-right">
+                            <span class="edit-heading-link hide-js" data-cancel-button="">
+                                <i class="fas fa-undo"></i>
+                                <span>Annuler</span>
+                            </span>
+                            <span class="edit-heading-link hide-js" data-edit-button="">
+                                <i class="fa fa-edit"></i>
+                                <span>Modifier</span>
+                            </span>
+                        </div>Carte Vitale</div>
+                    <div class="alert alert-info rounded-0">
+                        <p>Votre numéro de sécurité sociale est utilisé dans le cas où le posteur souhaite vous déclarer depuis le site Alloservice.</p>
+                        <p>
+                            <i class="fa fa-camera fa-lg"></i>
+                            <strong>Conseils pratiques</strong>
+                        </p>
+                        <ul class="mt-2">
+                            <li>Vous pouvez prendre en photo les documents demandés avec votre smartphone</li>
+                            <li>Vos documents ne doivent être ni flous, ni tronqués</li>
+                            <li>Vérifiez que le numéro présent sur la carte Vitale correspond à celui que vous avez saisi</li>
+                        </ul>
+                    </div>
+                    <form accept-charset="UTF-8" action="/profile/trust_and_security/update_vital_card#vital_card" class="new_profile_vital_card_form" enctype="multipart/form-data" id="new_profile_vital_card_form" method="post"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="9xU56JXAui3uaWp70veUG43DkZFSRkrRWMJjfsXuzUDUJbHrIVDi8D3F8umAeo/8pnaONtC++vr210uV9NxFNg=="><div class="card-body">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="vital_card_attachment">Photo / Scan de la carte Vitale</label><input accept="image/jpeg,image/png,application/pdf" class="filestyle" data-buttontext="Sélectionner un fichier" data-iconname="i fa fa-folder-open" data-input="true" id="vital_card_attachment" name="vital_card[attachment]" required="required" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" type="file"><div class="bootstrap-filestyle input-group"><input class="form-control " disabled="disabled" type="text">
+                                            <span class="group-span-filestyle input-group-append" tabindex="0">
+                                                <label class="btn btn-light " for="vital_card_attachment">
+                                                    <span class="glyphicon i fa fa-folder-open"></span>
+                                                    Sélectionner un fichier</label>
+                                            </span>
+                                        </div>
+                                        <p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                    </div>
+                                    <div class="form-group" data-component="ssn-validator">
+                                        <label class="col-form-label" for="detail_ssn">Numéro de sécurité sociale</label>
+                                        <div class="row">
+                                            <div class="col-md-8"><input autocomplete="off" class="form-control" data-ssn-field="" id="detail_ssn" maxlength="21" name="detail[ssn]" placeholder="X XX XX XX XXX XXX XX" required="required" type="text" value="2 69 05 49 588 157 80"><p class="text-muted">Donnée confidentielle et sécurisée<br>Ne sera pas visible sur le site</p>
+                                                <div class="alert alert-danger mt-3 hide-js" data-ssn-error="">
+                                                    <p>Le numéro de sécurité sociale renseigné est invalide. Veuillez vérifier</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8 offset-xs-2 col-sm-4 offset-sm-4 offset-md-1">
+                                    <div class="well-panel">
+                                        <p class="text-muted">Exemple</p><img alt="Vitale card recto example" class="img-fluid" height="240" src="{{ asset('images/vitale-card-recto-example-1504e481eef30921f188fcbf7b3f1f7376.png') }}" width="340"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-4">
+                                    <button class="btn btn-light btn-block" data-disable-with="Veuillez patienter" name="button" type="submit">Valider ma carte Vitale</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

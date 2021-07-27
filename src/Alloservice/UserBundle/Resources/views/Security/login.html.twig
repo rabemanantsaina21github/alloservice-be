@@ -1,0 +1,67 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Se connecter | {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--DEBUT ANTONIO-->
+<div style="padding-right: 17px; display: block;">
+    <div class="modal-dialog" style="margin: 48px auto 40px">
+        <div class="modal-content">
+            <div data-modal="modalSignIn" style="display: block;">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Connexion</h4>
+                    </div>
+                    <div class="modal-body facebook-content">
+                        <div class="mb-3" data-component="facebook-login">
+                            <a class="btn btn-block btn-lg btn-social btn-facebook" data-fb-login-btn="" href="#">
+                                <span class="fab fa-facebook" style="padding-top: 0; margin-top: 0"></span>
+                                <div class="font-size-4">Connexion avec Facebook</div>
+                            </a>
+                        </div>
+                        <div class="strike mb-3">
+                            <span>OU</span>
+                        </div>
+                        <form class="new_user" method="post" action="{{ path('alloservice_security_login_check') }}">
+                            {% if error %}
+                                <div class="error_message">
+                                    L'e-mail ou mot de passe que vous avez entré est incorrect !
+                                </div>
+                            {% endif %}
+                            <div class="form-group">
+                                <input type="email" name="_username" value="{{ last_username }}" placeholder="E-mail" autocomplete="off" maxlength="60" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <input autocomplete="off" min="8" name="_password" placeholder="Mot de passe" required="required" type="password"/>
+                            </div>
+                            <div>
+                                <input type="hidden" name="_csrf_token" value="{{csrf_token('authenticate')}}"/>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="form-check">
+                                    <label>
+                                        <input class="form-check-input" id="remember_me" name="_remember_me" type="checkbox"/>
+                                        <div class="form-check-label font-weight-normal">
+                                            Se souvenir de moi
+                                        </div>
+                                    </label>
+                                </div>
+                                <a class="float-right textblue" href="{{ path('alloservice_resetting_request') }}">
+                                    Mot de passe oublié ?
+                                </a>
+                            </div>
+                            <div>
+                                <input class="btn btn-block btn-lg btn-info" data-disable-with="Veuillez patienter" data-modal-submit="" name="commit" style="font-weight: 600" type="submit" value="Connexion"></input>
+                            </div>
+                        </form>
+                        <hr></hr>
+                        <div class="text-center">
+                            Pas encore membre ?
+                            <a href="{{ path('alloservice_registration_register') }}" class="textblue">Créez un compte</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FIN ANTONIO-->
+{% endblock %}

@@ -1,0 +1,300 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Tous les services sur {{ parent() }} {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+    <div class="bg-white">
+        <div class="ypj-fluid-container pb-3">
+            <ol class="breadcrumb pt-3 pl-0" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}" itemprop="item">
+                        <span itemprop="name">Accueil</span>
+                    </a><meta content="1" itemprop="position"></li>
+                <li class="breadcrumb-item active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a class="link-gray" href="" itemprop="item">
+                        <span itemprop="name">Tous les services</span>
+                    </a><meta content="2" itemprop="position"></li>
+            </ol>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mb-4">Tous les services</h1>
+                </div>
+            </div>
+            <h2 class="mb-3">
+                <i class="fa fa-tools"></i>
+                <a class="text-dark" href="">Bricolage</a>
+            </h2>
+            <div class="row mt-0">
+                <div class="col-md-3">
+                    <h3>
+                        <i class="fa font-size-4 fa-hammer"></i>
+                        <a class="font-size-4 font-weight-medium text-dark" href="">Aménagement</a>
+                    </h3>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Montage de meubles IKEA</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Assemblage de meubles</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Démontage de meubles</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de tringles à rideaux</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Fixation d'étagères</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Installer un pare-baignoire</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Autre job d'aménagement</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h3>
+                        <i class="fa font-size-4 fa-bolt"></i>
+                        <a class="font-size-4 font-weight-medium text-dark" href="electricite">Electricité</a>
+                    </h3>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Installation de prises électriques</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de lampes et luminaires</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Changer une ampoule</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose d'objets connectés Nest</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Domotique</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Installation d'un radiateur électrique</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Autre job d'électricité</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h3>
+                        <i class="fa font-size-4 fa-paint-roller"></i>
+                        <a class="font-size-4 font-weight-medium text-dark" href="">Rénovation</a>
+                    </h3>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Peinture intérieure</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de papier peint</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de parquet</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de dalles PVC</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de dalles de moquette</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de carrelage</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Décoller du papier peint</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Enduire un mur</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Pose de lino</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Autre job de rénovation</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h3>
+                        <i class="fa font-size-4 fa-tint"></i>
+                        <a class="font-size-4 font-weight-medium text-dark" href="plomberie">Plomberie</a>
+                    </h3>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Réparation de fuites d'eau</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Changer une chasse d'eau</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Changer un robinet</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Déboucher un évier</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Branchement d'une machine à laver</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Branchement d'un lave-vaisselle</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Faire les joints de la salle de bain</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Réparer une chasse d'eau</a>
+                    </p>
+                    <p>
+                        <a class="font-size-3 text-muted" href="">Autre job de plomberie</a>
+                    </p>
+                </div>
+            </div>
+            <div class="pb-4">
+                <div class="row">
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-leaf"></i>
+                            <a class="text-dark" href="">Jardinage</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Tondre la pelouse</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Taille de haie</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Couper un arbre</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Débroussaillage / Désherbage</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Ranger du bois</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Autre job de jardinage</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-box-open"></i>
+                            <a class="text-dark" href="">Déménagement</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Aide au déménagement</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Déplacer un meuble</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Déplacer de l'électroménager</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Autre job de déménagement</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-broom"></i>
+                            <a class="text-dark" href="">Ménage</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Ménage</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Repassage</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Lavage automobile</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Nettoyage de vitres</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Autre job de nettoyage</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-child"></i>
+                            <a class="text-dark" href="">Garde d'enfants</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Garde d'enfants</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-paw"></i>
+                            <a class="text-dark" href="">Animaux</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Garde de chien</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Garde de chat</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Faire promener son chien</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Garde d'autres animaux</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-desktop"></i>
+                            <a class="text-dark" href="">Informatique</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Nettoyer mon ordinateur</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Cours d'informatique</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Installer une imprimante</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Installer une box</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Autre job d'informatique</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <h2>
+                            <i class="fa fa-concierge-bell"></i>
+                            <a class="text-dark" href="">Conciergerie</a>
+                        </h2>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Service de conciergerie</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Faire la queue
+                            </a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Serveur / Serveuse</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Organiser un événement</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Couture</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Préparer un diner / apéritif</a>
+                        </p>
+                        <p>
+                            <a class="font-size-3 text-muted" href="">Me livrer un petit-déjeuner</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

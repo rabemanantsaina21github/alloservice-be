@@ -1,0 +1,156 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} La carte cadeau {{ parent() }} - {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="bg-cover bg-gift-card">
+    <!--navbar-->
+    {% include "inc/nav.html.twig" %}
+    <div class="index-public-hero">
+        <div class="container text-center">
+            <h1 class="hero-title">La carte cadeau Alloservice</h1>
+            <h2 class="hero-subtitle">Faites plaisir à vos amis, famille, collègues en leur offrant du service
+            </h2>
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="bg-gray-200">
+    <div class="container">
+        <ul class="breadcrumb mb-0 pl-0">
+            <li class="breadcrumb-item">
+                <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb-item active">La carte cadeau Alloservice</li>
+        </ul>
+    </div>
+</div>
+<div class="py-5 bg-white">
+    <div class="container">
+        <h3 class="mb-3">
+            <i class="fa fa-gift"></i>
+            En voilà un super cadeau : du temps libre pour vos proches ou vos collègues !</h3>
+        <p class="text-muted font-size-3">Vous avez déjà entendu vos proches ou vos collègues évoquer leur manque de temps ? Et bien voilà un super cadeau qui leur apportera du temps libre en les libérant de certaines tâches du quotidien.</p>
+        <p class="text-muted font-size-3">Vos proches font des travaux d'aménagement ? Offrez-leur une carte cadeau, ils pourront se faire aider par les Jobeurs.</p>
+        <h3 class="mt-4 mb-3">
+            <i class="fa fa-calendar-day"></i>
+            Les occasions ne manquent pas pour faire plaisir</h3>
+        <div class="d-flex flex-wrap mb-3">
+            <div class="well-panel well-bg-gift-card-item well-bg-earn-giftcard-info bg-cover">
+                <p class="h5 text-white u-margin-tb-60">Anniversaire</p>
+            </div>
+            <div class="well-panel well-bg-gift-card-item well-bg-earn-giftcard-info bg-cover">
+                <p class="h5 text-white u-margin-tb-60">Déménagement</p>
+            </div>
+            <div class="well-panel well-bg-gift-card-item well-bg-earn-giftcard-info bg-cover">
+                <p class="h5 text-white u-margin-tb-60">Noël</p>
+            </div>
+            <div class="well-panel well-bg-gift-card-item well-bg-earn-giftcard-info bg-cover">
+                <p class="h5 text-white u-margin-tb-60">Fête des pères</p>
+            </div>
+        </div>
+        <p>
+            <strong class="font-size-3">... et plein d'autres encore</strong>
+        </p>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div id="GiftCard-react-component-49d974d2-d749-4dcb-bf52-4a54cf9c5369">
+                    <div class="gift-card  ">
+                        <div class="gift-card-blue-side">
+                            <div class="gift-card-text "><img src="{{ asset('images/alloservice-logo@white-321105114a7417bbf7e3e299873be0c9.svg') }}"><div class="gift-card-text-recipient">
+                                    <p>
+                                        Pour<span class="gift-card-text-recipient-name">Stéphane</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gift-card-bg-icons">
+                                <div class="icon-gift icon-gift--small">
+                                    <svg height="115" viewbox="0 0 123 115" width="123" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill-rule="evenodd" fill="none">
+                                            <g fill="#2c7de8">
+                                                <path d="m9 36h37c2.7614237 0 5 2.2385763 5 5v43c0 1.6568542-1.3431458 3-3 3h-39c-1.65685425 0-3-1.3431458-3-3v-45c0-1.6568542 1.34314575-3 3-3z" transform="translate(5 26)"></path>
+                                                <path d="m49 0h15v4h-15z" transform="translate(5 26)"></path>
+                                                <path d="m65 36h37c2.761424 0 5 2.2385763 5 5v43c0 1.6568542-1.343146 3-3 3h-39c-1.6568542 0-3-1.3431458-3-3v-45c0-1.6568542 1.3431458-3 3-3z" transform="matrix(-1 0 0 1 174 26)"></path>
+                                                <path d="m62 3h46c2.761424 0 5 2.23857625 5 5v14c0 1.6568542-1.343146 3-3 3h-45c-1.6568542 0-3-1.3431458-3-3z" transform="translate(5 26)"></path>
+                                                <path d="m0 3h46c2.7614237 0 5 2.23857625 5 5v14c0 1.6568542-1.3431458 3-3 3h-45c-1.65685425 0-3-1.3431458-3-3z" transform="matrix(-1 0 0 1 56 26)"></path>
+                                            </g>
+                                            <g stroke-width="9" stroke="#2c7de8">
+                                                <path d="m34.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.65089919 0-19.57680089-14.54159134-2.94357056-20.14279689 6.96103206-.81537363 15.15297046 3.41588672 24.57581526 12.69378099z" transform="translate(27 6)"></path>
+                                                <path d="m69.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.6508992 0-19.5768009-14.54159134-2.9435706-20.14279689 6.9610321-.81537363 15.1529705 3.41588672 24.5758153 12.69378099z" transform="matrix(-1 0 0 1 131.085 6)"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gift-card-white-side">
+                            <div class="gift-card-label">
+                                <p>Carte cadeau</p><img alt="" class="gift-card-wave" src="{{ asset('images/gift-card-wave-a9502d3bf7eafaab382854ab46f8294f.svg') }}"></div>
+                            <div class="gift-card-price">
+                                <span class="price-label">25</span>
+                                <span class="price-label-currency">€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script class="js-react-on-rails-component" data-component-name="GiftCard" data-dom-id="GiftCard-react-component-49d974d2-d749-4dcb-bf52-4a54cf9c5369" type="application/json">{"name":"Stéphane","amount":25,"currency":"€"}</script>
+
+            </div>
+            <div class="col-md-7">
+                <h4 class="pt-3">Vous souhaitez offrir une carte cadeau ?</h4>
+                <p class="font-size-3 text-muted mb-2">Offrez du temps de libre et de l’aide à vos proches ou vos collègues en quelques clics et choisissez le montant que vous souhaitez offrir.</p>
+                <div class="mt-3">
+                    <a class="btn btn-yellow btn-lg" data-modal-form="" data-modal-name="modalSignIn" data-modal-show-switch="false" data-modal-url="/gift_cards/new" href="">Offrir une carte cadeau</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 order-md-2">
+                <div id="GiftCard-react-component-56bf26c2-4466-4865-b8c8-c7dc8c0480fe">
+                    <div class="gift-card  ">
+                        <div class="gift-card-blue-side">
+                            <div class="gift-card-text demo-card"><img src="{{ asset('images/alloservice-logo@white-321105114a7417bbf7e3e299873be0c9.svg') }}"></div>
+                            <div class="gift-card-bg-icons">
+                                <div class="icon-gift icon-gift--small">
+                                    <svg height="115" viewbox="0 0 123 115" width="123" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill-rule="evenodd" fill="none">
+                                            <g fill="#2c7de8">
+                                                <path d="m9 36h37c2.7614237 0 5 2.2385763 5 5v43c0 1.6568542-1.3431458 3-3 3h-39c-1.65685425 0-3-1.3431458-3-3v-45c0-1.6568542 1.34314575-3 3-3z" transform="translate(5 26)"></path>
+                                                <path d="m49 0h15v4h-15z" transform="translate(5 26)"></path>
+                                                <path d="m65 36h37c2.761424 0 5 2.2385763 5 5v43c0 1.6568542-1.343146 3-3 3h-39c-1.6568542 0-3-1.3431458-3-3v-45c0-1.6568542 1.3431458-3 3-3z" transform="matrix(-1 0 0 1 174 26)"></path>
+                                                <path d="m62 3h46c2.761424 0 5 2.23857625 5 5v14c0 1.6568542-1.343146 3-3 3h-45c-1.6568542 0-3-1.3431458-3-3z" transform="translate(5 26)"></path>
+                                                <path d="m0 3h46c2.7614237 0 5 2.23857625 5 5v14c0 1.6568542-1.3431458 3-3 3h-45c-1.65685425 0-3-1.3431458-3-3z" transform="matrix(-1 0 0 1 56 26)"></path>
+                                            </g>
+                                            <g stroke-width="9" stroke="#2c7de8">
+                                                <path d="m34.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.65089919 0-19.57680089-14.54159134-2.94357056-20.14279689 6.96103206-.81537363 15.15297046 3.41588672 24.57581526 12.69378099z" transform="translate(27 6)"></path>
+                                                <path d="m69.0854281 18.302421c-6.6542303 1.3624377-13.8649785 2.0436566-21.6322447 2.0436566-11.6508992 0-19.5768009-14.54159134-2.9435706-20.14279689 6.9610321-.81537363 15.1529705 3.41588672 24.5758153 12.69378099z" transform="matrix(-1 0 0 1 131.085 6)"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="condition-text">La carte cadeau Alloservice est valable pour tous les services sur notre site internet et un an à partir de la date d'achat</p>
+                    </div>
+                </div>
+                <script class="js-react-on-rails-component" data-component-name="GiftCard" data-dom-id="GiftCard-react-component-56bf26c2-4466-4865-b8c8-c7dc8c0480fe" type="application/json">{"demoCard":true}</script>
+
+            </div>
+            <div class="col-md-5 order-md-1">
+                <h4 class="pt-3">Vous avez reçu une carte cadeau ?</h4>
+                <p class="font-size-3 text-muted mb-2">Créditez le montant sur votre cagnotte en ajoutant le code de votre carte cadeau. Vous pouvez ainsi en profiter sur tous les services : ménage, bricolage...</p>
+                <div class="mt-3">
+                    <a class="btn btn-secondary btn-lg" data-modal-form="" data-modal-name="modalSignIn" data-modal-show-switch="false" data-modal-url="/gift_cards/add" href="">Utiliser une carte cadeau</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>{% endblock %}

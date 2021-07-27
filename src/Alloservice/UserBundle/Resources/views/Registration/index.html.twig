@@ -1,0 +1,216 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} Trouvez de l'aide ou augmentez vos revenus sur {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="bg-cover bg-dispatch">
+    {% include "inc/nav.html.twig" %}
+    <div class="container">
+            <h1 class="h3 mt-4 text-white text-center">
+                Améliorez votre quotidien grâce au jobbing
+            </h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card card-dispatch">
+                        <div class="card-body">
+                            <h2 class="h5 mb-4 text-secondary font-weight-bold">Besoin d'aide ? Trouvez quelqu'un pour vous aider</h2>
+                            <ul class="dispatch-list list-unstyled d-none d-sm-block">
+                                <li><span class="text-secondary pr-2">•</span>Déléguez vos tâches du quotidien</li>
+                                <li><span class="text-secondary pr-2">•</span>Faites-vous aider par des jobeurs compétents et évalués</li>
+                                <li><span class="text-secondary pr-2">•</span>Gagnez du temps et économisez de l’argent</li>
+                                <li><span class="text-secondary pr-2">•</span>Simplifiez-vous la vie et profitez de votre temps libre</li>
+                            </ul>
+                            <!--DEBUT PREMIER MODAL-->
+                            <a data-toggle="modal" data-target="#modalSignUp" class="btn btn-lg btn-secondary my-2" href="#">
+                                Inscription
+                            </a>
+                            <!--MODAL-->
+                            <div class="modal fade" id="modalSignUp" role="dialog" style="padding-right: 17px">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div data-modal="modalSignUp" style="display: block;">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Inscription</h4>
+                                                <button aria-label="Fermer" arria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                                            </div>
+                                            <div class="modal-body facebook-content">
+                                                <div>
+                                                    <div class="mb-3" data-component="facebook-login">
+                                                        <a class="btn btn-block btn-lg btn-social btn-facebook" data-fb-login-btn="" href="#">
+                                                            <span class="fab fa-facebook" style="margin-top: 0"></span>
+                                                            <div class="font-size-4">Inscription avec Facebook</div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="strike mb-3"><span>OU</span></div>
+                                                    <div class="new_signup_form" style="text-align: left">
+                                                        {{ form_start(form1) }}
+                                                        {{ form_errors(form1) }}
+                                                        <div class="form-group">
+                                                            {{ form_errors(form1.genre) }}
+                                                            {{ form_widget(form1.genre) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form1.lastname) }}
+                                                            {{ form_widget(form1.lastname) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form1.name) }}
+                                                            {{ form_widget(form1.name) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form1.email) }}
+                                                            {{ form_widget(form1.email) }}
+                                                        </div>
+                                                        {{form_errors(form1.plainPassword.first)}}
+                                                        <div class="form-group">
+                                                            {{form_widget(form1.plainPassword.first)}}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{form_widget(form1.plainPassword.second)}}
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input" id="checkbox" name="checkbox" required="true" type="checkbox"/>
+                                                                <div class="form-check-label font-weight-normal">
+                                                                    Je souhaite qu'on m'informe des nouveautés, cadeaux et bons plans !
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input" id="checkbox" name="checkbox" required="true" type="checkbox"/>
+                                                                <div class="form-check-label font-weight-normal">
+                                                                    Je souhaite recevoir les bons plans des partenaires de Alloservice !
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <input class="btn btn-lg btn-block btn-success mt-3" data-disable-with="Veuillez patienter" data-modal-submit="" name="commit" style="font-weight: 600" type="submit" value="Inscription"><br>
+                                                        <small>En vous inscrivant vous acceptez les
+                                                            <a href="{{path('alloservice_site_cgu')}}" target="_blank" class="font-weight-medium textblue">
+                                                                Conditions Générales</a>
+                                                            et la
+                                                            <a href="" target="_blank" class="font-weight-medium textblue">
+                                                                Police de Confidentialité</a>.
+                                                        </small>
+                                                        {{ form_end(form1) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN PREMIER MODAL-->
+                        </div>
+                    </div>
+                </div>
+                <div class="d-block d-sm-none text-white text-center font-weight-medium w-100">OU</div>
+                <div class="col-sm-6">
+                    <div class="card card-dispatch">
+                        <div class="card-body">
+                            <h2 class="h5 mb-4 text-primary font-weight-bold">Réalisez des jobs et augmentez vos revenus</h2>
+                            <ul class="dispatch-list list-unstyled d-none d-sm-block">
+                                <li><span class="text-primary pr-2">•</span>Gagnez un complément de revenus en pratiquant le jobbing</li>
+                                <li><span class="text-primary pr-2">•</span>Lancez votre activité de services en 5 minutes</li>
+                                <li><span class="text-primary pr-2">•</span>Développez votre clientèle</li>
+                                <li><span class="text-primary pr-2">•</span>Gagnez en moyenne 400 €/mois</li>
+                            </ul>
+                            <!--DEBUT DEUXIEME MODAL-->
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-lg btn-yellow my-2" href="{#{ path('alloservice_registration_register_jober') }#}">
+                                Inscription
+                            </a>
+                            <!--MODAL-->
+                            <div class="modal fade" id="myModal" role="dialog" style="padding-right: 17px">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div data-modal="modalSignUp" style="display: block;">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Inscription</h4>
+                                                <button aria-label="Fermer" arria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button>
+                                            </div>
+                                            <div class="modal-body facebook-content">
+                                                <div>
+                                                    <div class="mb-3" data-component="facebook-login">
+                                                        <a class="btn btn-block btn-lg btn-social btn-facebook" data-fb-login-btn="" href="#">
+                                                            <span class="fab fa-facebook" style="margin-top: 0"></span>
+                                                            <div class="font-size-4">Inscription avec Facebook</div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="strike mb-3"><span>OU</span></div>
+                                                    <div class="new_signup_form" style="text-align: left">
+                                                        {{ form_start(form2) }}
+                                                        {{ form_errors(form2) }}
+                                                        <div class="form-group">
+                                                            {{ form_errors(form2.lastname) }}
+                                                            {{ form_widget(form2.lastname) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form2.name) }}
+                                                            {{ form_widget(form2.name) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form2.city) }}
+                                                            {{ form_widget(form2.city) }}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{ form_errors(form2.email) }}
+                                                            {{ form_widget(form2.email) }}
+                                                        </div>
+                                                        {{form_errors(form2.plainPassword.first)}}
+                                                        <div class="form-group">
+                                                            {{form_widget(form2.plainPassword.first)}}
+                                                        </div>
+                                                        <div class="form-group">
+                                                            {{form_widget(form2.plainPassword.second)}}
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input" id="checkbox" name="checkbox" required="true" type="checkbox"/>
+                                                                <div class="form-check-label font-weight-normal">
+                                                                    Je souhaite qu'on m'informe des nouveautés, cadeaux et bons plans !
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label>
+                                                                <input class="form-check-input" id="checkbox" name="checkbox" required="true" type="checkbox"/>
+                                                                <div class="form-check-label font-weight-normal">
+                                                                    Je souhaite recevoir les bons plans des partenaires de Alloservice !
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <input class="btn btn-lg btn-block btn-info mt-3" data-disable-with="Veuillez patienter" data-modal-submit="" name="commit" style="font-weight: 600" type="submit" value="Inscription"><br>
+                                                        <small>En vous inscrivant vous acceptez les
+                                                            <a href="{{path('alloservice_site_cgu')}}" target="_blank" class="font-weight-medium textblue">
+                                                                Conditions Générales</a>
+                                                            et la
+                                                            <a href="" target="_blank" class="font-weight-medium textblue">
+                                                                Police de Confidentialité</a>.
+                                                        </small>
+                                                        {{ form_end(form2) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FIN DEUXIEME MODAL-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-200">
+        <div class="container">
+            <ul class="breadcrumb mb-0 pl-0">
+                <li class="breadcrumb-item">
+                    <a class="link-gray" href="{{ path('alloservice_site_homepage') }}">Accueil</a>
+                </li>
+                <li class="breadcrumb-item active">Inscription</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

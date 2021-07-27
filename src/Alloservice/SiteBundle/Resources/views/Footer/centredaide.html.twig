@@ -1,0 +1,57 @@
+{% extends "header.html.twig" %}
+
+{% block title %} {{ parent() }} {% endblock %}
+
+{% block body %}
+ <main role="main">
+    <section class="section hero">
+      <!--ALERTS-->
+      <div class="arh" style="padding-top: 8px">
+          {% if app.request.hasPreviousSession %}
+              <div class="alerts">
+                  {% for type, messages in app.session.flashbag.all %}
+                      {% for message in messages %}
+                          <div class="alert alert-{{ type }}">
+                              {{ message|raw }}
+                          </div>
+                      {% endfor %}
+                  {% endfor %}
+              </div>
+          {% endif %}
+      </div>
+      <div class="hero-inner">
+         <h1 class="textwhite">Qu'est-ce qui vous amène ?</h1>
+         <form class="search search-full" action="" method="GET">
+            <input type="search" name="query" id="query" placeholder="Recherche" autocomplete="off" aria-label="Recherche">
+         </form>
+         <p>Exemples: photo de profil, choisir un Jobeur, mot de passe oublié</p>
+      </div>
+   </section>
+      <div class="container">
+        <section class="section knowledge-base">
+          <section class="categories blocks">
+            <ul class="blocks-list">
+                  <li class="blocks-item">
+                    <a href="{{ path('alloservice_site_client') }}" class="blocks-item-link">
+                      <h4 class="blocks-item-title text-primary font-weight-bold">Client</h4>
+                      <p class="blocks-item-description text-primary font-weight-normal">Demandeur de Services</p>
+                    </a>
+                  </li>   
+                  <li class="blocks-item">
+                    <a href="{{ path('alloservice_site_jobeur') }}" class="blocks-item-link">
+                      <h4 class="blocks-item-title text-primary font-weight-bold">Jobeur </h4>
+                      <p class="blocks-item-description text-primary font-weight-normal">Prestataire</p>
+                    </a>
+                  </li>
+                  <li class="blocks-item">
+                    <a href="{{ path('alloservice_site_aide_assurance') }}" class="blocks-item-link">
+                      <h4 class="blocks-item-title text-primary font-weight-bold">Assurance</h4>
+                      <p class="blocks-item-description"></p>
+                    </a>
+                  </li> 
+            </ul>
+          </section>
+        </section>
+      </div> 
+  </main>
+{% endblock %}

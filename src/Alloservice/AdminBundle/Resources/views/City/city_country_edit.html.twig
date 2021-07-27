@@ -1,0 +1,27 @@
+{% extends "base-admin.html.twig" %}
+
+{% block title %}Modifier un pays - {{parent()}}{% endblock %}
+
+{% block main %}
+<section class="admin-section">
+	<div class="wrap">
+		<h1 class="section-title">{{entity.getName()}} : Modifier un pays</h1>
+		<div class="form-container">
+			{{form_start(form,{'attr':{'class':'form'}})}}
+				{{form_errors(form)}}
+				<div class="form-ctrl">
+					{{form_label(form.code)}}
+					{{form_widget(form.code)}}
+					{{form_errors(form.code)}}
+				</div>
+				<div class="form-ctrl">
+					<i>(<span class="error">*</span>) Obligatoire</i>
+				</div>
+				<div class="form-button text-right">
+					{{form_widget(form.submit)}}
+				</div>
+			{{form_end(form)}}
+		</div>
+	</div>
+</section>
+{% endblock %}

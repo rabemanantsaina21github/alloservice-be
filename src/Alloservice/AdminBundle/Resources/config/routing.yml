@@ -1,0 +1,115 @@
+alloservice_admin_homepage:
+    path:     /
+    defaults: { _controller: AlloserviceAdminBundle:Main:index }
+
+alloservice_admin_service:
+    path:     /services/{niv}
+    defaults: { _controller: AlloserviceAdminBundle:Main:service }
+
+alloservice_admin_service_add:
+    path:     /services/{niv}/new
+    defaults: { _controller: AlloserviceAdminBundle:Main:service_add }
+
+alloservice_admin_service_edit:
+    path:     /services/{niv}/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Main:service_edit }
+
+alloservice_admin_article:
+    path:     /articles
+    defaults: { _controller: AlloserviceAdminBundle:Main:article }
+
+alloservice_admin_article_add:
+    path:     /articles/new
+    defaults: { _controller: AlloserviceAdminBundle:Main:article_add }
+
+alloservice_admin_article_edit:
+    path:     /articles/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Main:article_edit }
+
+alloservice_admin_article_category:
+    path:     /articles/categories
+    defaults: { _controller: AlloserviceAdminBundle:Main:article_category }
+
+alloservice_admin_article_category_edit:
+    path:     /articles/categories/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Main:article_category_edit }
+
+alloservice_admin_section:
+    path:     /sections
+    defaults: { _controller: AlloserviceAdminBundle:Section:section }
+
+alloservice_admin_section_add:
+    path:     /sections/new
+    defaults: { _controller: AlloserviceAdminBundle:Section:section_add }
+
+alloservice_admin_section_edit:
+    path:     /sections/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Section:section_edit }
+
+alloservice_admin_util:
+    path:     /utilisateurs
+    defaults: { _controller: AlloserviceAdminBundle:Util:util }
+
+alloservice_admin_util_add:
+    path:     /utilisateurs/new
+    defaults: { _controller: AlloserviceAdminBundle:Util:util_add }
+
+alloservice_admin_util_edit:
+    path:     /utilisateurs/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Util:util_edit }
+
+alloservice_admin_client:
+    path:     /clients
+    defaults: { _controller: AlloserviceAdminBundle:Util:client }
+
+alloservice_admin_client_add:
+    path:     /clients/new
+    defaults: { _controller: AlloserviceAdminBundle:Util:client_add }
+
+alloservice_admin_client_edit:
+    path:     /clients/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Util:client_edit }
+
+alloservice_admin_jobeur:
+    path:     /jobeurs
+    defaults: { _controller: AlloserviceAdminBundle:Util:jobeur }
+
+alloservice_admin_jobeur_add:
+    path:     /jobeurs/new
+    defaults: { _controller: AlloserviceAdminBundle:Util:jobeur_add }
+
+alloservice_admin_jobeur_edit:
+    path:     /jobeurs/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Util:jobeur_edit }
+
+alloservice_admin_city:
+    path:     /villes
+    defaults: { _controller: AlloserviceAdminBundle:City:city }
+
+alloservice_admin_city_add:
+    path:     /villes/new
+    defaults: { _controller: AlloserviceAdminBundle:City:city_add }
+
+alloservice_admin_city_edit:
+    path:     /villes/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:City:city_edit }
+
+alloservice_admin_city_country:
+    path:     /pays
+    defaults: { _controller: AlloserviceAdminBundle:City:city_country }
+
+alloservice_admin_city_country_edit:
+    path:     /pays/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:City:city_country_edit }
+
+alloservice_admin_partner:
+    path:     /partenaires
+    defaults: { _controller: AlloserviceAdminBundle:Partner:partner }
+
+alloservice_admin_partner_add:
+    path:     /partenaires/new
+    defaults: { _controller: AlloserviceAdminBundle:Partner:partner_add }
+
+alloservice_admin_partner_edit:
+    path:     /partenaires/edit/{id}
+    defaults: { _controller: AlloserviceAdminBundle:Partner:partner_edit }

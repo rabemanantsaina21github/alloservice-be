@@ -1,0 +1,243 @@
+{% extends "base-gray.html.twig" %}
+
+{% block title %} Blog {{ parent() }} : un quotidien plus malin et plus serein {% endblock %}
+
+{% block body %}
+<!--[if lte IE 9]><p class="outdated-browser">Votre navigateur semble trop ancien. <a href="http://browsehappy.com/" target="_blank">Utilisez un navigateur moderne</a> pour profiter pleinement des fonctionnalités du site.</p><![endif]-->
+<div class="container">
+    <h1 class="text-center my-5">Astuces et conseils pour le quotidien</h1>
+    {%for article in lastArticles%}
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <a href="{{ path('alloservice_site_readblog', {'cat_slug':article.category.slug, 'slug':article.slug}) }}">
+                <div style="background: url(../images/large_a41468d4.jpeg) no-repeat;background-size: cover;background-position:center;height:450px;position:relative;border-radius:4px;">
+                    <div class="blog-header-post-content">
+                        <h2 class="h4 mt-3 px-2 font-size-5 text-center text-white">Comment prendre soin de son animal de compagnie âgé ?</h2>
+                        <div class="media mb-3">
+                            <div class="media-body align-self-center">
+                                <div class="font-size-3 pl-3 text-white text-justify">Votre chien ou votre chat se montre de moins en moins énergique et présente des signes d’isolement ? Il commence probablement à vieillir et a besoin d’attentions particulières. Tous nos conseils pour prendre soin de son animal de compagnie âgé.
+                                </div>
+                            </div>
+                            <div class="media-right align-self-center">
+                                <i class="fa fa-chevron-right fa-2x text-white pr-2 pl-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="my-4">
+        <div class="row">
+            <div class="col-md-3 text-center mb-2">
+                <a class="btn btn-lg btn-light btn-block " href="">Ma maison</a>
+            </div>
+            <div class="col-md-3 text-center mb-2">
+                <a class="btn btn-lg btn-light btn-block " href="">Mon extérieur</a>
+            </div>
+            <div class="col-md-3 text-center mb-2">
+                <a class="btn btn-lg btn-light btn-block " href="">Ma famille</a>
+            </div>
+            <div class="col-md-3 text-center mb-2">
+                <a class="btn btn-lg btn-light btn-block " href="">Animaux</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9" itemscope="" itemtype="http://schema.org/Blog">
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment protéger mes enfants face aux dangers d’internet ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_e6a74663.jpeg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment protéger mes enfants face aux dangers d’internet ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-05-20" datetime="2019-05-20" itemprop="datePublished">20 mai 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Internet est devenu de nos jours, l’un des principaux canaux pour s’instruire et se divertir. Toutefois, cette source d’informations immense peut s’avérer dangereuse pour les plus jeunes, avec les cybercriminels et harceleurs. Découvrez comment protéger les enfants face aux dangers d’internet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment lutter contre l’humidité en hiver ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_e76558ca.jpeg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment lutter contre l’humidité en hiver ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-02-11" datetime="2019-02-11" itemprop="datePublished">11 février 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Dans une maison, afin d’assurer la santé et le confort de ses occupants, le taux d’humidité ne doit pas dépasser les 30%. Toutes nos astuces pour lutter contre l’humidité en hiver.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment organiser la salle de bains des enfants ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_0448ddb5.png') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment organiser la salle de bains des enfants ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-27" datetime="2019-01-27" itemprop="datePublished">27 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Vous avez décidé que vos enfants auront leur propre salle de bains ? Il faudra alors la décorer pour leur donner envie d’y passer chaque jour et rendre ce moment de bain agréable. On vous dit tout pour organiser la salle de bains de vos enfants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment éclairer ma terrasse ou balcon ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_4ec9d3f4.png') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment éclairer ma terrasse ou balcon ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-21" datetime="2019-01-21" itemprop="datePublished">21 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Bien aménagé, le balcon ou la terrasse peut rapidement se transformer en un lieu agréable où se ressourcer et donner de la perspective à l’appartement. Toutes les astuces pour mieux éclairer votre balcon ou votre terrasse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment bien laver ma voiture ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_fb3dbd0f.jpeg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment bien laver ma voiture ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-20" datetime="2019-01-20" itemprop="datePublished">20 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Votre voiture est un peu votre seconde maison et avec le temps, elle est toute sale ? Toutes les astuces pour bien laver sa voiture et lui redonner fière allure à l’extérieur comme à l’intérieur !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Les tendances déco 2019" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_0a63afa3.jpg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Les tendances déco 2019</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-20" datetime="2019-01-20" itemprop="datePublished">20 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Nouvelle année, nouvelles résolutions et bien entendu, nouvelle décoration. Entre les ambiances, les couleurs ou encore les styles de décoration, découvrez toutes les tendances déco 2019.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Utilisations du bicarbonate de soude" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_238a26a0.jpg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Utilisations du bicarbonate de soude</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-18" datetime="2019-01-18" itemprop="datePublished">18 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Véritable poudre à tout faire, le bicarbonate de soude peut être utilisé dans de multiples aspects de la vie quotidienne. De la maison au jardin en passant par les soins beauté, quelques utilisations du bicarbonate de soude.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Quelles informations laisser à la baby-sitter ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_63c252e3.jpg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Quelles informations laisser à la baby-sitter ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-17" datetime="2019-01-17" itemprop="datePublished">17 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Vous avez enfin réussi à trouver la « bonne » baby-sitter ! Pour être sûr de partir le cœur léger, et sans vérifier votre téléphone toutes les 5 minutes, découvrez toutes les informations à laisser à la baby-sitter avant de sortir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Que faire au jardin en janvier ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_a41d7176.jpeg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Que faire au jardin en janvier ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-06" datetime="2019-01-06" itemprop="datePublished">
+                                6 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Le mois de janvier est une période calme dans le monde du jardinage. Les journées courtes et froides limitent les interventions au jardin. Néanmoins, quelques petits travaux doivent être réalisés. On vous dit tout ce qu’il y a à faire au jardin en janvier.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" itemscope="" itemtype="">
+                <div class="blog-post">
+                    <div class="blog-post-left">
+                        <a href=""><img alt="Comment trouver un bricoleur ?" class="blog-post-img" height="200" itemprop="image" src="{{ asset('images/thumbnail_75c54ce5.jpeg') }}" width="300"></a>
+                    </div>
+                    <div class="blog-post-right">
+                        <div class="p-3">
+                            <h2 class="h5 mt-2 mb-0" itemprop="name">
+                                <a class="text-dark" href="" itemprop="url">Comment trouver un bricoleur ?</a>
+                            </h2>
+                            <time class="activity-time font-size-2 d-inline-block mt-0" content="2019-01-03" datetime="2019-01-03" itemprop="datePublished">
+                                3 janvier 2019</time>
+                            <p class="mt-3 font-size-3 mb-3" itemprop="description">Une panne de courant ? Une fenêtre qui ne se ferme plus ? Un revêtement à poser ? Vous avez bien besoin de l’aide d’un bricoleur mais ne savez où chercher ? Toutes les astuces pour trouver un bricoleur près de chez vous.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pagination justify-content-between m-0">
+                    <li class="page-item disabled">
+                        <span class="page-link pagination-border-radius">← Précédent</span>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link pagination-border-radius font-weight-bold" href="">Suivant
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3 text-center">
+                <div class="card-body">
+                    <p class="h5 font-weight-normal mb-3 text-secondary">Besoin d'aide ? Trouvez quelqu'un pour vous aider</p>
+                    <a class="btn btn-secondary btn-break" href="">Demander un service</a>
+                </div>
+            </div>
+            <div class="card mb-3 text-center">
+                <div class="card-body">
+                    <p class="h5 font-weight-normal mb-3 text-primary">Réalisez des jobs et augmentez vos revenus</p>
+                    <a class="btn btn-yellow btn-break" href="">Devenir jobeur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
